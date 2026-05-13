@@ -9,7 +9,18 @@ public class Task16 {
      * Реализовать через switch.
      */
     public static double calculate(double a, double b, char op) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй calculate");
+        return switch (op) {
+            case '+' -> a + b;
+            case '-' -> a - b;
+            case '*' -> a * b;
+            case '/' -> {
+                if (b == 0) {
+                    throw new ArithmeticException("div by zero");
+                }
+                yield a / b;
+            }
+            default -> throw new IllegalArgumentException("unknown op");
+        };
+
     }
 }

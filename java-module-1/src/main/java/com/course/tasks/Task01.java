@@ -9,7 +9,7 @@ public class Task01 {
      * Пример: helloWorld() == "Hello, World!".
      */
     public static String helloWorld() {
-        // TODO: реализуй
+        // TODO: реализуй тест
         throw new UnsupportedOperationException("TODO: реализуй helloWorld");
     }
 }

@@ -8,7 +8,15 @@ public class Task10 {
      * Примеры: isLeapYear(2000) == true; isLeapYear(1900) == false.
      */
     public static boolean isLeapYear(int year) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isLeapYear");
+        if (year%4 == 0) {
+            if (year%100 == 0) {
+                if(year%400==0){
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
+        return false;
     }
 }

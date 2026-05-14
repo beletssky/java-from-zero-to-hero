@@ -7,7 +7,6 @@ public class Task04 {
      * Пример: concat("Hello", "World") == "Hello World".
      */
     public static String concat(String a, String b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй concat");
+        return a+" "+b;
     }
 }

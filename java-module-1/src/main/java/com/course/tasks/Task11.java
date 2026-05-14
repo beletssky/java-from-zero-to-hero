@@ -8,7 +8,24 @@ public class Task11 {
      * Если score &lt; 0 или &gt; 100 — IllegalArgumentException.
      */
     public static char gradeLetter(int score) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй gradeLetter");
+       if (score<0){
+           throw new IllegalArgumentException("ты шо, какое отрицательное?!");
+       }
+       if (score>100) {
+           throw new IllegalArgumentException("больше сотки? красава, пшёл нахер!");
+       }
+       if (score>=50){
+           if(score>=60){
+               if(score>=75){
+                   if(score>=90){
+                       return 'A';
+                   }
+                   return 'B';
+               }
+               return 'C';
+           }
+           return 'D';
+       }
+       return 'F';
     }
 }

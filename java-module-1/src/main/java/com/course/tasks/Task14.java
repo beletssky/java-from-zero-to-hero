@@ -24,7 +24,7 @@ public class Task14 {
             case 7:
                  return "Вс";
             default:
-                 return"?";
+                 return "?";
 
 
         }

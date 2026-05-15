@@ -8,7 +8,15 @@ public class Task18 {
      * Не чувствителен к регистру. Реализовать через switch.
      */
     public static String trafficLightAction(String color) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй trafficLightAction");
+        switch (color.toLowerCase()){
+            case "red":
+                return "stop";
+            case "yellow":
+                return "slow";
+            case "green":
+                return "go";
+            default:
+                return "wait";
+        }
     }
 }

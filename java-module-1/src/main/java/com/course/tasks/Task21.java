@@ -7,7 +7,24 @@ public class Task21 {
      * Для n &lt; 0 — IllegalArgumentException.
      */
     public static long fibonacci(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй fibonacci");
+        if(n<0) {
+            throw new IllegalArgumentException();
+        }
+        if (n==0){
+            return 0L;
+        }
+        if (n==1){
+            return 1L;
+        }
+        long a=0L;
+        long b=1L;
+        long result = 0L;
+        for (int i = 1; i<n; i++){
+            result = b + a;
+            a = b;
+            b = result;
+
+        }
+        return result;
     }
 }

@@ -7,7 +7,10 @@ public class Task19 {
      * Примеры: sumFromOneTo(5) == 15L; sumFromOneTo(100) == 5050L.
      */
     public static long sumFromOneTo(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sumFromOneTo");
+        long s = (long) (1 + n) *n/2;
+        if (n<=0){
+            return 0L;
+        }
+        return s;
     }
 }

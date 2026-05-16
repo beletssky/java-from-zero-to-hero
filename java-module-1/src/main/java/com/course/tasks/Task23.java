@@ -7,7 +7,27 @@ public class Task23 {
      * Примеры: sumOfDigits(123) == 6; sumOfDigits(-405) == 9; sumOfDigits(0) == 0.
      */
     public static int sumOfDigits(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sumOfDigits");
+
+        String numberString = Integer.toString(n);
+
+        if (n<0){
+
+            numberString = numberString.substring(1);
+
+        }
+
+        char[] charArray = numberString.toCharArray();
+
+        int result = 0;
+
+        for (int i = 0; i < charArray.length; i++) {
+            result = result + Character.getNumericValue(charArray[i]);
+        }
+
+//        for(char a : charArray) {
+//            result += Character.getNumericValue(a);
+//        }
+
+        return result;
     }
 }

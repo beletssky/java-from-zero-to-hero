@@ -7,7 +7,22 @@ public class Task27 {
      * Примеры: gcd(12, 18) == 6; gcd(7, 13) == 1; gcd(0, 5) == 5; gcd(0, 0) == 0.
      */
     public static int gcd(int a, int b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй gcd");
+        int lowerNumber = a;
+        int higherNumber = b;
+
+        if (a > b){
+            lowerNumber = b;
+            higherNumber = a;
+        }
+
+        while (lowerNumber != 0) {
+            int leftover = higherNumber % lowerNumber;
+            higherNumber = lowerNumber;
+            lowerNumber = leftover;
+        }
+
+        higherNumber = higherNumber < 0 ? higherNumber * -1 : higherNumber;
+
+        return higherNumber;
     }
 }

@@ -15,7 +15,7 @@ public class Task25 {
         }
 
         int [] divisor = {2, 3, 5};
-        if (n ==2 || n == 3 || n == 5 || n == 7) {
+        if (n == 2 || n == 3 || n == 5 || n == 7) {
             return result;
         }
 

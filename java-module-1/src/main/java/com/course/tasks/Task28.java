@@ -7,7 +7,19 @@ public class Task28 {
      * Примеры: countDivisors(12) == 6; countDivisors(7) == 2; countDivisors(1) == 1.
      */
     public static int countDivisors(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй countDivisors");
+        n = Math.abs(n);
+        if (n == 0) {
+            throw new IllegalArgumentException();
+        }
+        int a = 0;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                a++;
+
+            }
+
+        }
+
+        return a;
     }
 }

@@ -9,6 +9,6 @@ public class Task01 {
      * Пример: helloWorld() == "Hello, World!".
      */
     public static String helloWorld() {
-        return "Hello, World!";
+        return "Hello Hello Hello";
     }
 }

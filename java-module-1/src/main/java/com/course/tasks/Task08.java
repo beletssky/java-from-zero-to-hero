@@ -8,8 +8,14 @@ public class Task08 {
      */
     public static int maxOfThree(int a, int b, int c) {
 
-        if (a > b) {
+        if (a > b){
             return a;
-        } else return Math.max(b, c);
+        }
+        else if (b > c) {
+            return b;
+        }
+          else {
+              return c;
+          }
     }
-}
+    }

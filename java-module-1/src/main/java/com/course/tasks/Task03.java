@@ -7,7 +7,7 @@ public class Task03 {
      * Примеры: averageOfThree(1, 2, 3) == 2.0; averageOfThree(1, 1, 2) ≈ 1.333...
      */
     public static double averageOfThree(int a, int b, int c) {
-        return (a + b + c) / 3.0;
+     return (a + b + c) / 3.0;
 
     }
 }

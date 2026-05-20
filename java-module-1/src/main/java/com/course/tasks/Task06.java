@@ -7,6 +7,6 @@ public class Task06 {
      * Примеры: isEven(0) == true; isEven(-4) == true; isEven(7) == false.
      */
     public static boolean isEven(int n) {
-        return n % 2 == 0;
+    return n % 2 == 0;
     }
 }

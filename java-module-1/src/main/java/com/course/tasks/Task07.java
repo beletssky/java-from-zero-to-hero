@@ -8,7 +8,12 @@ public class Task07 {
      */
     public static int max(int a, int b) {
 
-        return Math.max(a, b);
+               if (a > b){
+                   return a;
+               }
+               else {
+                   return b;
+               }
 
     }
 }

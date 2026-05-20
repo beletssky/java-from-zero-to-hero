@@ -11,6 +11,8 @@ public class Task11 {
         if (score < 0 || score > 100) {
             throw new IllegalArgumentException("Хто здох той лох");
         }
+
+
         if (score >= 90) {
             return ('A');
         } else if (score >= 75) {

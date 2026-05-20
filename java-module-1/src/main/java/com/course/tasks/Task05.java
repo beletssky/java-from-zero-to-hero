@@ -11,7 +11,6 @@ public class Task05 {
         if (a == null) {
             throw new NullPointerException("a is null");
         }
-
-        return a + b;
+    return a + b;
     }
 }

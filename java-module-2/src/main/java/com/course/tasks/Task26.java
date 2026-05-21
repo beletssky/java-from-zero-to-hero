@@ -9,7 +9,22 @@ public class Task26 {
      *          parseOrDefault(null, 99) == 99.
      */
     public static int parseOrDefault(String s, int defaultValue) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй parseOrDefault");
+
+        int parsedInt;
+
+        try {
+
+            parsedInt = Integer.parseInt(s);
+
+        } catch (ClassCastException exception) {
+
+            System.out.println("exception caught");
+
+            return defaultValue;
+        } finally {
+            System.out.println("Finalized");
+        }
+
+        return  parsedInt;
     }
 }

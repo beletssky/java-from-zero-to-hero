@@ -8,7 +8,13 @@ public class Task07 {
      * Примеры: maxArray({3,1,4,1,5,9,2,6}) == 9; maxArray({-5,-1,-10}) == -1.
      */
     public static int maxArray(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй maxArray");
+        if (a == null){
+            throw new IllegalArgumentException();
+        }
+        int max = a[0];
+        for (int x : a) {
+            if (x > max) max = x;
+        }
+        return max;
     }
 }

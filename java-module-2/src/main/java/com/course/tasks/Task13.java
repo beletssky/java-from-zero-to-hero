@@ -8,7 +8,12 @@ public class Task13 {
      * Примеры: reverse({1,2,3}) == {3,2,1}; reverse({}) == {}; reverse({5}) == {5}.
      */
     public static int[] reverse(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй reverse");
+        int[] copy = a.clone();
+        int j = a.length - 1;
+        for (int i = 0; i < copy.length; i++){
+            copy[j] = a[i];
+            j--;
+        }
+        return copy;
     }
 }

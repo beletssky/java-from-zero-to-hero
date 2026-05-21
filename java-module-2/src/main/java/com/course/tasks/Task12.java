@@ -1,5 +1,7 @@
 package com.course.tasks;
 
+import java.util.Arrays;
+
 public class Task12 {
 
     /**
@@ -8,7 +10,12 @@ public class Task12 {
      *          countEvens({}) == 0.
      */
     public static int countEvens(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй countEvens");
+        int counter = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) {
+                counter++;
+            }
+        }
+        return counter;
     }
 }

@@ -9,7 +9,17 @@ public class Task20 {
      *          isPalindromeString("") == true; isPalindromeString("a") == true.
      */
     public static boolean isPalindromeString(String s) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isPalindromeString");
+        if (s.length() <= 1){
+            return true;
+        }
+        char[] palindrom = s.toCharArray();
+        int j = palindrom.length - 1;
+        for (int i = 0; i < j; i++){
+            if (palindrom[i] != palindrom[j]){
+                return false;
+            }
+            j--;
+        }
+        return true;
     }
 }

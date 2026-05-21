@@ -1,5 +1,7 @@
 package com.course.tasks;
 
+import java.util.Arrays;
+
 public class Task24 {
 
     /**
@@ -10,7 +12,29 @@ public class Task24 {
      *          isAnagram("hello", "world") == false.
      */
     public static boolean isAnagram(String a, String b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isAnagram");
+        if (a == null || b == null){
+            throw new IllegalArgumentException();
+        }
+
+        if (a.isBlank() && b.isBlank()){
+            return true;
+        }
+
+        char [] aArray = a.toLowerCase().replace(" ", "").toCharArray();
+        char [] bArray = b.toLowerCase().replace(" ", "").toCharArray();
+
+        if (aArray.length != bArray.length){
+            return false;
+        }
+
+        Arrays.sort(aArray);
+        Arrays.sort(bArray);
+
+
+        return Arrays.equals(aArray, bArray);
+
+
+
+
     }
 }

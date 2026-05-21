@@ -8,7 +8,16 @@ public class Task19 {
      * Примеры: reverseString("hello") == "olleh"; reverseString("") == "".
      */
     public static String reverseString(String s) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй reverseString");
+        if (s == null){
+            throw new IllegalArgumentException();
+        }
+        char[] inputArray = s.toCharArray();
+        char[] outputArray = new char[inputArray.length];
+        int j = inputArray.length - 1;
+        for (int i = 0; i < inputArray.length; i++){
+        outputArray[j] = inputArray[i];
+        j--;
+        }
+        return String.valueOf(outputArray);
     }
 }

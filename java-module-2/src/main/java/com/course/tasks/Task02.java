@@ -8,7 +8,9 @@ public class Task02 {
      *          inRange(10, 1, 10) == true.
      */
     public static boolean inRange(int n, int min, int max) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй inRange");
+        if (n>=min && n<=max){
+            return true;
+        }
+        return false;
     }
 }

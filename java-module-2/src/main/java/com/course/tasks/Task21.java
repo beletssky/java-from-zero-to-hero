@@ -10,7 +10,9 @@ public class Task21 {
      *          toTitleCase("") == "".
      */
     public static String toTitleCase(String s) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй toTitleCase");
+        // разделить по пробелам,
+        // первую букву апперкейс
+        // соеденить через stringbuilder (потом string.build)
+    return null;
     }
 }

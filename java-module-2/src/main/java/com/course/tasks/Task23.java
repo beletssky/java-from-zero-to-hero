@@ -8,7 +8,23 @@ public class Task23 {
      *          removeVowels("AEIOU") == "".
      */
     public static String removeVowels(String s) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй removeVowels");
+        char[] aeiou = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+        char[] input = s.toCharArray();
+        char[] output = new char[input.length];
+        int x = 0;
+        for (int i = 0; i < input.length; i++) {
+
+            for (int j = 0; j < aeiou.length; j++){
+                if (aeiou[j] == input[i]) {
+                    break;
+                }
+                if (j == aeiou.length - 1){
+                    output[x] = input[i];
+                    x++;
+                }
+            }
+        }
+
+        return String.valueOf(output).substring(0, x);
     }
 }

@@ -8,7 +8,14 @@ public class Task17 {
      * Примеры: concat({1,2}, {3,4,5}) == {1,2,3,4,5}; concat({}, {1,2}) == {1,2}.
      */
     public static int[] concat(int[] a, int[] b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй concat");
+        int[] result = new int[a.length + b.length];
+        int index = 0;
+        for(int item: a) {
+            result [index++] = item;
+        }
+        for(int item: b) {
+            result [index++] = item;
+        }
+        return result; 
     }
 }

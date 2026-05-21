@@ -9,7 +9,14 @@ public class Task22 {
      *          countWords("") == 0; countWords("   ") == 0.
      */
     public static int countWords(String s) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй countWords");
+        // сплит строки через пробел, проверить на бланк, посчитать не бланк
+        String[] splited = s.split(" ");
+        int lenghtString = splited.length;
+        for (int i = 0; i < splited.length; i++){
+            if (splited[i].equals("")){
+                lenghtString--;
+            }
+        }
+        return lenghtString;
     }
 }

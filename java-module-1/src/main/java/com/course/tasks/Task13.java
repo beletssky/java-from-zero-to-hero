@@ -8,7 +8,6 @@ public class Task13 {
      * Примеры: isTriangle(3, 4, 5) == true; isTriangle(1, 1, 5) == false.
      */
     public static boolean isTriangle(int a, int b, int c) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isTriangle");
+        return (a > 0 && b > 0 && c > 0) && (a + b > c && a + c > b && c + b > a);
     }
 }

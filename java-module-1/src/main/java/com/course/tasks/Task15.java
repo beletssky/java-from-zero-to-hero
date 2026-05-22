@@ -18,11 +18,15 @@ public class Task15 {
             case 2:
                 if (leap) {
                     return 29;
-                } else {
+                } else{
                     return 28;
                 }
             default:
                 return -1;
         }
+        }
+
+
+
     }
-}
+

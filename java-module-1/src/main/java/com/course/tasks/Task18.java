@@ -1,22 +1,22 @@
 package com.course.tasks;
 
 public class Task18 {
+    /**
+     * Возвращает действие на сигнале светофора:
+     * "red" → "stop"; "yellow" → "slow"; "green" → "go"; иначе → "wait".
+     * Не чувствителен к регистру. Реализовать через switch.
+     */
     public static String trafficLightAction(String color) {
+        color = color.toLowerCase();
         switch (color) {
-            case "Red":
-                return "Stop";
-            case "Yellow":
-                return "Slow";
-            case "Green":
-                return "Go";
+            case "red":
+                return "stop";
+            case "yellow":
+                return "slow";
+            case "green":
+                return "go";
             default:
-                return "Wait";
+                return "wait";
         }
     }
 }
-
-/**
- * Возвращает действие на сигнале светофора:
- * "red" → "stop"; "yellow" → "slow"; "green" → "go"; иначе → "wait".
- * Не чувствителен к регистру. Реализовать через switch.
- */

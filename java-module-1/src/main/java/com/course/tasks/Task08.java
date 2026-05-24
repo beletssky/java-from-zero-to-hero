@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 public class Task08 {
-
     /**
      * Возвращает наибольшее из трёх целых чисел.
      * Пример: maxOfThree(1, 9, 5) == 9.

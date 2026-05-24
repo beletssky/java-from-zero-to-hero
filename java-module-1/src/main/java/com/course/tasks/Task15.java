@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 public class Task15 {
-
     /**
      * Возвращает количество дней в месяце (1..12).
      * Февраль: leap == true → 29, иначе 28. Невалидный месяц — -1.
@@ -16,7 +15,7 @@ public class Task15 {
                     return 29;
                 }
                 else
-                    return 29;
+                    return 28;
             case 3:
                 return 31;
             case 4:
@@ -28,7 +27,7 @@ public class Task15 {
             case 7:
                 return 31;
             case 8:
-                return 30;
+                return 31;
             case 9:
                 return 31;
             case 10:
@@ -36,7 +35,7 @@ public class Task15 {
             case 11:
                 return 31;
             case 12:
-                return 30;
+                return 31;
             default:
                 return -1;
         }

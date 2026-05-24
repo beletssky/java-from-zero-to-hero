@@ -1,6 +1,10 @@
 package com.course.tasks;
 
 public class Task21 {
+    /**
+     * Возвращает n-е число Фибоначчи. fib(0) == 0, fib(1) == 1, fib(2) == 1, fib(10) == 55.
+     * Для n < 0 — IllegalArgumentException.
+     */
     public static long fibonacci(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("n не может быть меньше 0");
@@ -22,7 +26,3 @@ public class Task21 {
         return next;
     }
 }
-/**
- * Возвращает n-е число Фибоначчи. fib(0) == 0, fib(1) == 1, fib(2) == 1, fib(10) == 55.
- * Для n < 0 — IllegalArgumentException.
- */

@@ -8,6 +8,12 @@ public class Task23 {
      */
     public static int sumOfDigits(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sumOfDigits");
+        String number = String.valueOf(n);
+        int sum = 0;
+        for (char ch : number.toCharArray()) {
+            if (ch == '-') continue;
+            sum += ch - '0';
+        }
+        return sum;
     }
 }

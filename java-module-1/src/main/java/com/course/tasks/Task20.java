@@ -8,6 +8,14 @@ public class Task20 {
      */
     public static long factorial(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй factorial");
+        if (n < 0) {
+            throw new IllegalArgumentException();
+        }
+
+        long sum = 1;
+        for (int i = 1; i < n; i++) {
+            sum += sum * i;
+        }
+        return sum;
     }
 }

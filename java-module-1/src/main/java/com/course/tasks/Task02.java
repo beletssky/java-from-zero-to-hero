@@ -9,6 +9,6 @@ public class Task02 {
      */
     public static int sumTwo(int a, int b) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sumTwo");
+        return a + b;
     }
 }

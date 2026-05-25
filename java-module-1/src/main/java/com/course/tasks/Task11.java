@@ -9,6 +9,18 @@ public class Task11 {
      */
     public static char gradeLetter(int score) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй gradeLetter");
+        if (score < 0 || score > 100) {
+            throw new IllegalArgumentException();
+        } else if (score >= 90) {
+            return 'A';
+        } else if (score >= 75) {
+            return 'B';
+        } else if (score >= 60) {
+            return 'C';
+        } else if (score >= 50) {
+            return 'D';
+        } else {
+            return 'F';
+        }
     }
 }

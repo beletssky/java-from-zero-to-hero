@@ -8,6 +8,6 @@ public class Task03 {
      */
     public static double averageOfThree(int a, int b, int c) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй averageOfThree");
+        return (a + b + c) / 3.0;
     }
 }

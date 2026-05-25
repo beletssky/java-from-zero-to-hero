@@ -9,6 +9,15 @@ public class Task14 {
      */
     public static String dayName(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй dayName");
+        return switch (n) {
+            case 1 -> "Пн";
+            case 2 -> "Вт";
+            case 3 -> "Ср";
+            case 4 -> "Чт";
+            case 5 -> "Пт";
+            case 6 -> "Сб";
+            case 7 -> "Вс";
+            default -> "?";
+        };
     }
 }

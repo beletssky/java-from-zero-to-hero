@@ -8,6 +8,18 @@ public class Task21 {
      */
     public static long fibonacci(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй fibonacci");
+        if (n < 0) {
+            throw new IllegalArgumentException();
+        } else if (n <= 1) {
+            return n;
+        }
+        long n1 = 0, n2 = 1;
+
+        for (int i = 1; i < n; i++) {
+            long n3 = n2 + n1;
+            n1 = n2;
+            n2 = n3;
+        }
+        return n2;
     }
 }

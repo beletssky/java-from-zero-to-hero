@@ -8,6 +8,6 @@ public class Task04 {
      */
     public static String concat(String a, String b) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй concat");
+        return a + " " + b;
     }
 }

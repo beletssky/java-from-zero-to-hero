@@ -8,6 +8,14 @@ public class Task25 {
      */
     public static boolean isPrime(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isPrime");
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }

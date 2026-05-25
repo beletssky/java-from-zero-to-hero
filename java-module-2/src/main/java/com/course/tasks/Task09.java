@@ -9,7 +9,13 @@ public class Task09 {
      * Примеры: avgArray({1,2,3,4}) == 2.5.
      */
     public static double avgArray(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй avgArray");
+        if (a == null || a.length == 0) {
+            throw new IllegalArgumentException("NOOO");
+        }
+        int sum = 0;
+        for (int x : a){
+            sum = sum +x;
+        }
+        return (double) sum / a.length;
     }
 }

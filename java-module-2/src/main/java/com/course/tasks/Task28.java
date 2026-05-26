@@ -9,7 +9,18 @@ public class Task28 {
      *          isDigitOnly("") == false; isDigitOnly(null) == false.
      */
     public static boolean isDigitOnly(String s) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isDigitOnly");
+        boolean digits = true;
+        try {
+
+            Integer.parseInt(s);
+
+        } catch (NumberFormatException exception) {
+
+            System.out.println("exception caught");
+
+            return false;
+        }
+
+        return  digits;
     }
 }

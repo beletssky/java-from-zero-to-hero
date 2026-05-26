@@ -8,7 +8,11 @@ public class Task27 {
      *          sumOrZero(null, null) == 0.
      */
     public static int sumOrZero(Integer a, Integer b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sumOrZero");
+
+       a = a == null ? 0 : a;
+       b = b == null ? 0 : b;
+
+        return a + b;
     }
-}
+    }
+

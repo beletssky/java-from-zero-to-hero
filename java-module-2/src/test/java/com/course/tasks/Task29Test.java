@@ -17,6 +17,11 @@ class Task29Test {
     }
 
     @Test
+    void findMax_firstNullsReturnsNumber() {
+        assertEquals(Integer.valueOf(1), Task29.findMax(new Integer[]{null, 1}));
+    }
+
+    @Test
     void findMax_emptyReturnsNull() {
         assertNull(Task29.findMax(new Integer[]{}));
     }

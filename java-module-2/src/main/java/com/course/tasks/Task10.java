@@ -9,6 +9,17 @@ public class Task10 {
      */
     public static int indexOf(int[] a, int target) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй indexOf");
+        if (a == null) {
+            throw new IllegalArgumentException();
+        }
+        int idx = -1;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == target) {
+                idx = i;
+                break;
+            }
+        }
+        return idx;
+
     }
 }

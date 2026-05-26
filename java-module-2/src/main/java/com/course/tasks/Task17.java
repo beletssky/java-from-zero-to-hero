@@ -9,6 +9,18 @@ public class Task17 {
      */
     public static int[] concat(int[] a, int[] b) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй concat");
+        if (a == null || b == null) {
+            throw new IllegalArgumentException();
+        }
+        int combinedLength = a.length + b.length;
+        int[] combinedArray = new int[combinedLength];
+        System.arraycopy(a, 0, combinedArray, 0, a.length);
+        int count = 0;
+        for (int i = a.length; i < combinedLength; i++) {
+            combinedArray[i] = b[count];
+            count++;
+        }
+
+        return combinedArray;
     }
 }

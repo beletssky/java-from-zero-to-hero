@@ -9,6 +9,14 @@ public class Task18 {
      */
     public static int countChar(String s, char c) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй countChar");
+        if (s == null) {
+            throw new IllegalArgumentException();
+        }
+        char[] dividedS = s.toCharArray();
+        int count = 0;
+        for (int x : dividedS) {
+            if (x == c) count++;
+        }
+        return count;
     }
 }

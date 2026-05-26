@@ -10,6 +10,27 @@ public class Task16 {
      */
     public static int secondMax(int[] a) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй secondMax");
+        if (a == null || a.length < 2) {
+            throw new IllegalArgumentException();
+        }
+        Integer max = null;
+        Integer secondMax = null;
+        for (int x : a) {
+            if (max == null) {
+                max = x;
+            } else if (x > max) {
+                secondMax = max;
+                max = x;
+
+            } else if (x < max) {
+                if (secondMax == null || x > secondMax) {
+                    secondMax = x;
+                }
+            }
+        }
+        if (secondMax == null) {
+            throw new IllegalArgumentException();
+        }
+        return secondMax;
     }
 }

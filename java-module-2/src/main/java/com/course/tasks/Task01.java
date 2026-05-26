@@ -8,6 +8,6 @@ public class Task01 {
      */
     public static int square(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй square");
+        return n * n;
     }
 }

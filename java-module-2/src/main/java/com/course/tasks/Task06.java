@@ -10,6 +10,15 @@ public class Task06 {
      */
     public static int sumArray(int[] a) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sumArray");
+        if (a == null) {
+            throw new IllegalArgumentException();
+        } else if (a.length == 0) {
+            return 0;
+        }
+        int sum = 0;
+        for (int x : a) {
+            sum += x;
+        }
+        return sum;
     }
 }

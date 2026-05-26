@@ -9,6 +9,6 @@ public class Task03 {
      */
     public static double celsiusToFahrenheit(double c) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй celsiusToFahrenheit");
+        return c * 9 / 5 + 32;
     }
 }

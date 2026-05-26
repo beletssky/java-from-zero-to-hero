@@ -9,6 +9,11 @@ public class Task13 {
      */
     public static int[] reverse(int[] a) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй reverse");
+        int[] b = new int[a.length];
+        for (int bIndex = 0; bIndex < a.length; bIndex++) {
+            int aIndex = a.length - bIndex - 1;
+            b[bIndex] = a[aIndex];
+        }
+        return b;
     }
 }

@@ -10,6 +10,23 @@ public class Task31 {
      */
     public static int[] sortAsc(int[] a) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sortAsc");
+        int[] result = a.clone();
+        boolean swapped;
+        for (int i = 0; i < result.length - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < result.length - 1 - i; j++) {
+                if (result[j] > result[j + 1]) {
+                    int temp = result[j];
+                    result[j] = result[j + 1];
+                    result[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+        }
+        return result;
     }
+
 }

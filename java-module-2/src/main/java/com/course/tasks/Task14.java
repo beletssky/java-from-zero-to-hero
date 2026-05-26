@@ -8,6 +8,10 @@ public class Task14 {
      */
     public static int[] doubleEach(int[] a) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй doubleEach");
+        int[] b = new int[a.length];
+        for (int i = 0; i < a.length; i++) {
+            b[i] = a[i] * 2;
+        }
+        return b;
     }
 }

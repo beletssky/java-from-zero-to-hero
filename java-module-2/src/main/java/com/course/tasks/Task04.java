@@ -9,11 +9,13 @@ public class Task04 {
      */
     public static int max3(int a, int b, int c) {
         // TODO: реализуй (через max2)
-        throw new UnsupportedOperationException("TODO: реализуй max3");
+        //return c > max2(a, b) ? c : max2(a, b);
+        return Math.max(c, max2(a, b));
     }
 
     private static int max2(int a, int b) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй max2");
+        //return a > b ? a : b;
+        return Math.max(a, b);
     }
 }

@@ -10,6 +10,13 @@ public class Task09 {
      */
     public static double avgArray(int[] a) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй avgArray");
+        if (a == null || a.length == 0) {
+            throw new IllegalArgumentException();
+        }
+        double sum = 0;
+        for (int x : a) {
+            sum += x;
+        }
+        return sum / a.length;
     }
 }

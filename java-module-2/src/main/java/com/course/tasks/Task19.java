@@ -9,6 +9,10 @@ public class Task19 {
      */
     public static String reverseString(String s) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй reverseString");
+        if (s == null) {
+            throw new IllegalArgumentException();
+        }
+        StringBuilder reversedString = new StringBuilder(s);
+        return reversedString.reverse().toString();
     }
 }

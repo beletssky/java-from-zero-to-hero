@@ -9,6 +9,13 @@ public class Task07 {
      */
     public static int maxArray(int[] a) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй maxArray");
+        if (a == null || a.length == 0) {
+            throw new IllegalArgumentException();
+        }
+        int max = a[0];
+        for (int x : a) {
+            if (x > max) max = x;
+        }
+        return max;
     }
 }

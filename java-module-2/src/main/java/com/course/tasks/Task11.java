@@ -9,6 +9,14 @@ public class Task11 {
      */
     public static boolean contains(int[] a, int target) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй contains");
+        if (a == null) {
+            throw new IllegalArgumentException();
+        }
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == target) {
+                return true;
+            }
+        }
+        return false;
     }
 }

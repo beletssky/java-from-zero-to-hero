@@ -8,7 +8,7 @@ public class Task05 {
      */
     public static int sum(int a, int b) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sum(int,int)");
+        return a + b;
     }
 
     /**
@@ -17,6 +17,6 @@ public class Task05 {
      */
     public static int sum(int a, int b, int c) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sum(int,int,int)");
+        return a + b + c;
     }
 }

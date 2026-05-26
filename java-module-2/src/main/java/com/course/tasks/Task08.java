@@ -9,6 +9,14 @@ public class Task08 {
      */
     public static int minArray(int[] a) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй minArray");
+        if (a == null || a.length == 0) {
+            throw new IllegalArgumentException();
+        }
+        int min = a[0];
+        for (int x : a) {
+            if (x < min) min = x;
+        }
+        return min;
     }
+
 }

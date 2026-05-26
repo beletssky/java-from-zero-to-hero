@@ -9,6 +9,10 @@ public class Task25 {
      */
     public static String repeat(String s, int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй repeat");
+        if (n < 0) {
+            throw new IllegalArgumentException();
+        }
+        StringBuilder repeatedString = new StringBuilder();
+        return repeatedString.repeat(String.valueOf(s), n).toString();
     }
 }

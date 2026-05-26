@@ -1,11 +1,13 @@
 package com.course.tasks;
 
+import java.util.Arrays;
+
 public class Task32 {
 
     /**
      * Возвращает новый массив без дубликатов. Порядок сохраняется (по первому вхождению).
      * Примеры: removeDuplicates({1,2,1,3,2,4}) == {1,2,3,4};
-     *          removeDuplicates({}) == {}.
+     * removeDuplicates({}) == {}.
      */
     public static int[] removeDuplicates(int[] a) {
 

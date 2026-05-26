@@ -10,7 +10,21 @@ public class Task29 {
      *          findMax({}) == null.
      */
     public static Integer findMax(Integer[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй findMax");
+
+        if (!isInputValid(a)) {
+            return null;
+        }
+
+        int max = Integer.MIN_VALUE;
+
+        for (int i = 0; i < a.length; i++) {
+
+            if (a[i] != null && max < a[i]) {
+                max = a[i];
+            }
+
+        }
+
+        return max;
     }
 }

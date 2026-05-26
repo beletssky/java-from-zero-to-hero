@@ -1,5 +1,7 @@
 package com.course.tasks;
 
+import java.util.Objects;
+
 public class Task33 {
 
     /**
@@ -10,7 +12,32 @@ public class Task33 {
      * Пример: mostFrequentWord("the cat and the dog") == "the".
      */
     public static String mostFrequentWord(String s) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй mostFrequentWord");
+        if (s == null || s.isBlank()) {
+            throw new IllegalArgumentException();
+        }
+
+        String[] words = s.toLowerCase().split(" ");
+
+        int index = 0;
+        int repeatsMax = 0;
+
+        for (int i = 0; i < words.length; i++) {
+            int quantity = 0;
+
+
+            for (int j = 0; j < words.length; j++) {
+                if (words[i].equals(words[j])) {
+                    quantity++;
+                }
+            }
+
+            if (repeatsMax < quantity) {
+                repeatsMax = quantity;
+                index = i;
+            }
+
+        }
+
+        return words[index];
     }
 }

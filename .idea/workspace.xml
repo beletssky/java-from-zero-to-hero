@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3b6b81e-100f-48ee-bf54-dc14a24cc421" name="Changes" comment="Nikitosik Tasks &#10;1-12, &#10;15 - 19, &#10;21 - 24, &#10;27 - 30">
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task12.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task13.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task14.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task15.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task15.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task16.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task17.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task17.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task18.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task19.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task19.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task20.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task20.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task21.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task21.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task22.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task22.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task23.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-module-2/src/main/java/com/course/tasks/Task23.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;Lordeyser&quot;,
+      &quot;author&quot;: &quot;Lordeyser&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lordeyser&quot;,
+    &quot;author&quot;: &quot;Lordeyser&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/beletssky/java-from-zero-to-hero.git&quot;,
+    &quot;accountId&quot;: &quot;abcb675d-c77d-42d7-9cb9-bc77843da148&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DxAwr2o3sZXvTmIFMeyXE8VLGf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.java-module-1 [clean,test...].executor": "Run",
+    "Maven.java-module-1 [clean].executor": "Run",
+    "Maven.java-module-1 [test].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "Nikita-dz2",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean test -Dtest=Task01Test" />
+      <command value="mvn clean test -Dtest=Task22Test" />
+      <command value="mvn clean test -Dtest=Task23Test" />
+      <command value="mvn clean test -Dtest=Task24Test" />
+      <command value="mvn clean test -Dtest=Task28Test" />
+      <command value="mvn clean test -Dtest=Task29Test" />
+      <command value="mvn clean test -Dtest=Task30Test" />
+      <command value="mvn clean test -Dtest=Task3Test" />
+      <command value="mvn clean test -Dtest=Task03Test" />
+      <command value="mvn clean test -Dtest=Task10Test" />
+      <command value="mvn clean test -Dtest=Task11Test" />
+      <command value="mvn clean test -Dtest=Task15Test" />
+      <command value="mvn clean test -Dtest=Task17Test" />
+      <command value="mvn clean test -Dtest=Task18Test" />
+      <command value="mvn clean test -Dtest=Task27Test" />
+      <command value="mvn test" />
+    </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3b6b81e-100f-48ee-bf54-dc14a24cc421" name="Changes" comment="" />
+      <created>1779213589049</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1779213589049</updated>
+    </task>
+    <task id="LOCAL-00001" summary="никита first commit">
+      <option name="closed" value="true" />
+      <created>1779213910008</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779213910009</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Nikitosik wtoroy raz kommit">
+      <option name="closed" value="true" />
+      <created>1779302287002</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779302287002</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Nikitosik tretiy raz kommit">
+      <option name="closed" value="true" />
+      <created>1779305257383</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779305257384</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Nikitosik tretiy raz kommit">
+      <option name="closed" value="true" />
+      <created>1779305322577</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779305322577</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Nikitosik och mnogog kommentit">
+      <option name="closed" value="true" />
+      <created>1779308632397</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779308632397</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Nikitosik och mnogog kommentit">
+      <option name="closed" value="true" />
+      <created>1779445497706</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779445497706</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Nikitosik och mnogog kommentit">
+      <option name="closed" value="true" />
+      <created>1779446249905</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779446249905</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Nikitosik Task 16">
+      <option name="closed" value="true" />
+      <created>1779464045893</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1779464045893</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Nikitosik Task 16">
+      <option name="closed" value="true" />
+      <created>1779464055611</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1779464055611</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Nikitosik Tasks &#10;1-12, &#10;15 - 19, &#10;21 - 24, &#10;27 - 30">
+      <option name="closed" value="true" />
+      <created>1779643599019</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1779643599020</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Nikitosik Tasks &#10;1-11">
+      <option name="closed" value="true" />
+      <created>1779833668034</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1779833668034</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="никита first commit" />
+    <MESSAGE value="Nikitosik wtoroy raz kommit" />
+    <MESSAGE value="Nikitosik tretiy raz kommit" />
+    <MESSAGE value="Nikitosik och mnogog kommentit" />
+    <MESSAGE value="Nikitosik Task 16" />
+    <MESSAGE value="Nikitosik Tasks &#10;1-12, &#10;15 - 19, &#10;21 - 24, &#10;27 - 30" />
+    <MESSAGE value="Nikitosik Tasks &#10;1-11" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nikitosik Tasks &#10;1-11" />
+  </component>
+</project>

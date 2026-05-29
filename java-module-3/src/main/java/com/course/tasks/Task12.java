@@ -31,44 +31,48 @@ public class Task12 {
 
     public Task12() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.value = 0;
     }
 
     public int getValue() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return value;
     }
 
     public void increment() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        value++;
     }
 
     public void decrement() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (value == 0) {
+            throw new IllegalArgumentException();
+        }
+        value--;
     }
 
     public void reset() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        value = 0;
     }
 
     @Override
     public boolean equals(Object o) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!(o instanceof Task12 task12)) return false;
+        return this.value == task12.value;
     }
 
     @Override
     public int hashCode() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(value);
     }
 
     @Override
     public String toString() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Counter" + value;
     }
 }

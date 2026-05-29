@@ -34,44 +34,56 @@ public class Task11 {
 
     public Task11(String owner, long initialBalance) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.owner = owner;
+        this.balanceKopecks = initialBalance;
     }
 
     public String getOwner() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return owner;
     }
 
     public long getBalance() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return balanceKopecks;
     }
 
-    public void deposit(long amount) {
+    public long deposit(long amount) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (amount <= 0) {
+            throw new IllegalArgumentException();
+        }
+        balanceKopecks += amount;
+        return balanceKopecks;
     }
 
-    public void withdraw(long amount) {
+    public long withdraw(long amount) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (amount <= 0 || balanceKopecks < amount) {
+            throw new IllegalArgumentException();
+        }
+        balanceKopecks -= amount;
+        return balanceKopecks;
     }
 
     @Override
     public boolean equals(Object o) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!(o instanceof Task11 task11)) return false;
+
+        return Objects.equals(this.owner, task11.owner)
+                && this.balanceKopecks == task11.balanceKopecks;
     }
 
     @Override
     public int hashCode() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(owner, balanceKopecks);
     }
 
     @Override
     public String toString() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "BankAccount " + owner + " " + balanceKopecks;
     }
 }

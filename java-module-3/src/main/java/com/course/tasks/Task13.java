@@ -31,44 +31,55 @@ public class Task13 {
 
     public Task13(double celsius) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validateTemperature(celsius);
+        this.celsius = celsius;
+    }
+
+    private void validateTemperature(double d) {
+        double lowestPoint = -273.15;
+        double highestPoint = 1000;
+        if (d < lowestPoint || d > highestPoint) {
+            throw new IllegalArgumentException();
+        }
     }
 
     public double getCelsius() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return celsius;
     }
 
     public void setCelsius(double celsius) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validateTemperature(celsius);
+        this.celsius = celsius;
     }
 
     public double getFahrenheit() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return this.celsius * 9 / 5 + 32;
     }
 
     public double getKelvin() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return this.celsius + 273.15;
     }
 
     @Override
     public boolean equals(Object o) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!(o instanceof Task13 task13)) return false;
+        return this.celsius == task13.celsius;
     }
 
     @Override
     public int hashCode() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(celsius);
     }
 
     @Override
     public String toString() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "TemperatureSensor " + celsius;
     }
 }

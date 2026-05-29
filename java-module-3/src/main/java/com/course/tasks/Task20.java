@@ -36,49 +36,64 @@ public class Task20 {
 
     public Task20(int correct, int total) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (correct < 0 || correct > total) {
+            throw new IllegalArgumentException();
+        }
+        this.correct = correct;
+        this.total = total;
     }
 
     public int getCorrect() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return correct;
     }
 
     public int getTotal() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return total;
     }
 
     public void addCorrect() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        correct++;
+        total++;
+        if (correct > total) {
+            throw new IllegalArgumentException();
+        }
     }
 
     public void addWrong(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (n < 0) {
+            throw new IllegalArgumentException();
+        }
+        total += n;
     }
 
     public double getPercentage() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (total == 0) {
+            return 0.0;
+        }
+        return correct * 100.0 / total;
     }
 
     @Override
     public boolean equals(Object o) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!(o instanceof Task20 task20)) return false;
+        return this.total == task20.total && this.correct == task20.correct;
     }
 
     @Override
     public int hashCode() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(total, correct);
     }
 
     @Override
     public String toString() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Score" + total + correct;
     }
 }

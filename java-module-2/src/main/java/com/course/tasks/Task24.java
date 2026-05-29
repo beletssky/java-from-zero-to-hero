@@ -1,7 +1,8 @@
 package com.course.tasks;
 
-public class Task24 {
+import java.util.Arrays;
 
+public class Task24 {
     /**
      * Проверяет, являются ли две строки анаграммами (одинаковый набор букв).
      * Регистр не важен. Пробелы игнорировать.
@@ -10,7 +11,18 @@ public class Task24 {
      *          isAnagram("hello", "world") == false.
      */
     public static boolean isAnagram(String a, String b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isAnagram");
+        if (a == null || b == null) {
+            throw new IllegalArgumentException("");
+        }
+
+        String cleanA = a.toLowerCase().replace(" ", "");
+        String cleanB = b.toLowerCase().replace(" ", "");
+
+        char[] arrA = cleanA.toCharArray();
+        char[] arrB = cleanB.toCharArray();
+        Arrays.sort(arrA);
+        Arrays.sort(arrB);
+
+        return Arrays.equals(arrA, arrB);
     }
 }

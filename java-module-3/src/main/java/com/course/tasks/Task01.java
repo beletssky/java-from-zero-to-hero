@@ -21,35 +21,45 @@ public class Task01 {
     private final int y;
 
     public Task01(int x, int y) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.x = x;
+        this.y = y;
     }
 
     public int getX() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return x;
     }
 
     public int getY() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return y;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (o == null){
+            return false;
+        }
+
+        if(!(o instanceof Task01)) {
+            return false;
+        }
+
+        if(this == o) {
+            return true;
+        }
+
+        boolean isFirstParamSame = x == ((Task01) o).getX();
+        boolean isSecondParamSame = y == ((Task01) o).getY();
+
+        return isFirstParamSame && isSecondParamSame;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return this.x * 25 + this.y * 13;
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Point{x=" + x + ", y=" + y + "}";
     }
 }

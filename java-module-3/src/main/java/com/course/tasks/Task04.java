@@ -19,31 +19,44 @@ public class Task04 {
 
     private final double width;
     private final double height;
+    private final double area;
 
     public Task04(double width, double height) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (width < 0.0 || height < 0.0){
+            throw new IllegalArgumentException();
+        }
+
+        this.width = width;
+        this.height = height;
+        this.area = width * height;
     }
 
     public double getWidth() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return width;
     }
 
     public double getHeight() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return height;
     }
 
     public double area() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return area;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (o == null){
+            return false;
+        }
+
+        if(!(o instanceof Task04)) {
+            return false;
+        }
+
+        boolean isFirstParamSame = height == ((Task04) o).getHeight();
+        boolean isSecondParamSame = width == ((Task04) o).getWidth();
+
+        return isFirstParamSame && isSecondParamSame;
     }
 
     @Override
@@ -54,7 +67,6 @@ public class Task04 {
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Rectangle" + height + width + area;
     }
 }

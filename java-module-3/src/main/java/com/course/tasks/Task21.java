@@ -12,7 +12,7 @@ import java.util.Objects;
  *   <li>toString: префікс "Coordinates" разом зі значеннями полів.</li>
  *   <li>Приклад: {@code new Task21(50.45, 30.52)} -> "Coordinates{latitude=50.45, longitude=30.52}".</li>
  * </ul>
- *
+ * <p>
  * RU: Класс моделирует географические координаты (Coordinates).
  * <ul>
  *   <li>Поля: {@code latitude} (широта), {@code longitude} (долгота) — оба {@code double}, неизменяемые (final).</li>
@@ -32,34 +32,47 @@ public class Task21 {
 
     public Task21(double latitude, double longitude) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validateCoordinates(latitude, longitude);
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+
+    private void validateCoordinates(double latitude, double longitude) {
+        if (latitude < -90 || latitude > 90) {
+            throw new IllegalArgumentException();
+        } else if (longitude < -180 || longitude > 180) {
+            throw new IllegalArgumentException();
+        }
     }
 
     public double getLatitude() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return latitude;
     }
 
     public double getLongitude() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return longitude;
     }
 
     @Override
     public boolean equals(Object o) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!(o instanceof Task21 task21)) return false;
+        return Math.abs(this.latitude - task21.latitude) < EPSILON
+                && Math.abs(this.longitude - task21.longitude) < EPSILON;
     }
 
     @Override
     public int hashCode() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(latitude, longitude);
     }
 
     @Override
     public String toString() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Coordinates{latitude=" + latitude +
+                ", longtitude=" + longitude + "}";
     }
 }

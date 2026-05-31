@@ -12,7 +12,7 @@ import java.util.Objects;
  *   <li>toString: повертає "major.minor.patch", напр. "1.2.3".</li>
  *   <li>Приклад: {@code new Task24(1, 2, 3).toString()} -> "1.2.3".</li>
  * </ul>
- *
+ * <p>
  * RU: Класс моделирует семантическую версию (Version).
  * <ul>
  *   <li>Поля: {@code major}, {@code minor}, {@code patch} — все {@code int}, неизменяемые (final), все >= 0 (иначе {@link IllegalArgumentException}).</li>
@@ -31,44 +31,64 @@ public class Task24 {
 
     public Task24(int major, int minor, int patch) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validateNumber(major);
+        validateNumber(minor);
+        validateNumber(patch);
+        this.major = major;
+        this.minor = minor;
+        this.patch = patch;
+    }
+
+    private void validateNumber(int number) {
+        if (number < 0) {
+            throw new IllegalArgumentException();
+        }
     }
 
     public int getMajor() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return major;
     }
 
     public int getMinor() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return minor;
     }
 
     public int getPatch() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return patch;
     }
 
     public boolean isNewerThan(Task24 other) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this.major != other.major) {
+            return this.major > other.major;
+        }
+        if (this.minor != other.minor) {
+            return this.minor > other.minor;
+        }
+        return this.patch > other.patch;
     }
 
     @Override
     public boolean equals(Object o) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!(o instanceof Task24 task24)) return false;
+        return this.major == task24.major
+                && this.minor == task24.minor
+                && this.patch == task24.patch;
     }
 
     @Override
     public int hashCode() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(major, minor, patch);
     }
 
     @Override
     public String toString() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return major + "." + minor + "." + patch;
     }
 }

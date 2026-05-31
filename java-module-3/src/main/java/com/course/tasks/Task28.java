@@ -13,7 +13,7 @@ import java.util.Objects;
  *   <li>toString: префікс "Vector2D" зі значеннями полів.</li>
  *   <li>Приклад: {@code new Task28(3, 4).length()} -> 5.0.</li>
  * </ul>
- *
+ * <p>
  * RU: Класс моделирует двумерный вектор (Vector2D).
  * <ul>
  *   <li>Поля: {@code x}, {@code y} — оба {@code double}, неизменяемые (final).</li>
@@ -32,44 +32,46 @@ public class Task28 {
 
     public Task28(double x, double y) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.x = x;
+        this.y = y;
     }
 
     public double getX() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return x;
     }
 
     public double getY() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return y;
     }
 
     public Task28 add(Task28 other) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return new Task28((x + other.x), (y + other.y));
     }
 
     public double length() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Math.sqrt(x * x + y * y);
     }
 
     @Override
     public boolean equals(Object o) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!(o instanceof Task28 task28)) return false;
+        return this.x == task28.x && this.y == task28.y;
     }
 
     @Override
     public int hashCode() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(x, y);
     }
 
     @Override
     public String toString() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Vector2D" + x + y;
     }
 }

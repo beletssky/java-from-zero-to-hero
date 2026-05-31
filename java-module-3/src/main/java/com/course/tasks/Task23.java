@@ -12,7 +12,7 @@ import java.util.Objects;
  *   <li>toString: префікс "ISBN" зі значенням.</li>
  *   <li>Приклад: {@code new Task23("9781234567897")} -> "ISBN{value='9781234567897'}".</li>
  * </ul>
- *
+ * <p>
  * RU: Класс моделирует международный книжный номер ISBN.
  * <ul>
  *   <li>Поле: {@code value} — {@code String}, неизменяемое (final).</li>
@@ -29,29 +29,45 @@ public class Task23 {
 
     public Task23(String value) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validate(value);
+        this.value = value;
+    }
+
+    private void validate(String value) {
+        if (value == null) {
+            throw new IllegalArgumentException();
+        } else if (!(value.length() == 13)) {
+            throw new IllegalArgumentException();
+        }
+        for (int i = 0; i < value.length(); i++) {
+            char currentChar = value.charAt(i);
+            if (!Character.isDigit(currentChar)) {
+                throw new IllegalArgumentException();
+            }
+        }
     }
 
     public String getValue() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return value;
     }
 
     @Override
     public boolean equals(Object o) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!(o instanceof Task23 task23)) return false;
+        return this.value.equals(task23.value);
     }
 
     @Override
     public int hashCode() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(value);
     }
 
     @Override
     public String toString() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "ISBN{value=" + value + "}";
     }
 }

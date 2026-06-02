@@ -8,6 +8,26 @@ public class Task34 {
      */
     public static int countPrimesUpTo(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй countPrimesUpTo");
+        if (n < 2) {
+            return 0;
+        }
+        boolean[] isComposite = new boolean[n + 1];
+
+        for (int i = 2; i * i <= n; i++) {
+            if (!isComposite[i]) {
+                for (int j = i * i; j <= n; j += i) {
+                    isComposite[j] = true;
+                }
+            }
+        }
+
+        int count = 0;
+        for (int i = 2; i <= n; i++) {
+            if (!isComposite[i]) {
+                count++;
+            }
+        }
+
+        return count;
     }
 }

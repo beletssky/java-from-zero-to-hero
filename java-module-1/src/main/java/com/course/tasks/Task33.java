@@ -8,6 +8,26 @@ public class Task33 {
      */
     public static int[] sortThreeAsc(int a, int b, int c) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sortThreeAsc");
+        int temp;
+
+        if (a > b) {
+            temp = a;
+            a = b;
+            b = temp;
+        }
+
+        if (b > c) {
+            temp = b;
+            b = c;
+            c = temp;
+        }
+
+        if (a > b) {
+            temp = a;
+            a = b;
+            b = temp;
+        }
+
+        return new int[]{a, b, c};
     }
 }

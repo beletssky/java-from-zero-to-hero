@@ -3,9 +3,8 @@ package com.course.tasks;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Task27Test {
 
@@ -26,6 +25,6 @@ class Task27Test {
 
     @Test
     void gcd_largeNumbers() {
-        assertEquals(7, Task27.gcd(1071, 462));
+        assertEquals(21, Task27.gcd(1071, 462));
     }
 }

@@ -8,6 +8,17 @@ public class Task30 {
      */
     public static int minDigit(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй minDigit");
+        if (n == 0) {
+            return 0;
+        }
+        n = Math.abs(n);
+        int min = 9;
+        while (n > 0) {
+            if (min > n % 10) {
+                min = n % 10;
+            }
+            n /= 10;
+        }
+        return min;
     }
 }

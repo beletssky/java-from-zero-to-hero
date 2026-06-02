@@ -9,6 +9,19 @@ public class Task35 {
      */
     public static String intToRoman(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй intToRoman");
+        if (n < 1 || n > 50) {
+            throw new IllegalArgumentException();
+        }
+        int[] values = {50, 40, 10, 9, 5, 4, 1};
+        String[] romanNumerals = {"L", "XL", "X", "IX", "V", "IV", "I"};
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < values.length; i++) {
+            while (n >= values[i]) {
+                sb.append(romanNumerals[i]);
+                n -= values[i];
+            }
+        }
+
+        return sb.toString();
     }
 }

@@ -9,6 +9,13 @@ public class Task29 {
      */
     public static String multiplicationTable(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй multiplicationTable");
+        StringBuilder table = new StringBuilder();
+        for (int k = 1; k <= 10; k++) {
+            table.append(n).append(" x ").append(k).append(" = ").append(n * k);
+            if (k < 10) {
+                table.append("\n");
+            }
+        }
+        return table.toString();
     }
 }

@@ -10,10 +10,27 @@ public class Task36 {
      * середнє арифметичне, округлене до найближчого цілого (Math.round).
      * Для {@code null} або порожнього масиву — IllegalArgumentException.
      * Примеры: minMaxAvg({3,1,5,2,4}) == {1,5,3};
-     *          minMaxAvg({10}) == {10,10,10}.
+     * minMaxAvg({10}) == {10,10,10}.
      */
     public static int[] minMaxAvg(int[] a) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй minMaxAvg");
+        if (a == null || a.length == 0) {
+            throw new IllegalArgumentException();
+        }
+        int min = a[0];
+        int max = a[0];
+        long sum = 0;
+        int avg;
+        for (int j : a) {
+            if (min > j) {
+                min = j;
+            }
+            if (max < j) {
+                max = j;
+            }
+            sum += j;
+        }
+        avg = (int) Math.round((double) sum / a.length);
+        return new int[]{min, max, avg};
     }
 }

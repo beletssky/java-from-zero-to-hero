@@ -10,10 +10,28 @@ public class Task45 {
      * Між крапкою та літерою може бути один або декілька пробілів.
      * Інші символи не змінюються.
      * Примеры: capitalizeAfterDots("hello. how are you. fine.") ==
-     *          "Hello. How are you. Fine."; capitalizeAfterDots("") == "".
+     * "Hello. How are you. Fine."; capitalizeAfterDots("") == "".
      */
     public static String capitalizeAfterDots(String s) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй capitalizeAfterDots");
+        if (s.isEmpty()) {
+            return s;
+        }
+        StringBuilder sb = new StringBuilder(s);
+        boolean capitalizeNext = true;
+
+        for (int i = 0; i < sb.length(); i++) {
+            char currentChar = sb.charAt(i);
+            if (currentChar == '.') {
+                capitalizeNext = true;
+            } else if (currentChar == ' ') continue;
+            else if (capitalizeNext) {
+                char newChar = Character.toUpperCase(currentChar);
+                sb.setCharAt(i, newChar);
+                capitalizeNext = false;
+
+            }
+        }
+        return sb.toString();
     }
 }

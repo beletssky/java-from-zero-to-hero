@@ -7,8 +7,15 @@ public class Task13 {
      * Исходный массив не изменять.
      * Примеры: reverse({1,2,3}) == {3,2,1}; reverse({}) == {}; reverse({5}) == {5}.
      */
+
+
     public static int[] reverse(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй reverse");
+        int[] buffer = new int[a.length];
+
+        for (int i = 0; i < a.length; i++) {
+            buffer[i] = a[a.length - 1 - i];
+        }
+        return buffer;
     }
 }
+

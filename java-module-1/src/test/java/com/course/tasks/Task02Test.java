@@ -17,16 +17,16 @@ class Task02Test {
         "100, 200, 300"
     })
     void sumTwo_returnsCorrectSum(int a, int b, int expected) {
-        assertEquals(expected, Task02.sumTwo(a, b));
+        assertEquals(expected, Task02.sum(a, b));
     }
 
     @Test
     void sumTwo_handlesLargePositiveValues() {
-        assertEquals(2_000_000_000, Task02.sumTwo(1_000_000_000, 1_000_000_000));
+        assertEquals(2_000_000_000, Task02.sum(1_000_000_000, 1_000_000_000));
     }
 
     @Test
     void sumTwo_isCommutative() {
-        assertEquals(Task02.sumTwo(7, 11), Task02.sumTwo(11, 7));
+        assertEquals(Task02.sum(7, 11), Task02.sum(11, 7));
     }
 }

@@ -8,7 +8,15 @@ public class Task19 {
      * Примеры: reverseString("hello") == "olleh"; reverseString("") == "".
      */
     public static String reverseString(String s) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй reverseString");
+        if (s == null) {
+            throw new IllegalArgumentException("NOOO");
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int i = s.length() - 1; i >= 0; i--) {
+            char currentLetter = s.charAt(i);
+            sb.append(currentLetter);
+        }
+
+        return sb.toString();
     }
 }

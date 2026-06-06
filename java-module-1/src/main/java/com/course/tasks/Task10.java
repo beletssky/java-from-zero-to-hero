@@ -9,6 +9,6 @@ public class Task10 {
      */
     public static boolean isLeapYear(int year) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isLeapYear");
+        return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
     }
 }

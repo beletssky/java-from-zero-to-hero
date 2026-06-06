@@ -9,6 +9,13 @@ public class Task13 {
      */
     public static boolean isTriangle(int a, int b, int c) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isTriangle");
+        // Made myself
+        // return a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a;
+        // Ruslan shouted
+        boolean abValid = a + b > c;
+        boolean acValid = a + c > b;
+        boolean bcValid = b + c > a;
+        boolean isPositiveSides = a > 0 && b > 0 && c > 0;
+        return isPositiveSides && abValid && acValid && bcValid;
     }
 }

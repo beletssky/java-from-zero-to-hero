@@ -8,6 +8,6 @@ public class Task06 {
      */
     public static boolean isEven(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isEven");
+        return n % 2 == 0;
     }
 }

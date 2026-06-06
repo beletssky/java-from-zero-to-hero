@@ -9,6 +9,11 @@ public class Task18 {
      */
     public static String trafficLightAction(String color) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй trafficLightAction");
+        return switch (color.toLowerCase()) {
+            case "red" -> "stop";
+            case "yellow" -> "slow";
+            case "green" -> "go";
+            default -> "wait";
+        };
     }
 }

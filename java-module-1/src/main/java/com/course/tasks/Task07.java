@@ -8,6 +8,7 @@ public class Task07 {
      */
     public static int max(int a, int b) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй max");
+        // return a > b ? a : b;
+        return Math.max(a,b);
     }
 }

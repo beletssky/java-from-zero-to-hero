@@ -9,6 +9,16 @@ public class Task26 {
      */
     public static long power(int base, int exp) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй power");
+        if (exp < 0) {
+            throw new IllegalArgumentException();
+        }
+        if (exp == 0) {
+            return 1;
+        }
+        long number = base;
+        for (int i = 0; i < exp - 1; i++) {
+            number *= base;
+        }
+        return number;
     }
 }

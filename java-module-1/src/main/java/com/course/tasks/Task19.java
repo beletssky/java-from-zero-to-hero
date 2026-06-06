@@ -8,6 +8,15 @@ public class Task19 {
      */
     public static long sumFromOneTo(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sumFromOneTo");
+        if (n <= 0) {
+            return 0;
+        }
+
+        long sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+
+        return sum;
     }
 }

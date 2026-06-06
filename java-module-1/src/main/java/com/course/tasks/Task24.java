@@ -8,6 +8,13 @@ public class Task24 {
      */
     public static int reverseNumber(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй reverseNumber");
+        StringBuilder numberBuilder = new StringBuilder(String.valueOf(n));
+        boolean isNegative = n < 0;
+        if (isNegative) {
+            numberBuilder.delete(0, 1);
+        }
+        String reversedString = numberBuilder.reverse().toString();
+        int reversedInt = Integer.parseInt(reversedString);
+        return isNegative ? reversedInt * -1 : reversedInt;
     }
 }

@@ -8,6 +8,7 @@ public class Task22 {
      */
     public static int countDigits(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй countDigits");
+        String number = String.valueOf(n);
+        return n < 0 ? number.length() - 1 : number.length();
     }
 }

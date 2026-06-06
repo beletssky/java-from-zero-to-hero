@@ -9,6 +9,11 @@ public class Task15 {
      */
     public static int daysInMonth(int month, boolean leap) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй daysInMonth");
+        return switch (month) {
+            case 1, 3, 5, 7, 8, 10, 12 -> 31;
+            case 4, 6, 9, 11 -> 30;
+            case 2 -> leap ? 29 : 28;
+            default -> -1;
+        };
     }
 }

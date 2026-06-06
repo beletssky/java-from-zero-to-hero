@@ -8,6 +8,6 @@ public class Task12 {
      */
     public static boolean canVote(int age, boolean isCitizen) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй canVote");
+        return age >= 18 && isCitizen;
     }
 }

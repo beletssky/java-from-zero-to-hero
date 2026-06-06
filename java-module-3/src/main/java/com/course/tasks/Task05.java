@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 import java.util.Objects;
-
 /**
  * UA: Моделює коло.
  *     Поле: radius (double, незмінне). Валідація: radius > 0, інакше IllegalArgumentException.
@@ -20,35 +19,39 @@ public class Task05 {
     private final double radius;
 
     public Task05(double radius) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (radius <= 0) {
+            throw new IllegalArgumentException("");
+        }
+        this.radius = radius;
     }
 
     public double getRadius() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return radius;
     }
 
     public double area() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Math.PI * radius * radius;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task05 that = (Task05) o;
+        return this.radius == that.radius;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(radius);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Circle{radius=" + radius + "}";
     }
 }

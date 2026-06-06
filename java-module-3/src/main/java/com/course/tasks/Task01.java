@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 import java.util.Objects;
-
 /**
  * UA: Моделює точку на площині з цілочисельними координатами.
  *     Поля: x (int, незмінне), y (int, незмінне). Сеттерів немає, валідації немає.
@@ -21,35 +20,40 @@ public class Task01 {
     private final int y;
 
     public Task01(int x, int y) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.x = x;
+        this.y = y;
     }
 
     public int getX() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return x;
     }
 
     public int getY() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return y;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        if (this.getClass() != o.getClass()) {
+            return false;
+        }
+        Task01 that = (Task01) o;
+        return this.x == that.x && this.y == that.y;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(x, y);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Point{x=" + x + ", y=" + y + "}";
     }
 }

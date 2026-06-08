@@ -8,7 +8,15 @@ public class Task11 {
      * Примеры: contains({1,2,3}, 2) == true; contains({}, 5) == false.
      */
     public static boolean contains(int[] a, int target) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй contains");
+        if (a == null){
+            throw new IllegalArgumentException();
+        }
+        int idx = 0;
+        for (int i = 0; i < a.length; i++)
+            if (a[i] == target) {
+                idx = i;
+                return true;
+            }
+        return false;
     }
 }

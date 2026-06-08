@@ -1,5 +1,7 @@
 package com.course.tasks;
 
+import java.util.Arrays;
+
 public class Task18 {
 
     /**
@@ -8,7 +10,20 @@ public class Task18 {
      * Примеры: countChar("hello", 'l') == 2; countChar("", 'a') == 0.
      */
     public static int countChar(String s, char c) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй countChar");
+
+        if (s == null){
+            throw new IllegalArgumentException();
+        }
+
+        char [] dobryDzien = s.toCharArray();
+        int j = 0;
+
+        for (int i = 0; i < dobryDzien.length; i++){
+            if (dobryDzien[i] == c ){
+                j++;
+            };
+        }
+
+        return j;
     }
 }

@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 public class Task09 {
-
     /**
      * Возвращает среднее арифметическое элементов массива (как double).
      * Для пустого массива или {@code null} — IllegalArgumentException.
@@ -9,7 +8,13 @@ public class Task09 {
      * Примеры: avgArray({1,2,3,4}) == 2.5.
      */
     public static double avgArray(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй avgArray");
+        if (a == null || a.length == 0) {
+            throw new IllegalArgumentException("TODO: реализуй avgArray");
+        }
+        int sum = 0;
+        for (int i : a) {
+            sum += i;
+        }
+        return (double) sum / a.length;
     }
 }

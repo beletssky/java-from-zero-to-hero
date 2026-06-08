@@ -9,7 +9,14 @@ public class Task06 {
      * Примеры: sumArray({1,2,3}) == 6; sumArray({}) == 0.
      */
     public static int sumArray(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sumArray");
+        if (a == null) {
+            throw new IllegalArgumentException("NOOO");
+        }
+        int sum = 0;
+        for (int x : a) {
+        sum += x;
+        }
+
+        return sum;
     }
 }

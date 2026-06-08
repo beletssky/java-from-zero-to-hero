@@ -8,7 +8,15 @@ public class Task08 {
      * Примеры: minArray({3,1,4,1,5}) == 1.
      */
     public static int minArray(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй minArray");
+        if (a == null || a.length == 0) {
+            throw new IllegalArgumentException("NOOO");
+        }
+        int min = a[0];
+        for (int x : a) {
+            if (x < min) {
+                min = x;
+            }
+        }
+        return min;
     }
 }

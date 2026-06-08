@@ -8,7 +8,6 @@ public class Task03 {
      * Примеры: celsiusToFahrenheit(0) == 32.0; celsiusToFahrenheit(100) == 212.0.
      */
     public static double celsiusToFahrenheit(double c) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй celsiusToFahrenheit");
+        return c * 9/5 + 32. ;
     }
 }

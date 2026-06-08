@@ -1,5 +1,8 @@
 package com.course.tasks;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Task05 {
 
     /**
@@ -8,7 +11,13 @@ public class Task05 {
      * Пример: unboxAndAdd(7, 3) == 10.
      */
     public static int unboxAndAdd(Integer a, int b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй unboxAndAdd");
+        if (a == null) {
+            throw new NullPointerException("a is null");
+        }
+
+        return a + b;
     }
 }
+
+
+

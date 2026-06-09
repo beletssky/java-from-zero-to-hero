@@ -6,15 +6,15 @@ package com.course.task16;
  */
 public class Animal {
 
-  protected String name;
+    protected String name;
 
-  public Animal(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public Animal(String name) {
+        // TODO: реализуй
+        this.name = name;
+    }
 
-  public String getName() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public String getName() {
+        // TODO: реализуй
+        return name;
+    }
 }

@@ -11,21 +11,22 @@ public class Vehicle {
 
     public Vehicle(String brand, int year) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.brand = brand;
+        this.year = year;
     }
 
     public String getBrand() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return this.brand;
     }
 
     public int getYear() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return this.year;
     }
 
     public String describe() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return brand + " " + year;
     }
 }

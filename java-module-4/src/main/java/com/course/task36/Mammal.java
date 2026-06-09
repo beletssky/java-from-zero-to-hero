@@ -10,16 +10,16 @@ public abstract class Mammal extends Animal {
     public Mammal(String name, int legs) {
         super(name);
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.legs = legs;
     }
 
     public int getLegs() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return legs;
     }
 
     public String describe() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Mammal with " + legs + " legs, says " + sound();
     }
 }

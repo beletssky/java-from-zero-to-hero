@@ -8,6 +8,6 @@ public interface Greeter {
 
     default String greet() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Hello, " + name();
     }
 }

@@ -5,15 +5,14 @@ package com.course.task25;
  */
 public class Checkers extends Game {
 
-  public Checkers() {
-    super(2);
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public Checkers() {
+        super(2);
+        // TODO: реализуй
+    }
 
-  @Override
-  public String start() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public String start() {
+        // TODO: реализуй
+        return "Checkers started";
+    }
 }

@@ -6,8 +6,9 @@ package com.course.task13;
  */
 public class Logger {
 
-  public String log(String msg) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public String log(String msg) {
+        // TODO: реализуй
+        String prefix = "[INFO]";
+        return prefix + " " + msg;
+    }
 }

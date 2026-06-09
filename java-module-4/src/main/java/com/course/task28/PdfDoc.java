@@ -5,15 +5,14 @@ package com.course.task28;
  */
 public class PdfDoc extends Document {
 
-  public PdfDoc(String title) {
-    super(title);
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public PdfDoc(String title) {
+        super(title);
+        // TODO: реализуй
+    }
 
-  @Override
-  public String getExtension() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public String getExtension() {
+        // TODO: реализуй
+        return "pdf";
+    }
 }

@@ -11,31 +11,43 @@ public class Robot {
 
     public Robot(int x, int y, Direction facing) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.x = x;
+        this.y = y;
+        this.facing = facing;
     }
 
     public int getX() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return x;
     }
 
     public int getY() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return y;
     }
 
     public Direction getFacing() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return facing;
     }
 
     public void move(int steps) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        switch (facing) {
+            case EAST -> x += steps;
+            case SOUTH -> y -= steps;
+            case WEST -> x -= steps;
+            case NORTH -> y += steps;
+        }
     }
 
     public void turnRight() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        switch (facing) {
+            case NORTH -> facing = Direction.EAST;
+            case EAST -> facing = Direction.SOUTH;
+            case SOUTH -> facing = Direction.WEST;
+            case WEST -> facing = Direction.NORTH;
+        }
     }
 }

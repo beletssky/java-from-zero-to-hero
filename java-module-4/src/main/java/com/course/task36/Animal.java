@@ -9,12 +9,12 @@ public abstract class Animal {
 
     public Animal(String name) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.name = name;
     }
 
     public String getName() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return name;
     }
 
     public abstract String sound();

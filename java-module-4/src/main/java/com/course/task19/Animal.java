@@ -6,8 +6,8 @@ package com.course.task19;
  */
 public class Animal {
 
-  public String sound() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public String sound() {
+        // TODO: реализуй
+        return "звук";
+    }
 }

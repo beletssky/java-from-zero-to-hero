@@ -11,16 +11,17 @@ public class Employee {
 
     public Employee(String name, long salary) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.name = name;
+        this.salary = salary;
     }
 
     public String getName() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return this.name;
     }
 
     public long getSalary() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return this.salary;
     }
 }

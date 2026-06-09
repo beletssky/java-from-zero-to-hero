@@ -1,7 +1,8 @@
 package com.course.task31;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Task31Test {
 
@@ -25,7 +26,7 @@ public class Task31Test {
 
     @Test
     void documentAsSaveable() {
-        Saveable s = new Document("data");
+        Savable s = new Document("data");
         assertEquals("saving 'data'", s.save());
     }
 

@@ -11,31 +11,32 @@ public class Job {
 
     public Job(String title, Priority priority) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.title = title;
+        this.priority = priority;
     }
 
     public String getTitle() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return title;
     }
 
     public Priority getPriority() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return priority;
     }
 
     public boolean isDone() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return done;
     }
 
     public void setDone(boolean done) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.done = done;
     }
 
     public boolean isUrgent() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return priority.equals(Priority.HIGH) || priority.equals(Priority.CRITICAL);
     }
 }

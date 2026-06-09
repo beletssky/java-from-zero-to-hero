@@ -6,9 +6,9 @@ package com.course.task15;
  */
 public class C extends B {
 
-  @Override
-  public int level() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public int level() {
+        // TODO: реализуй
+        return super.level() + 100;
+    }
 }

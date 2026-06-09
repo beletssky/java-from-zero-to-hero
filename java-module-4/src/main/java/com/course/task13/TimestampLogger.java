@@ -6,9 +6,10 @@ package com.course.task13;
  */
 public class TimestampLogger extends Logger {
 
-  @Override
-  public String log(String msg) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public String log(String msg) {
+        // TODO: реализуй
+        String timeStamp = "1234ms";
+        return timeStamp + ": " + super.log(msg);
+    }
 }

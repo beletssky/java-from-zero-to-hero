@@ -22,35 +22,49 @@ public class Task07 {
     private final String address;
 
     public Task07(String address) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (address == null){
+            throw new IllegalArgumentException();
+        }
+        if (!(address.contains("@") && address.contains("."))){
+            throw new IllegalArgumentException();
+        }
+
+        this.address = address;
     }
 
     public String getAddress() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return address;
     }
 
     public String getDomain() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        String[] domain = address.split("@");
+        return domain[1];
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (o == null){
+            return false;
+        }
+        if (!(o instanceof Task07)){
+            return false;
+        }
+        if (this == o){
+            return true;
+        }
+        return address.equals(getAddress());
+
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        int a = Objects.hashCode(this.getAddress());
+        int b = Objects.hashCode(this.getDomain());
+        return a + b;
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Email " + address;
     }
 }

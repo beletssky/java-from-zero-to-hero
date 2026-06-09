@@ -20,35 +20,47 @@ public class Task05 {
     private final double radius;
 
     public Task05(double radius) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (radius <= 0.0){
+            throw new IllegalArgumentException();
+        }
+        this.radius = radius;
     }
 
     public double getRadius() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return radius;
     }
 
     public double area() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Math.PI * radius * radius;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (o == null){
+            return false;
+        }
+
+        if (this == o){
+            return true;
+        }
+
+        if (!(o instanceof Task05)) {
+            return false;
+        }
+
+        boolean radiusSame = radius == ((Task05) o).getRadius();
+
+        return radiusSame;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        int a = Objects.hashCode(this.radius);
+        return a;
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Circle " + radius;
     }
 }

@@ -22,40 +22,63 @@ public class Task02 {
     private final int b;
 
     public Task02(int r, int g, int b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (r < 0 || r > 255){
+            throw new IllegalArgumentException();
+        }
+        if (g < 0 || g > 255){
+            throw new IllegalArgumentException();
+        }
+        if (b < 0 || b > 255){
+            throw new IllegalArgumentException();
+        }
+
+
+        this.r = r;
+        this.g = g;
+        this.b = b;
     }
 
     public int getR() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return r;
     }
 
     public int getG() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return g;
     }
 
     public int getB() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return b;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (o == null){
+            return false;
+        }
+
+        if(!(o instanceof Task02)) {
+            return false;
+        }
+
+        if(this == o) {
+            return true;
+        }
+
+        boolean isFirstParamSame = r == ((Task02) o).getR();
+        boolean isSecondParamSame = g == ((Task02) o).getG();
+        boolean isThirdParamSame = b == ((Task02) o).getB();
+
+
+        return isFirstParamSame && isSecondParamSame && isThirdParamSame;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return r * 3 + g * 5 + b *7;
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Color{r=" + r + ", g=" + g + ", b=" + b;
     }
 }

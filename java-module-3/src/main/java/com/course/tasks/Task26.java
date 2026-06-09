@@ -11,7 +11,7 @@ import java.util.Objects;
  *   <li>equals/hashCode: за rank + suit.</li>
  *   <li>toString: формат "rank of suit" з ЧИСЛОВИМ rank, напр. "10 of hearts", "14 of spades".</li>
  * </ul>
- *
+ * <p>
  * RU: Класс моделирует игральную карту (Card).
  * <ul>
  *   <li>Поля: {@code rank} ({@code int}, 2..14, где 11=J, 12=Q, 13=K, 14=A) и {@code suit} ({@code String}) — неизменяемые (final).</li>
@@ -28,34 +28,58 @@ public class Task26 {
 
     public Task26(int rank, String suit) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validateRank(rank);
+        validateSuit(suit);
+        this.rank = rank;
+        this.suit = suit;
+    }
+
+    private void validateRank(int rank) {
+        if (rank < 2 || rank > 14) {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    private void validateSuit(String suit) {
+        if (suit == null) {
+            throw new IllegalArgumentException();
+        }
+        String[] suits = {"hearts", "diamonds", "clubs", "spades"};
+        for (String s : suits) {
+            if (s.equals(suit)) {
+                return;
+            }
+        }
+        throw new IllegalArgumentException();
     }
 
     public int getRank() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return rank;
     }
 
     public String getSuit() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return suit;
     }
 
     @Override
     public boolean equals(Object o) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!(o instanceof Task26 task26)) return false;
+        return this.rank == task26.rank
+                && this.suit.equals(task26.suit);
     }
 
     @Override
     public int hashCode() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(rank, suit);
     }
 
     @Override
     public String toString() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return rank + " of " + suit;
     }
 }

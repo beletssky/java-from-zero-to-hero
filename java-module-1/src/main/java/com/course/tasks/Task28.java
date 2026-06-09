@@ -8,6 +8,21 @@ public class Task28 {
      */
     public static int countDivisors(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй countDivisors");
+        if (n == 0) {
+            throw new IllegalArgumentException();
+        }
+        int num = Math.abs(n);
+        int count = 0;
+
+        for (long i = 1; i * i <= num; i++) {
+            if (num % i == 0) {
+                if (i * i == num) {
+                    count += 1;
+                } else {
+                    count += 2;
+                }
+            }
+        }
+        return count;
     }
 }

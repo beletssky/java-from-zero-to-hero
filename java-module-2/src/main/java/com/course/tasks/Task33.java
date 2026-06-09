@@ -11,6 +11,24 @@ public class Task33 {
      */
     public static String mostFrequentWord(String s) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй mostFrequentWord");
+        if (s == null || s.isBlank()) {
+            throw new IllegalArgumentException();
+        }
+        String[] words = s.toLowerCase().split("\\s+");
+        String mostFrequentWord = words[0];
+        int maxCount = 0;
+        for (String word : words) {
+            int currentCount = 0;
+            for (String string : words) {
+                if (word.equals(string)) {
+                    currentCount++;
+                }
+            }
+            if (currentCount > maxCount) {
+                maxCount = currentCount;
+                mostFrequentWord = word;
+            }
+        }
+        return mostFrequentWord;
     }
 }

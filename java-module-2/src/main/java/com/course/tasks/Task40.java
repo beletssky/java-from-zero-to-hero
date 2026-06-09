@@ -10,10 +10,42 @@ public class Task40 {
      * відсортований масив. Реалізувати лінійним проходом по обох масивах,
      * без Arrays.sort. Якщо будь-який із масивів {@code null} — IllegalArgumentException.
      * Примеры: mergeSortedArrays({1,3,5}, {2,4,6}) == {1,2,3,4,5,6};
-     *          mergeSortedArrays({}, {1,2}) == {1,2}.
+     * mergeSortedArrays({}, {1,2}) == {1,2}.
      */
     public static int[] mergeSortedArrays(int[] a, int[] b) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй mergeSortedArrays");
+        if (a == null || b == null) {
+            throw new IllegalArgumentException();
+        }
+        int[] result = new int[a.length + b.length];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (i < a.length && j < b.length) {
+            if (a[i] <= b[j]) {
+                result[k] = a[i];
+                i++;
+            } else {
+                result[k] = b[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i < a.length) {
+            result[k] = a[i];
+            i++;
+            k++;
+        }
+
+        while (j < b.length) {
+            result[k] = b[j];
+            j++;
+            k++;
+        }
+        return result;
     }
+
+
 }

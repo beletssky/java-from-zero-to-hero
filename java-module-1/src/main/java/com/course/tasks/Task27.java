@@ -8,6 +8,12 @@ public class Task27 {
      */
     public static int gcd(int a, int b) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй gcd");
+        a = Math.abs(a);
+        b = Math.abs(b);
+
+        if (b == 0) {
+            return a;
+        }
+        return gcd(b, a % b);
     }
 }

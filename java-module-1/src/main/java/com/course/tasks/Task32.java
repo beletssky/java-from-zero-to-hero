@@ -9,6 +9,27 @@ public class Task32 {
      */
     public static String fizzBuzz(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй fizzBuzz");
+        if (n <= 0) {
+            return "";
+        }
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 15 == 0) {
+                result.append("FizzBuzz");
+            } else if (i % 3 == 0) {
+                result.append("Fizz");
+            } else if (i % 5 == 0) {
+                result.append("Buzz");
+            } else {
+                result.append(i);
+            }
+
+            if (i < n) {
+                result.append("\n");
+            }
+        }
+        return result.toString();
     }
 }

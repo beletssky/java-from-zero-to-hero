@@ -9,6 +9,12 @@ public class Task31 {
      */
     public static boolean isPalindrome(int n) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isPalindrome");
+        if (n < 0) {
+            return false;
+        }
+        String original = String.valueOf(n);
+        String reversed = new StringBuilder(original).reverse().toString();
+
+        return original.equals(reversed);
     }
 }

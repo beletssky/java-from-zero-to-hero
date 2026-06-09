@@ -66,7 +66,10 @@ public class Task21 {
     @Override
     public int hashCode() {
         // TODO: реализуй
-        return Objects.hash(latitude, longitude);
+        return Objects.hash(
+                Math.round(latitude / EPSILON),
+                Math.round(longitude / EPSILON)
+        );
     }
 
     @Override

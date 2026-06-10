@@ -6,16 +6,16 @@ package com.course.task16;
  */
 public class Dog extends Animal {
 
-    private int age;
+  private int age;
 
-    public Dog(String name, int age) {
-        super(name);
-        // TODO: реализуй
-        this.age = age;
-    }
+  public Dog(String name, int age) {
+    super(name);
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public int getAge() {
-        // TODO: реализуй
-        return age;
-    }
+  public int getAge() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 }

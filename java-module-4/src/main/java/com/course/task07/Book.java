@@ -11,22 +11,21 @@ public class Book {
 
     public Book(String title, String author) {
         // TODO: реализуй
-        this.title = title;
-        this.author = author;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String getTitle() {
         // TODO: реализуй
-        return this.title;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String getAuthor() {
         // TODO: реализуй
-        return this.author;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String getInfo() {
         // TODO: реализуй
-        return title + " by " + author;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

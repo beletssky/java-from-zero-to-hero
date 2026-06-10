@@ -5,14 +5,15 @@ package com.course.task28;
  */
 public class TextDoc extends Document {
 
-    public TextDoc(String title) {
-        super(title);
-        // TODO: реализуй
-    }
+  public TextDoc(String title) {
+    super(title);
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    @Override
-    public String getExtension() {
-        // TODO: реализуй
-        return "txt";
-    }
+  @Override
+  public String getExtension() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 }

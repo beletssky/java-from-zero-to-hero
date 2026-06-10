@@ -6,6 +6,6 @@ package com.course.task33;
 public interface Swimmable {
     default String swim() {
         // TODO: реализуй
-        return "swimming";
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

@@ -8,21 +8,19 @@ public class Manager extends Employee {
 
     private int teamSize;
 
-    private static final long COST_PER_TEAM_MEMBER = 1000;
-
     public Manager(String name, long salary, int teamSize) {
         super(name, salary);
         // TODO: реализуй
-        this.teamSize = teamSize;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public int getTeamSize() {
         // TODO: реализуй
-        return this.teamSize;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public long getTotalCost() {
         // TODO: реализуй
-        return getSalary() + teamSize * COST_PER_TEAM_MEMBER;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

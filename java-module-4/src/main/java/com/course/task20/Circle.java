@@ -6,21 +6,21 @@ package com.course.task20;
  */
 public class Circle extends Shape {
 
-    private double radius;
+  private double radius;
 
-    public Circle(double radius) {
-        // TODO: реализуй
-        this.radius = radius;
-    }
+  public Circle(double radius) {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public double getRadius() {
-        // TODO: реализуй
-        return radius;
-    }
+  public double getRadius() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    @Override
-    public double area() {
-        // TODO: реализуй
-        return Math.PI * radius * radius;
-    }
+  @Override
+  public double area() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 }

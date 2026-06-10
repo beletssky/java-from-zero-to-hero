@@ -9,12 +9,12 @@ public abstract class Vehicle {
 
     public Vehicle(String brand) {
         // TODO: реализуй
-        this.brand = brand;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String getBrand() {
         // TODO: реализуй
-        return brand;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public abstract double maxSpeed();

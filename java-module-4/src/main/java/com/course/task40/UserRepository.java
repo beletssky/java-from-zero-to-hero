@@ -9,11 +9,6 @@ public class UserRepository extends BaseRepository {
     @Override
     public void save(Object item) {
         // TODO: реализуй
-        if (item instanceof User user) {
-            int id = user.getId();
-            if (id >= 0 && id < items.length) {
-                items[id] = user;
-            }
-        }
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

@@ -9,25 +9,21 @@ public class Intersection {
 
     public Intersection(Light start) {
         // TODO: реализуй
-        this.current = start;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public Light getCurrent() {
         // TODO: реализуй
-        return this.current;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public void next() {
         // TODO: реализуй
-        switch (current) {
-            case RED -> current = Light.GREEN;
-            case GREEN -> current = Light.YELLOW;
-            case YELLOW -> current = Light.RED;
-        }
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public int getCurrentSeconds() {
         // TODO: реализуй
-        return this.current.getSeconds();
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

@@ -8,6 +8,6 @@ public class Animal {
 
   public String sound() {
     // TODO: реализуй
-      return "звук";
+    throw new UnsupportedOperationException("TODO: реализуй");
   }
 }

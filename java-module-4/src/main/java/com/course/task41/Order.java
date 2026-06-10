@@ -10,27 +10,21 @@ public class Order {
 
     public Order(long id, OrderStatus status) {
         // TODO: реализуй
-        this.id = id;
-        this.status = status;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public long getId() {
         // TODO: реализуй
-        return id;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public OrderStatus getStatus() {
         // TODO: реализуй
-        return status;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public void advance() {
         // TODO: реализуй
-        switch (this.status) {
-            case NEW -> this.status = OrderStatus.PROCESSING;
-            case PROCESSING -> this.status = OrderStatus.SHIPPED;
-            case SHIPPED -> this.status = OrderStatus.DELIVERED;
-            case DELIVERED, CANCELLED -> throw new IllegalStateException();
-        }
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

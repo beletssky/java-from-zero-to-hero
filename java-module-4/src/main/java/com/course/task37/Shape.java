@@ -9,12 +9,12 @@ public abstract class Shape {
 
     public Shape(String color) {
         // TODO: реализуй
-        this.color = color;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String getColor() {
         // TODO: реализуй
-        return color;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public abstract double area();

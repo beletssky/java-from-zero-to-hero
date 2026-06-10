@@ -6,8 +6,8 @@ package com.course.task20;
  */
 public class Shape {
 
-    public double area() {
-        // TODO: реализуй
-        return 0;
-    }
+  public double area() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 }

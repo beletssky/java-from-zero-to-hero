@@ -8,12 +8,12 @@ public class Building implements Sized {
 
     public Building(int floors) {
         // TODO: реализуй
-        this.floors = floors;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public int getSize() {
         // TODO: реализуй
-        return floors * 3;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

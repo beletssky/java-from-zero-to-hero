@@ -9,16 +9,17 @@ public class AdminUser extends User {
     public AdminUser(String username) {
         super(username);
         // TODO: реализуй
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public boolean canDelete() {
         // TODO: реализуй
-        return true;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String ban(User u) {
         // TODO: реализуй
-        return u.username + " banned by " + username;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

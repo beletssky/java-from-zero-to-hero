@@ -11,29 +11,27 @@ public class Point {
 
     public Point(int x, int y) {
         // TODO: реализуй
-        this.x = x;
-        this.y = y;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public int getX() {
         // TODO: реализуй
-        return x;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public int getY() {
         // TODO: реализуй
-        return y;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public void move(int dx, int dy) {
         // TODO: реализуй
-        x += dx;
-        y += dy;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public String toString() {
         // TODO: реализуй
-        return "(" + x + "," + y + ")";
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

@@ -7,12 +7,6 @@ public class Race {
 
     public Vehicle fastest(Vehicle[] vehicles) {
         // TODO: реализуй
-        Vehicle max = vehicles[0];
-        for (int i = 0; i < vehicles.length; i++) {
-            if (vehicles[i].maxSpeed() > max.maxSpeed()) {
-                max = vehicles[i];
-            }
-        }
-        return max;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

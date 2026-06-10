@@ -10,16 +10,16 @@ public class Shape {
 
     public Shape(String color) {
         // TODO: реализуй
-        this.color = color;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String getColor() {
         // TODO: реализуй
-        return this.color;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public double area() {
         // TODO: реализуй
-        return 0;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

@@ -4,29 +4,28 @@ package com.course.task23;
  * Сотрудник на почасовой оплате.
  */
 public class PartTimeEmployee extends Employee {
-    private int hoursWorked;
-    private long hourlyRate;
+  private int hoursWorked;
+  private long hourlyRate;
 
-    public PartTimeEmployee(String name, long baseSalary, int hoursWorked, long hourlyRate) {
-        super(name, baseSalary);
-        // TODO: реализуй
-        this.hoursWorked = hoursWorked;
-        this.hourlyRate = hourlyRate;
-    }
+  public PartTimeEmployee(String name, long baseSalary, int hoursWorked, long hourlyRate) {
+    super(name, baseSalary);
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public int getHoursWorked() {
-        // TODO: реализуй
-        return hoursWorked;
-    }
+  public int getHoursWorked() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public long getHourlyRate() {
-        // TODO: реализуй
-        return hourlyRate;
-    }
+  public long getHourlyRate() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    @Override
-    public long getMonthlyPay() {
-        // TODO: реализуй
-        return hourlyRate * hoursWorked;
-    }
+  @Override
+  public long getMonthlyPay() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 }

@@ -5,22 +5,22 @@ package com.course.task25;
  * Хранит число игроков и определяет контракт старта.
  */
 public abstract class Game {
-    protected int players;
+  protected int players;
 
-    public Game(int players) {
-        // TODO: реализуй
-        this.players = players;
-    }
+  public Game(int players) {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public int getPlayers() {
-        // TODO: реализуй
-        return players;
-    }
+  public int getPlayers() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public abstract String start();
+  public abstract String start();
 
-    public String info() {
-        // TODO: реализуй
-        return "Game for " + players + " players";
-    }
+  public String info() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 }

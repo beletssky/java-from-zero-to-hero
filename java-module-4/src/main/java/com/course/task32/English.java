@@ -7,6 +7,6 @@ public class English implements Greeter {
     @Override
     public String name() {
         // TODO: реализуй
-        return "John";
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

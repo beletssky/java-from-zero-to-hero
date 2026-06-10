@@ -8,12 +8,12 @@ public class Box implements Sized {
 
     public Box(int size) {
         // TODO: реализуй
-        this.size = size;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public int getSize() {
         // TODO: реализуй
-        return size;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

@@ -10,16 +10,16 @@ public class Phone {
 
     public Phone(String number) {
         // TODO: реализуй
-        this.number = number;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String getNumber() {
         // TODO: реализуй
-        return this.number;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String call() {
         // TODO: реализуй
-        return "calling " + number;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

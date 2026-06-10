@@ -10,21 +10,21 @@ public class Account {
 
     public Account(long initialBalance) {
         // TODO: реализуй
-        this.balance = initialBalance;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public void deposit(long amount) {
         // TODO: реализуй
-        balance += amount;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public void withdraw(long amount) {
         // TODO: реализуй
-        balance -= amount;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public long getBalance() {
         // TODO: реализуй
-        return balance;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

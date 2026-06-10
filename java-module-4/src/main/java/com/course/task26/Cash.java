@@ -5,9 +5,9 @@ package com.course.task26;
  */
 public class Cash extends PaymentProcessor {
 
-    @Override
-    public boolean process(long amount) {
-        // TODO: реализуй
-        return true;
-    }
+  @Override
+  public boolean process(long amount) {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 }

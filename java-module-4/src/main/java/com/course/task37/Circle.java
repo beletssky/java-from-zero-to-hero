@@ -10,35 +10,35 @@ public class Circle extends Shape implements Drawable, Resizable {
     public Circle(String color, double radius) {
         super(color);
         // TODO: реализуй
-        this.radius = radius;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public double getRadius() {
         // TODO: реализуй
-        return radius;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public double area() {
         // TODO: реализуй
-        return Math.PI * radius * radius;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public String draw() {
         // TODO: реализуй
-        return "drawing circle r=" + radius;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public void resize(double k) {
         // TODO: реализуй
-        radius *= k;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public String describe() {
         // TODO: реализуй
-        return "Circle color=" + color + " r=" + radius;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

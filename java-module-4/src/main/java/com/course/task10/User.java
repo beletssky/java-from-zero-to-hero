@@ -10,16 +10,16 @@ public class User {
 
     public User(String username) {
         // TODO: реализуй
-        this.username = username;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String getUsername() {
         // TODO: реализуй
-        return this.username;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public boolean canDelete() {
         // TODO: реализуй
-        return false;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

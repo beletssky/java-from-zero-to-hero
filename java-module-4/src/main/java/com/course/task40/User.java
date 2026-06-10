@@ -9,17 +9,16 @@ public class User {
 
     public User(int id, String name) {
         // TODO: реализуй
-        this.id = id;
-        this.name = name;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public int getId() {
         // TODO: реализуй
-        return id;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public String getName() {
         // TODO: реализуй
-        return name;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

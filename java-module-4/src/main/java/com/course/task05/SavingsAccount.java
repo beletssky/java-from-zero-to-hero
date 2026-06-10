@@ -11,17 +11,16 @@ public class SavingsAccount extends Account {
     public SavingsAccount(long initialBalance, double interestRate) {
         super(initialBalance);
         // TODO: реализуй
-        this.interestRate = interestRate;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public double getInterestRate() {
         // TODO: реализуй
-        return interestRate;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public void addInterest() {
         // TODO: реализуй
-        long interest = (long) (getBalance() * interestRate);
-        deposit(interest);
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

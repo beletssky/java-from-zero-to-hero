@@ -8,11 +8,12 @@ public class Cat extends Animal {
   public Cat(String name) {
     super(name);
     // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
   }
 
   @Override
   public String sound() {
     // TODO: реализуй
-      return "meow";
+    throw new UnsupportedOperationException("TODO: реализуй");
   }
 }

@@ -7,6 +7,6 @@ public class Circle implements Drawable {
     @Override
     public String draw() {
         // TODO: реализуй
-        return "drawing circle";
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

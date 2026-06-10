@@ -8,15 +8,11 @@ public class Schedule {
 
     public boolean isWeekend(Day d) {
         // TODO: реализуй
-        return d == Day.SAT || d == Day.SUN;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public int workHours(Day d) {
         // TODO: реализуй
-        return switch (d) {
-            case SAT -> 4;
-            case SUN -> 0;
-            default -> 8;
-        };
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

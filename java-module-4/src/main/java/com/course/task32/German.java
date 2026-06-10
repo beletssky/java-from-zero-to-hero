@@ -7,12 +7,12 @@ public class German implements Greeter {
     @Override
     public String name() {
         // TODO: реализуй
-        return "Hans";
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public String greet() {
         // TODO: реализуй
-        return "Hallo, " + name();
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

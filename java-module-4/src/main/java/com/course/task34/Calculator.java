@@ -6,11 +6,11 @@ package com.course.task34;
 public class Calculator implements MathConstants {
     public double circleArea(double r) {
         // TODO: реализуй
-        return PI * r * r;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public double exp() {
         // TODO: реализуй
-        return E;
+        throw new UnsupportedOperationException("TODO: реализуй");
     }
 }

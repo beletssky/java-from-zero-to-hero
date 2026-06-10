@@ -6,18 +6,17 @@ package com.course.task17;
  */
 public class Vehicle {
 
-    protected String brand;
-    protected int year;
+  protected String brand;
+  protected int year;
 
-    public Vehicle(String brand, int year) {
-        // TODO: реализуй
-        this.brand = brand;
-        this.year = year;
-    }
+  public Vehicle(String brand, int year) {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    @Override
-    public String toString() {
-        // TODO: реализуй
-        return "Vehicle{brand=" + brand + ", year=" + year + "}";
-    }
+  @Override
+  public String toString() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 }

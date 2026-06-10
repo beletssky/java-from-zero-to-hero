@@ -5,17 +5,17 @@ package com.course.task24;
  * Задаёт контракт отправки сообщения получателю.
  */
 public abstract class Notification {
-    protected String recipient;
+  protected String recipient;
 
-    public Notification(String recipient) {
-        // TODO: реализуй
-        this.recipient = recipient;
-    }
+  public Notification(String recipient) {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public String getRecipient() {
-        // TODO: реализуй
-        return recipient;
-    }
+  public String getRecipient() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public abstract String send(String message);
+  public abstract String send(String message);
 }

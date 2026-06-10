@@ -5,24 +5,23 @@ package com.course.task23;
  * Определяет контракт расчёта месячной зарплаты.
  */
 public abstract class Employee {
-    protected String name;
-    protected long baseSalary;
+  protected String name;
+  protected long baseSalary;
 
-    public Employee(String name, long baseSalary) {
-        // TODO: реализуй
-        this.name = name;
-        this.baseSalary = baseSalary;
-    }
+  public Employee(String name, long baseSalary) {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public String getName() {
-        // TODO: реализуй
-        return name;
-    }
+  public String getName() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public long getBaseSalary() {
-        // TODO: реализуй
-        return baseSalary;
-    }
+  public long getBaseSalary() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    public abstract long getMonthlyPay();
+  public abstract long getMonthlyPay();
 }

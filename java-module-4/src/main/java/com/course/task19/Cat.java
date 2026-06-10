@@ -6,9 +6,9 @@ package com.course.task19;
  */
 public class Cat extends Animal {
 
-    @Override
-    public String sound() {
-        // TODO: реализуй
-        return "мяу";
-    }
+  @Override
+  public String sound() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 }

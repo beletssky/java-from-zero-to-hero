@@ -6,17 +6,17 @@ package com.course.task17;
  */
 public class Car extends Vehicle {
 
-    private int seats;
+  private int seats;
 
-    public Car(String brand, int year, int seats) {
-        super(brand, year);
-        // TODO: реализуй
-        this.seats = seats;
-    }
+  public Car(String brand, int year, int seats) {
+    super(brand, year);
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 
-    @Override
-    public String toString() {
-        // TODO: реализуй
-        return super.toString() + ", seats=" + seats;
-    }
+  @Override
+  public String toString() {
+    // TODO: реализуй
+    throw new UnsupportedOperationException("TODO: реализуй");
+  }
 }

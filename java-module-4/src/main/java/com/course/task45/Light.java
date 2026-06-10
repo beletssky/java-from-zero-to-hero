@@ -13,6 +13,6 @@ public enum Light {
 
     public int getSeconds() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return seconds;
     }
 }

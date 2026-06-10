@@ -9,6 +9,6 @@ public class Cow extends Animal {
   @Override
   public String sound() {
     // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+      return "му";
   }
 }

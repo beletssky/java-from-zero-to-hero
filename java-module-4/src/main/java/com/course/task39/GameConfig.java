@@ -11,11 +11,10 @@ public class GameConfig {
 
     private GameConfig() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     public static String getInfo() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Version " + VERSION + ", max " + MAX_PLAYERS + " players";
     }
 }

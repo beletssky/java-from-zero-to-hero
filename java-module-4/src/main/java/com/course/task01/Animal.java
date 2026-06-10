@@ -10,16 +10,16 @@ public class Animal {
 
     public Animal(String name) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.name = name;
     }
 
     public String getName() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return this.name;
     }
 
     public String sound() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "звук";
     }
 }

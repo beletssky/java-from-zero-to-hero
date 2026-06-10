@@ -7,6 +7,6 @@ public class Square implements Drawable {
     @Override
     public String draw() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "drawing square";
     }
 }

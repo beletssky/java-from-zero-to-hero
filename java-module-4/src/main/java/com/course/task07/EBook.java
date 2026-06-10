@@ -11,17 +11,17 @@ public class EBook extends Book {
     public EBook(String title, String author, long sizeMb) {
         super(title, author);
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.sizeMb = sizeMb;
     }
 
     public long getSizeMb() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return this.sizeMb;
     }
 
     @Override
     public String getInfo() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return title + " by " + author + " (" + sizeMb + " MB)";
     }
 }

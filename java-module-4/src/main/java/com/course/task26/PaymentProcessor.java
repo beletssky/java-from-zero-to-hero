@@ -6,10 +6,10 @@ package com.course.task26;
  */
 public abstract class PaymentProcessor {
 
-  public abstract boolean process(long amount);
+    public abstract boolean process(long amount);
 
-  public String log(long amount) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public String log(long amount) {
+        // TODO: реализуй
+        return "Processing " + amount;
+    }
 }

@@ -6,21 +6,21 @@ package com.course.task20;
  */
 public class Square extends Shape {
 
-  private double side;
+    private double side;
 
-  public Square(double side) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public Square(double side) {
+        // TODO: реализуй
+        this.side = side;
+    }
 
-  public double getSide() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public double getSide() {
+        // TODO: реализуй
+        return side;
+    }
 
-  @Override
-  public double area() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public double area() {
+        // TODO: реализуй
+        return side * side;
+    }
 }

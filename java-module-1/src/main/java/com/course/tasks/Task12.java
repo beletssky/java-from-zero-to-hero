@@ -7,7 +7,6 @@ public class Task12 {
      * Примеры: canVote(20, true) == true; canVote(17, true) == false.
      */
     public static boolean canVote(int age, boolean isCitizen) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй canVote");
+        return age >= 18 && isCitizen;
     }
 }

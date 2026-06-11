@@ -7,7 +7,19 @@ public class Task34 {
      * Примеры: countPrimesUpTo(10) == 4 (2,3,5,7); countPrimesUpTo(1) == 0.
      */
     public static int countPrimesUpTo(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй countPrimesUpTo");
+        int count = 0;
+        for (int i = 2; i <= n; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                count++;
+            }
+        }
+        return count;
     }
 }

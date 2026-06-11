@@ -7,7 +7,13 @@ public class Task24 {
      * Примеры: reverseNumber(123) == 321; reverseNumber(-450) == -54; reverseNumber(0) == 0.
      */
     public static int reverseNumber(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй reverseNumber");
+        int reverse = 0;
+        while (n != 0){
+            int i = n % 10;
+            reverse = (reverse * 10) + i;
+            n = n / 10;
+        }
+        return reverse;
+
     }
 }

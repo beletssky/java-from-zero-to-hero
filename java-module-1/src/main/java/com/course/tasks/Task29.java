@@ -8,7 +8,13 @@ public class Task29 {
      * Пример: multiplicationTable(2) начинается с "2 x 1 = 2\n2 x 2 = 4\n...".
      */
     public static String multiplicationTable(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй multiplicationTable");
+        String result = "";
+        for (int k = 1; k <= 10; k++) {
+            result = result + n + " x " + k + " = " + (n * k);
+            if (k < 10)
+                result = result + "\n";
+
+        }
+        return result;
     }
 }

@@ -9,7 +9,8 @@ public class Task24 {
     public static int reverseNumber(int n) {
         int reverse = 0;
         while (n != 0){
-            reverse = n % 10;
+            int i = n % 10;
+            reverse = (reverse * 10) + i;
             n = n / 10;
         }
         return reverse;

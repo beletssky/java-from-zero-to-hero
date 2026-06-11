@@ -8,7 +8,13 @@ public class Task26 {
      * Примеры: power(2, 10) == 1024L; power(3, 0) == 1L; power(5, 1) == 5L.
      */
     public static long power(int base, int exp) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй power");
+        if (exp < 0) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        long result = 1;
+        for (int i = 0; i < exp; i++) {
+            result = result * base;
+        }
+        return result;
     }
 }

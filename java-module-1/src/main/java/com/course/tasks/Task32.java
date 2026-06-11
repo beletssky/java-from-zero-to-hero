@@ -8,7 +8,27 @@ public class Task32 {
      * При n &lt;= 0 — пустая строка.
      */
     public static String fizzBuzz(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй fizzBuzz");
+
+        if (n <= 0) {
+            return "";
+        }
+
+        String result = "";
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 15 == 0) {
+                result += "FizzBuzz";
+            } else if (i % 3 == 0) {
+                result += "Fizz";
+            } else if (i % 5 == 0) {
+                result += "Buzz";
+            } else {
+                result += i;
+            }
+            if (i < n) {
+                result += "\n";
+            }
+        }
+        return result;
     }
 }

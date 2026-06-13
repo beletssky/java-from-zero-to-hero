@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3905504-02c3-4f6c-a739-a2522342524b" name="Changes" comment="s" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="homework/nikita-dz4" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lordeyser&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/beletssky/java-from-zero-to-hero.git&quot;,
+    &quot;accountId&quot;: &quot;abcb675d-c77d-42d7-9cb9-bc77843da148&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3EPXzmBcrQgc7AdUKSY7eTvXrYl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.Task01Test.executor": "Run",
+    "JUnit.Task02Test.executor": "Run",
+    "JUnit.Task03Test.executor": "Run",
+    "JUnit.Task04Test.executor": "Run",
+    "JUnit.Task05Test.executor": "Run",
+    "Maven.java-module-2 [-Dtest=Task02Test,test,-f...].executor": "Run",
+    "Maven.java-module-2 [-Dtest=Task02Test,test].executor": "Run",
+    "Maven.java-module-2 [test].executor": "Run",
+    "Maven.java-module-3 [test].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "Nikita-Dz3",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Lordeyser/Desktop/Fosslik/java-from-zero-to-hero",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn test" />
+      <command value="mvn -Dtest=Task02Test test" />
+      <command value="mvn -Dtest=Task02Test test -f C:\Users\Lordeyser\Desktop\Fosslik\java-from-zero-to-hero\java-module-3\pom.xm" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.Task05Test">
+    <configuration name="Task01Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-module-4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.course.task01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.course.task01" />
+      <option name="MAIN_CLASS_NAME" value="com.course.task01.Task01Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task02Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-module-4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.course.task02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.course.task02" />
+      <option name="MAIN_CLASS_NAME" value="com.course.task02.Task02Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task03Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-module-4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.course.task03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.course.task03" />
+      <option name="MAIN_CLASS_NAME" value="com.course.task03.Task03Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task04Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-module-4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.course.task04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.course.task04" />
+      <option name="MAIN_CLASS_NAME" value="com.course.task04.Task04Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task05Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-module-4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.course.task05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.course.task05" />
+      <option name="MAIN_CLASS_NAME" value="com.course.task05.Task05Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Task05Test" />
+        <item itemvalue="JUnit.Task04Test" />
+        <item itemvalue="JUnit.Task03Test" />
+        <item itemvalue="JUnit.Task02Test" />
+        <item itemvalue="JUnit.Task01Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3905504-02c3-4f6c-a739-a2522342524b" name="Changes" comment="1-11" />
+      <created>1780081445912</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780081445912</updated>
+    </task>
+    <task id="LOCAL-00001" summary="24-25">
+      <option name="closed" value="true" />
+      <created>1780084108262</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1780084108262</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Nikitos_DZ_3&#10;1-5">
+      <option name="closed" value="true" />
+      <created>1780746444125</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1780746444126</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Nikitos_DZ_3&#10;06-30">
+      <option name="closed" value="true" />
+      <created>1781319640776</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1781319640776</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Nikitos_DZ_3&#10;06-30">
+      <option name="closed" value="true" />
+      <created>1781319653175</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1781319653175</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Nikitos_DZ_4&#10;01-05">
+      <option name="closed" value="true" />
+      <created>1781346586290</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1781346586290</updated>
+    </task>
+    <task id="LOCAL-00006" summary="s">
+      <option name="closed" value="true" />
+      <created>1781347406675</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1781347406675</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="9526a657-6644-4245-a1d3-19478f84bb59" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="nikita_dz1" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="Nikita-dz-2" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="Nikita-Dz3" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="9526a657-6644-4245-a1d3-19478f84bb59">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="24-25" />
+    <MESSAGE value="Nikitos_DZ_3&#10;1-5" />
+    <MESSAGE value="Nikitos_DZ_3&#10;06-30" />
+    <MESSAGE value="Nikitos_DZ_4&#10;01-05" />
+    <MESSAGE value="s" />
+    <option name="LAST_COMMIT_MESSAGE" value="s" />
+  </component>
+</project>

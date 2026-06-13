@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 public class Task26 {
-
     /**
      * Парсит строку s через Integer.parseInt. Если падает с NumberFormatException
      * (в том числе для {@code null}), возвращает defaultValue.

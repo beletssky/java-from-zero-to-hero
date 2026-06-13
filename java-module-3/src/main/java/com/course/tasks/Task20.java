@@ -35,50 +35,59 @@ public class Task20 {
     private int total;
 
     public Task20(int correct, int total) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (correct < 0 || correct > total) {
+            throw new IllegalArgumentException("");
+        }
+        this.correct = correct;
+        this.total = total;
     }
 
     public int getCorrect() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return correct;
     }
 
     public int getTotal() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return total;
     }
 
     public void addCorrect() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        correct++;
+        total++;
     }
 
     public void addWrong(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (n < 0) {
+            throw new IllegalArgumentException("");
+        }
+        total += n;
     }
 
     public double getPercentage() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (total == 0) {
+            return 0.0;
+        }
+        return correct * 100.0 / total;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task20 that = (Task20) o;
+        return this.correct == that.correct && this.total == that.total;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(correct, total);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Score{correct =" + correct + ", total=" + total + "}";
     }
 }

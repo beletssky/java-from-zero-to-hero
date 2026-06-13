@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 import java.util.Objects;
-
 /**
  * UA: Модель товару (Product).
  * <p>Поля:
@@ -38,60 +37,76 @@ public class Task15 {
     private int stock;
 
     public Task15(String name, long priceKopecks, int stock) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (priceKopecks < 0) {
+            throw new IllegalArgumentException("");
+        }
+        if (stock < 0) {
+            throw new IllegalArgumentException("");
+        }
+        this.name = name;
+        this.priceKopecks = priceKopecks;
+        this.stock = stock;
     }
 
     public String getName() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return name;
     }
 
     public long getPriceKopecks() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return priceKopecks;
     }
 
     public int getStock() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return stock;
     }
 
     public void setPriceKopecks(long priceKopecks) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (priceKopecks < 0) {
+            throw new IllegalArgumentException("");
+        }
+        this.priceKopecks = priceKopecks;
     }
 
     public void setStock(int stock) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (stock < 0) {
+            throw new IllegalArgumentException("");
+        }
+        this.stock = stock;
     }
 
     public void sell(int qty) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (qty <= 0 || stock < qty) {
+            throw new IllegalArgumentException("");
+        }
+        stock -= qty;
     }
 
     public void restock(int qty) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (qty <= 0) {
+            throw new IllegalArgumentException("");
+        }
+        stock += qty;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task15 that = (Task15) o;
+        return this.name.equals(that.name) && this.priceKopecks == that.priceKopecks && this.stock == that.stock;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(name, priceKopecks, stock);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Product{name=" + name + ", priceKopecks=" + priceKopecks +", stock=" + stock + "}";
     }
 }

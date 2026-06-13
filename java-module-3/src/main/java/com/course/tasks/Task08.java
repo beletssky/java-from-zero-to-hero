@@ -22,35 +22,44 @@ public class Task08 {
     private final String number;
 
     public Task08(String number) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (number.length() != 10) {
+            throw new IllegalArgumentException("");
+        }
+        for (int i = 0; i < number.length(); i++) {
+            if (!Character.isDigit(number.charAt(i))) {
+                throw new IllegalArgumentException("");
+            }
+        }
+        this.number = number;
     }
 
     public String getNumber() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return number;
     }
 
     public String format() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return  "(" + number.substring(0, 3) + ") " + number.substring(3, 6) + "-" + number.substring(6, 8) + "-" + number.substring(8, 10);
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task08 that = (Task08) o;
+        return this.number.equals(that.number);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(number);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "PhoneNumber{number =" + number + "}";
     }
 }

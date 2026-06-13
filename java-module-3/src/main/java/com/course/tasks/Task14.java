@@ -36,50 +36,72 @@ public class Task14 {
     private int age;
 
     public Task14(String username, String email, int age) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (username.length() < 3 || username.length() > 20) {
+            throw new IllegalArgumentException("");
+        }
+        for (int i = 0; i < username.length(); i++) {
+            if (!Character.isLetterOrDigit(username.charAt(i))) {
+                throw new IllegalArgumentException("");
+            }
+        }
+// проверка email
+        if (!email.contains("@")) {
+            throw new IllegalArgumentException("");
+        }
+// проверка age
+        if (age < 0 || age > 150) {
+            throw new IllegalArgumentException("");
+        }
+        this.username = username;
+        this.email = email;
+        this.age = age;
     }
 
     public String getUsername() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return username;
     }
 
     public String getEmail() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return email;
     }
 
     public int getAge() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return age;
     }
 
     public void setEmail(String email) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!email.contains("@")) {
+            throw new IllegalArgumentException("");
+        }
+        this.email = email;
     }
 
     public void setAge(int age) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (age < 0 || age > 150) {
+            throw new IllegalArgumentException("");
+        }
+        this.age = age;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task14 that = (Task14) o;
+        return this.username.equals(that.username) && this.email.equals(that.email) && this.age == that.age;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(username, email, age);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "User{username=" + username + ", email=" + email +", age=" + age +"}";
     }
 }

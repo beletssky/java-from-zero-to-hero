@@ -28,30 +28,40 @@ public class Task23 {
     private final String value;
 
     public Task23(String value) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (value.length() != 13) {
+            throw new IllegalArgumentException("");
+        }
+        for (int i = 0; i < value.length(); i++) {
+            if (!Character.isDigit(value.charAt(i))) {
+                throw new IllegalArgumentException("");
+            }
+        }
+        this.value = value;
     }
 
     public String getValue() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return value;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task23 that = (Task23) o;
+        return this.value.equals(that.value);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(value);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "ISBN{value='" + value + "'}";
     }
 }

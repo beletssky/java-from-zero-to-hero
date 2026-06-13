@@ -27,35 +27,43 @@ public class Task26 {
     private final String suit;
 
     public Task26(int rank, String suit) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (rank < 2 || rank > 14) {
+            throw new IllegalArgumentException("");
+        }
+        if (!suit.equals("hearts") && !suit.equals("diamonds") && !suit.equals("clubs") && !suit.equals("spades")) {
+            throw new IllegalArgumentException("");
+        }
+        this.rank = rank;
+        this.suit = suit;
     }
 
     public int getRank() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return rank;
     }
 
     public String getSuit() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return suit;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task26 that = (Task26) o;
+        return this.rank == that.rank && this.suit.equals(that.suit);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(rank, suit);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return rank + " of " + suit;
     }
 }

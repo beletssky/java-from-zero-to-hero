@@ -30,45 +30,55 @@ public class Task24 {
     private final int patch;
 
     public Task24(int major, int minor, int patch) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (major < 0 || minor < 0 || patch < 0) {
+            throw new IllegalArgumentException("");
+        }
+        this.major = major;
+        this.minor = minor;
+        this.patch = patch;
     }
 
     public int getMajor() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return major;
     }
 
     public int getMinor() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return minor;
     }
 
     public int getPatch() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return patch;
     }
 
     public boolean isNewerThan(Task24 other) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this.major != other.major) {
+            return this.major > other.major;
+        }
+        if (this.minor != other.minor) {
+            return this.minor > other.minor;
+        }
+        return this.patch > other.patch;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task24 that = (Task24) o;
+        return this.major == that.major && this.minor == that.minor && this.patch == that.patch;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(major, minor, patch);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return major + "." + minor + "." + patch;
     }
 }

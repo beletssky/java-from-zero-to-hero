@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 import java.util.Objects;
-
 /**
  * UA: Моделює адресу електронної пошти.
  *     Поле: address (String, незмінне). Валідація: address != null, містить "@" та містить ".",
@@ -22,35 +21,45 @@ public class Task07 {
     private final String address;
 
     public Task07(String address) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (address == null) {
+            throw new IllegalArgumentException("Кола зиро");
+        }
+        if (!address.contains("@")) {
+            throw new IllegalArgumentException("ты собака");
+        }
+        if (!address.contains(".")) {
+            throw new IllegalArgumentException("точка для штаточка");
+        }
+        this.address = address;
     }
 
     public String getAddress() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return address;
     }
 
     public String getDomain() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return address.substring(address.indexOf("@") + 1);
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task07 that = (Task07) o;
+        return this.address.equals(that.address);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(address);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Email{address = " + address + "}";
     }
 }

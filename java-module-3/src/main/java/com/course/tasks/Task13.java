@@ -8,7 +8,7 @@ import java.util.Objects;
  * <ul>
  *   <li>{@code celsius} — температура в градусах Цельсія (змінюване).</li>
  * </ul>
- * Валідація: -273.15 &le; celsius &le; 1000 (у конструкторі та сетері), інакше IllegalArgumentException.
+ * Валідація: -273.15 <= celsius <= 1000 (у конструкторі та сетері), інакше IllegalArgumentException.
  * Методи: {@code getCelsius()}; {@code setCelsius(double)};
  * {@code getFahrenheit()} = c*9/5+32; {@code getKelvin()} = c+273.15.
  * toString має префікс "TemperatureSensor" і містить значення celsius.
@@ -18,57 +18,62 @@ import java.util.Objects;
  * <ul>
  *   <li>{@code celsius} — температура в градусах Цельсия (изменяемое).</li>
  * </ul>
- * Валидация: -273.15 &le; celsius &le; 1000 (в конструкторе и сеттере), иначе IllegalArgumentException.
+ * Валидация: -273.15 <= celsius <= 1000 (в конструкторе и сеттере), иначе IllegalArgumentException.
  * Методы: {@code getCelsius()}; {@code setCelsius(double)};
  * {@code getFahrenheit()} = c*9/5+32; {@code getKelvin()} = c+273.15.
  * toString имеет префикс "TemperatureSensor" и содержит значение celsius.
  *
- * <p>Приклад / Пример: new Task13(0.0) -&gt; getFahrenheit()=32.0, getKelvin()=273.15.
+ * <p>Приклад / Пример: new Task13(0.0) > getFahrenheit()=32.0, getKelvin()=273.15.
  */
 public class Task13 {
 
     private double celsius;
 
     public Task13(double celsius) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (celsius < -273.15 || celsius > 1000) {
+            throw new IllegalArgumentException("");
+        }
+        this.celsius = celsius;
     }
 
     public double getCelsius() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return celsius;
     }
 
     public void setCelsius(double celsius) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (celsius < -273.15 || celsius > 1000) {
+            throw new IllegalArgumentException("");
+        }
+        this.celsius = celsius;
     }
 
     public double getFahrenheit() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return celsius*9/5+32;
     }
 
     public double getKelvin() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return celsius+273.15;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task13 that = (Task13) o;
+        return this.celsius == that.celsius;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(celsius);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "TemperatureSensor{celsius=" + celsius + "}";
     }
 }

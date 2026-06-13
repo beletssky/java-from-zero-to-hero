@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 import java.util.Objects;
-
 /**
  * UA: Модель часу доби (Time24).
  * <p>Поля:
@@ -33,50 +32,64 @@ public class Task16 {
     private int minutes;
 
     public Task16(int hours, int minutes) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (hours < 0 || hours > 23) {
+            throw new IllegalArgumentException("");
+        }
+        if (minutes < 0 || minutes > 59) {
+            throw new IllegalArgumentException("");
+        }
+        this.hours = hours;
+        this.minutes = minutes;
     }
 
     public int getHours() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return hours;
     }
 
     public int getMinutes() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return minutes;
     }
 
     public void setHours(int hours) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (hours < 0 || hours > 23) {
+            throw new IllegalArgumentException("");
+        }
+        this.hours = hours;
     }
 
     public void setMinutes(int minutes) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (minutes < 0 || minutes > 59) {
+            throw new IllegalArgumentException("");
+        }
+        this.minutes = minutes;
     }
 
     public void addMinutes(int m) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        int total = hours * 60 + minutes + m;
+        total = total % (24 * 60);
+        hours = total / 60;
+        minutes = total % 60;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task16 that = (Task16) o;
+        return this.hours == that.hours && this.minutes == that.minutes;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(hours, minutes);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return String.format("%02d:%02d", hours, minutes);
     }
 }

@@ -33,50 +33,51 @@ public class Task27 {
     private boolean paid;
 
     public Task27(long id, String customer, long totalKopecks, boolean paid) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.id = id;
+        this.customer = customer;
+        this.totalKopecks = totalKopecks;
+        this.paid = paid;
     }
 
     public long getId() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return id;
     }
 
     public String getCustomer() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return customer;
     }
 
     public long getTotalKopecks() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return totalKopecks;
     }
 
     public boolean isPaid() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return paid;
     }
 
     public void markAsPaid() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        paid = true;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task27 that = (Task27) o;
+        return this.id == that.id;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(id);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Order{id=" + id + ", customer='" + customer + "', totalKopecks=" + totalKopecks + ", paid=" + paid + "}";
     }
 }

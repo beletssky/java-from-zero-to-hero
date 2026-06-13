@@ -23,45 +23,48 @@ public class Task10 {
     private final int to;
 
     public Task10(int from, int to) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (from > to) {
+            throw new IllegalArgumentException("");
+        }
+        this.from = from;
+        this.to = to;
     }
 
     public int getFrom() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return from;
     }
 
     public int getTo() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return to;
     }
 
     public boolean contains(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return from <= n && n <= to;
     }
 
     public int length() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return to - from;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task10 that = (Task10) o;
+        return this.from == that.from && this.to == that.to;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(from, to);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Range{from=" + from + ", to=" + to + "}";
     }
 }

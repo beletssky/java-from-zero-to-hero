@@ -23,40 +23,49 @@ public class Task09 {
     private final String currency;
 
     public Task09(long amount, String currency) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (currency == null || currency.length() != 3) {
+            throw new IllegalArgumentException("");
+        }
+        for (int i = 0; i < currency.length(); i++) {
+            if (!Character.isUpperCase(currency.charAt(i))) {
+                throw new IllegalArgumentException("");
+            }
+        }
+        this.amount = amount;
+        this.currency = currency;
     }
 
     public long getAmount() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return amount;
     }
 
     public String getCurrency() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return currency;
     }
 
     public double toMajor() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return amount / 100.0;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this== o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task09 that = (Task09) o;
+        return this.amount == that.amount && this.currency.equals(that.currency);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(amount, currency);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+            return "Money{amount=" + amount + ", currency=" + currency + "}";
     }
 }

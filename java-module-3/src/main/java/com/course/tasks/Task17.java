@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 import java.util.Objects;
-
 /**
  * UA: Модель дати (Date).
  * <p>Поля:
@@ -36,60 +35,80 @@ public class Task17 {
     private int year;
 
     public Task17(int day, int month, int year) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (month < 1 || month > 12) {
+            throw new IllegalArgumentException("");
+        }
+        if (year < 1900 || year > 2100) {
+            throw new IllegalArgumentException("");
+        }
+        if (day < 1 || day > daysInMonth(month, year)) {
+            throw new IllegalArgumentException("");
+        }
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
 
     public int getDay() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return day;
     }
 
     public int getMonth() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return month;
     }
 
     public int getYear() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return year;
     }
 
     public void setDay(int day) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (day < 1 || day > daysInMonth(month, year)) {
+            throw new IllegalArgumentException("");
+        }
+        this.day = day;
     }
 
     public void setMonth(int month) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (month < 1 || month > 12) {
+            throw new IllegalArgumentException("");
+        }
+        this.month = month;
     }
 
     public void setYear(int year) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (year < 1900 || year > 2100) {
+            throw new IllegalArgumentException("");
+        }
+        this.year = year;
     }
 
     private int daysInMonth(int month, int year) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        switch (month) {
+            case 2: return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? 29 : 28;
+            case 4: case 6: case 9: case 11: return 30;
+            default: return 31;
+        }
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task17 that = (Task17) o;
+        return this.day == that.day && this.month == that.month && this.year == that.year;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(day, month, year);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return String.format("%02d.%02d.%04d", day, month, year);
     }
 }

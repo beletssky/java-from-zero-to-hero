@@ -32,35 +32,48 @@ public class Task19 {
     private final String hash;
 
     public Task19(String raw) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (raw.length() < 8) {
+            throw new IllegalArgumentException("");
+        }
+        boolean hasDigit = false;
+        boolean hasUpper = false;
+        for (int i = 0; i < raw.length(); i++) {
+            if (Character.isDigit(raw.charAt(i))) hasDigit = true;
+            if (Character.isUpperCase(raw.charAt(i))) hasUpper = true;
+        }
+        if (!hasDigit || !hasUpper) {
+            throw new IllegalArgumentException("");
+        }
+        this.hash = raw;
     }
 
     public String getHash() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return hash;
     }
 
     public boolean matches(String raw) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return hash.equals(raw);
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task19 that = (Task19) o;
+        return this.hash.equals(that.hash);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(hash);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Password{hash=***}";
     }
 }

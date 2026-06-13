@@ -6,7 +6,7 @@ import java.util.Objects;
  * UA: Клас моделює раціональний дріб (Fraction).
  * <ul>
  *   <li>Поля: {@code numerator}, {@code denominator} — обидва {@code int}, незмінні (final).</li>
- *   <li>Валідація: {@code denominator != 0}, інакше {@link IllegalArgumentException}.</li>
+ *   <li>Валідація: {@code denominator != 0}, інакше {@link IllegalArgumentEnumeratorception}.</li>
  *   <li>Конструктор скорочує дріб на НСД (приватний помічник {@link #gcd(int, int)}).
  *       Знак нормалізується так, що знаменник завжди додатний (мінус переноситься в чисельник).</li>
  *   <li>Методи: гетери {@link #getNumerator()}, {@link #getDenominator()} (повертають скорочені значення).</li>
@@ -18,7 +18,7 @@ import java.util.Objects;
  * RU: Класс моделирует рациональную дробь (Fraction).
  * <ul>
  *   <li>Поля: {@code numerator}, {@code denominator} — оба {@code int}, неизменяемые (final).</li>
- *   <li>Валидация: {@code denominator != 0}, иначе {@link IllegalArgumentException}.</li>
+ *   <li>Валидация: {@code denominator != 0}, иначе {@link IllegalArgumentEnumeratorception}.</li>
  *   <li>Конструктор сокращает дробь на НОД (приватный помощник {@link #gcd(int, int)}).
  *       Знак нормализуется так, что знаменатель всегда положительный (минус переносится в числитель).</li>
  *   <li>Методы: геттеры {@link #getNumerator()}, {@link #getDenominator()} (возвращают сокращённые значения).</li>
@@ -33,40 +33,51 @@ public class Task29 {
     private final int denominator;
 
     public Task29(int numerator, int denominator) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (denominator == 0) {
+            throw new IllegalArgumentException("");
+        }
+        int g = gcd(numerator, denominator);
+        int n = numerator / g;
+        int d = denominator / g;
+        if (d < 0) { n = -n; d = -d; }
+        this.numerator = n;
+        this.denominator = d;
     }
 
     public int getNumerator() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return numerator;
     }
 
     public int getDenominator() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return denominator;
     }
 
     private int gcd(int a, int b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return b == 0 ? Math.abs(a) : gcd(b, a % b);
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task29 that = (Task29) o;
+        return this.numerator == that.numerator && this.denominator == that.denominator;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(numerator, denominator);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (denominator == 1) {
+            return String.valueOf(numerator);
+        }
+        return numerator + "/" + denominator;
     }
 }

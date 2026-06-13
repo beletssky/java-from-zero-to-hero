@@ -13,7 +13,31 @@ public class Task36 {
      *          minMaxAvg({10}) == {10,10,10}.
      */
     public static int[] minMaxAvg(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй minMaxAvg");
+        int[] result = new int[3];
+        int min;
+        int max;
+
+        for (int i = 0; i < a.length; i++){
+            min = a[0];
+            if (min > a[i]){
+                min = a[i];
+            }
+            max = a[0];
+            if (max < a[i]){
+                max = a[i];
+            }
+
+            int sum = 0;
+            sum = sum + a[i];
+
+            int avg = Math.round((float) sum / a.length);
+
+            result[0] = min;
+            result[1] = max;
+            result[2] = avg;
+        }
+
+        return result;
+
     }
 }

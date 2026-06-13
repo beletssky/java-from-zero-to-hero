@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 import java.util.Objects;
-
 /**
  * UA: Моделює людину.
  *     Поля: name (String, незмінне, без сеттера), age (int, ИЗМЕНЯЕМОЕ → має сеттер setAge).
@@ -21,40 +20,47 @@ public class Task06 {
     private int age;
 
     public Task06(String name, int age) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (age < 0 || age > 150) {
+            throw new IllegalArgumentException("150 + 150 сколько?");
+        }
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return name;
     }
 
     public int getAge() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return age;
     }
 
     public void setAge(int age) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (age < 0 || age > 150) {
+            throw new IllegalArgumentException("");
+        }
+        this.age = age;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task06 that = (Task06) o;
+        return this.name.equals(that.name) && this.age == that.age;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(name, age);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Person{name=" + name + ", age=" + age + "}";
     }
 }

@@ -37,55 +37,73 @@ public class Task18 {
     private String path;
 
     public Task18(String protocol, String host, int port, String path) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!protocol.equals("http") && !protocol.equals("https")) {
+            throw new IllegalArgumentException("");
+        }
+        if (host == null || host.isEmpty()) {
+            throw new IllegalArgumentException("");
+        }
+        if (port < 1 || port > 65535) {
+            throw new IllegalArgumentException("");
+        }
+        if (!path.startsWith("/")) {
+            throw new IllegalArgumentException("");
+        }
+        this.protocol = protocol;
+        this.host = host;
+        this.port = port;
+        this.path = path;
     }
 
     public String getProtocol() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return protocol;
     }
 
     public String getHost() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return host;
     }
 
     public int getPort() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return port;
     }
 
     public String getPath() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return path;
     }
 
     public void setPort(int port) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (port < 1 || port > 65535) {
+            throw new IllegalArgumentException("");
+        }
+        this.port = port;
     }
 
     public void setPath(String path) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (!path.startsWith("/")) {
+            throw new IllegalArgumentException("");
+        }
+        this.path = path;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task18 that = (Task18) o;
+        return this.protocol.equals(that.protocol) && this.host.equals(that.host) && this.port == that.port && this.path.equals(that.path);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(protocol, host, port, path);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return (protocol + "://" + host + ":" + port + path);
     }
 }

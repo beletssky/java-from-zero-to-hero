@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 import java.util.Objects;
-
 /**
  * UA: Моделює прямокутник.
  *     Поля: width (double, незмінне), height (double, незмінне).
@@ -21,40 +20,47 @@ public class Task04 {
     private final double height;
 
     public Task04(double width, double height) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (width <= 0) {
+            throw new IllegalArgumentException("");
+        }
+        if (height <= 0) {
+            throw new IllegalArgumentException("");
+        }
+        this.width = width;
+        this.height = height;
     }
 
     public double getWidth() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return width;
     }
 
     public double getHeight() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return height;
     }
 
     public double area() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return width * height;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task04 that = (Task04) o;
+        return this.width == that.width && this.height == that.height;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(width, height);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Rectangle{width=" + width + ", height=" + height + "}";
     }
 }

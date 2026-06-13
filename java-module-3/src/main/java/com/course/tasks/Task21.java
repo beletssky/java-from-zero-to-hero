@@ -1,7 +1,6 @@
 package com.course.tasks;
 
 import java.util.Objects;
-
 /**
  * UA: Клас моделює географічні координати (Coordinates).
  * <ul>
@@ -31,35 +30,45 @@ public class Task21 {
     private final double longitude;
 
     public Task21(double latitude, double longitude) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (latitude < -90 || latitude > 90) {
+            throw new IllegalArgumentException("");
+        }
+        if (longitude < -180 || longitude > 180) {
+            throw new IllegalArgumentException("");
+        }
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public double getLatitude() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return latitude;
     }
 
     public double getLongitude() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return longitude;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task21 that = (Task21) o;
+        return Math.abs(this.latitude - that.latitude) < EPSILON && Math.abs(this.longitude - that.longitude) < EPSILON;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        long latBits = Double.doubleToLongBits(Math.round(latitude / EPSILON) * EPSILON);
+        long lonBits = Double.doubleToLongBits(Math.round(longitude / EPSILON) * EPSILON);
+        return Objects.hash(latBits, lonBits);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Coordinates{latitude =" + latitude + ", longitude=" + longitude + "}";
     }
 }

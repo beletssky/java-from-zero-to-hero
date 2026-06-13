@@ -14,7 +14,29 @@ public class Task37 {
      *          describeNumber(0) == "n=0, sign=zero, parity=even, digits=1".
      */
     public static String describeNumber(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй describeNumber");
+        String sign = "";
+        String parity = "";
+        String digits = "";
+
+        if (n < 0){
+            sign = "negative";
+        }
+        if (n == 0){
+            sign = "zero";
+        }
+        if (n > 0){
+            sign = "positive";
+        }
+        if (n % 2 == 0){
+            parity = "even";
+        }
+        if (n % 2 != 0){
+            parity = "odd";
+        }
+
+        int a = Math.abs(n);
+        digits = String.valueOf(a);
+        int length = digits.length();
+        return "n=" + n + ", sign=" + sign + ", parity=" + parity + ", digits=" + length;
     }
 }

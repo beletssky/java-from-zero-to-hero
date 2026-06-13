@@ -30,40 +30,60 @@ public class Task25 {
     private final String building;
 
     public Task25(String city, String street, String building) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (city == null) {
+            throw new IllegalArgumentException("");
+        }
+        if (city.trim().isEmpty()) {
+            throw new IllegalArgumentException("");
+        }
+        if (street == null) {
+            throw new IllegalArgumentException("");
+        }
+        if (street.trim().isEmpty()) {
+            throw new IllegalArgumentException("");
+        }
+        if (building == null) {
+            throw new IllegalArgumentException("");
+        }
+        if (building.trim().isEmpty()) {
+            throw new IllegalArgumentException("");
+        }
+        this.city = city;
+        this.street = street;
+        this.building = building;
     }
 
     public String getCity() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return city;
     }
 
     public String getStreet() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return street;
     }
 
     public String getBuilding() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return building;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task25 that = (Task25) o;
+        return this.city.equals(that.city) && this.street.equals(that.street) && this.building.equals(that.building);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(city, street, building);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Address{city='" + city + "', street='" + street + "', building='" + building + "'}";
     }
 }

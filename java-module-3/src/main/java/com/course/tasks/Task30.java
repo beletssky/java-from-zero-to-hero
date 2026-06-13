@@ -33,45 +33,56 @@ public class Task30 {
     private final int durationMinutes;
 
     public Task30(String title, int year, double rating, int durationMinutes) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (rating < 0.0 || rating > 10.0) {
+            throw new IllegalArgumentException("");
+        }
+        if (year < 1900 || year > 2100) {
+            throw new IllegalArgumentException("");
+        }
+        if (durationMinutes <= 0) {
+            throw new IllegalArgumentException("");
+        }
+        this.title = title;
+        this.year = year;
+        this.rating = rating;
+        this.durationMinutes = durationMinutes;
     }
 
     public String getTitle() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return title;
     }
 
     public int getYear() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return year;
     }
 
     public double getRating() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return rating;
     }
 
     public int getDurationMinutes() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return durationMinutes;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        Task30 that = (Task30) o;
+        return this.title.equals(that.title) && this.year == that.year && this.rating == that.rating && this.durationMinutes == that.durationMinutes;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(title, year, rating, durationMinutes);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Movie{title='" + title + "', year=" + year + ", rating=" + rating + "}";
     }
 }

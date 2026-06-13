@@ -62,7 +62,9 @@ public class Task21 {
 
     @Override
     public int hashCode() {
-        return Objects.hash(latitude, longitude);
+        long latBits = Double.doubleToLongBits(Math.round(latitude / EPSILON) * EPSILON);
+        long lonBits = Double.doubleToLongBits(Math.round(longitude / EPSILON) * EPSILON);
+        return Objects.hash(latBits, lonBits);
     }
 
     @Override

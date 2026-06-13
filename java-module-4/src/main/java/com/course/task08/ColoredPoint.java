@@ -10,18 +10,15 @@ public class ColoredPoint extends Point {
 
     public ColoredPoint(int x, int y, String color) {
         super(x, y);
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.color = color;
     }
 
     public String getColor() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return color;
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "(" + x + "," + y + "," + color + ")";
     }
 }

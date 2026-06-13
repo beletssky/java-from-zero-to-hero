@@ -9,18 +9,16 @@ public abstract class Employee {
   protected long baseSalary;
 
   public Employee(String name, long baseSalary) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.name = name;
+    this.baseSalary = baseSalary;
   }
 
   public String getName() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return name;
   }
 
   public long getBaseSalary() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return baseSalary;
   }
 
   public abstract long getMonthlyPay();

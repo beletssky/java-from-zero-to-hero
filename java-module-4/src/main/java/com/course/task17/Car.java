@@ -1,5 +1,7 @@
 package com.course.task17;
 
+import java.time.Year;
+
 /**
  * Автомобиль — транспортное средство с числом мест.
  * Дописывает информацию о местах к строковому представлению родителя.
@@ -10,13 +12,11 @@ public class Car extends Vehicle {
 
   public Car(String brand, int year, int seats) {
     super(brand, year);
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.seats = seats;
   }
 
   @Override
   public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return super.toString() +  ", seats=" + seats;
   }
 }

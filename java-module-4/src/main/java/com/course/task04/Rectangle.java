@@ -11,23 +11,20 @@ public class Rectangle extends Shape {
 
     public Rectangle(String color, double width, double height) {
         super(color);
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.width = width;
+        this. height = height;
     }
 
     public double getWidth() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return width;
     }
 
     public double getHeight() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return height;
     }
 
     @Override
     public double area() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return width * height;
     }
 }

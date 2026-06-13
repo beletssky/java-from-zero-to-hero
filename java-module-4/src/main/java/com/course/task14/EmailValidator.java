@@ -8,7 +8,9 @@ public class EmailValidator extends BaseValidator {
 
   @Override
   public boolean validate(String s) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    if (s != null && s.contains("@")){
+      return super.validate(s);
+    }
+    return false;
   }
 }

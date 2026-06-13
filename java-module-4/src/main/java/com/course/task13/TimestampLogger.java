@@ -8,7 +8,6 @@ public class TimestampLogger extends Logger {
 
   @Override
   public String log(String msg) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "1234ms: " + super.log(msg);
   }
 }

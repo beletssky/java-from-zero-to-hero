@@ -9,23 +9,20 @@ public class PartTimeEmployee extends Employee {
 
   public PartTimeEmployee(String name, long baseSalary, int hoursWorked, long hourlyRate) {
     super(name, baseSalary);
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.hourlyRate = hourlyRate;
+    this.hoursWorked = hoursWorked;
   }
 
   public int getHoursWorked() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return hoursWorked;
   }
 
   public long getHourlyRate() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return hourlyRate;
   }
 
   @Override
   public long getMonthlyPay() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return hourlyRate * hoursWorked;
   }
 }

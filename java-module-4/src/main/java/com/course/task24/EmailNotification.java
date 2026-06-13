@@ -7,13 +7,11 @@ public class EmailNotification extends Notification {
 
   public EmailNotification(String recipient) {
     super(recipient);
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+
   }
 
   @Override
   public String send(String message) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return message;
   }
 }

@@ -9,22 +9,18 @@ public class Account {
     protected long balance;
 
     public Account(long initialBalance) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.balance = initialBalance;
     }
 
     public void deposit(long amount) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        balance = balance + amount;
     }
 
     public void withdraw(long amount) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        balance = balance - amount;
     }
 
     public long getBalance() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return balance;
     }
 }

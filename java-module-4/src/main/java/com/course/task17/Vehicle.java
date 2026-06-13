@@ -10,13 +10,12 @@ public class Vehicle {
   protected int year;
 
   public Vehicle(String brand, int year) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.brand = brand;
+    this.year = year;
   }
 
   @Override
   public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "Vehicle{brand=" + brand + ", year=" + year + "}";
   }
 }

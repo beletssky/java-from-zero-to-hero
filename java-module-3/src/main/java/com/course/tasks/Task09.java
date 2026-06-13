@@ -23,13 +23,12 @@ public class Task09 {
     private final String currency;
 
     public Task09(long amount, String currency) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (currency == null || !currency.matches("[A-Z]{3}")) {
+            throw new IllegalArgumentException();
     }
 
     public long getAmount() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return amount;
     }
 
     public String getCurrency() {

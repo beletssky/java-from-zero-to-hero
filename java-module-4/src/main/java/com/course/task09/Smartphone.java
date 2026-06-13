@@ -10,17 +10,14 @@ public class Smartphone extends Phone {
 
     public Smartphone(String number, String osName) {
         super(number);
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.osName = osName;
     }
 
     public String getOsName() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return osName;
     }
 
     public String runApp(String app) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "WhatsApp running on " + osName;
     }
 }

@@ -7,19 +7,17 @@ package com.course.task04;
 public class Shape {
 
     protected String color;
+    protected double area;
 
     public Shape(String color) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.color = color;
     }
 
     public String getColor() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return color;
     }
 
     public double area() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return area;
     }
 }

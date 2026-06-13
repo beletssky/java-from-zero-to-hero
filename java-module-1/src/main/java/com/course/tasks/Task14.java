@@ -8,7 +8,16 @@ public class Task14 {
      * Иначе — "?". Реализовать через switch.
      */
     public static String dayName(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй dayName");
+        String name = switch (n) {
+            case 1 -> "Пн";
+            case 2 -> "Вт";
+            case 3 -> "Ср";
+            case 4 -> "Чт";
+            case 5 -> "Пт";
+            case 6 -> "Сб";
+            case 7 -> "Вс";
+            default -> "?";
+        };
+        return name;
     }
 }

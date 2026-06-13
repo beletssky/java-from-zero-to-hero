@@ -1,13 +1,11 @@
 package com.course.tasks;
 
 public class Task06 {
-
     /**
      * Возвращает true, если n чётное.
      * Примеры: isEven(0) == true; isEven(-4) == true; isEven(7) == false.
      */
     public static boolean isEven(int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isEven");
+        return n%2 == 0;
     }
 }

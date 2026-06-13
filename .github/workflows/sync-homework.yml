@@ -1,0 +1,82 @@
+name: Sync homework branches with main
+
+# При кожному пуші в main підтягує оновлений main у всі гілки homework/*.
+# Використовується merge (а не reset), щоб НЕ втратити вже влиті роботи студентів.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Не дозволяємо двом синхронізаціям бігти одночасно (щоб пуші не гонилися).
+concurrency:
+  group: sync-homework
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (повна історія + усі гілки)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # Адмін-PAT, щоб пуш у homework/* обходив branch protection (required checks).
+          token: ${{ secrets.SYNC_TOKEN }}
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Merge main into every homework/* branch
+        run: |
+          set -uo pipefail
+          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+          MAIN_SHA=$(git rev-parse origin/main)
+          echo "main is at $MAIN_SHA"
+
+          UPDATED=""
+          UPTODATE=""
+          CONFLICTS=""
+
+          for ref in $(git for-each-ref --format='%(refname:short)' 'refs/remotes/origin/homework/*'); do
+            branch="${ref#origin/}"
+            echo "::group::$branch"
+
+            git checkout -B "$branch" "origin/$branch"
+
+            if git merge-base --is-ancestor "$MAIN_SHA" HEAD; then
+              echo "✓ $branch вже містить main — пропускаю"
+              UPTODATE="$UPTODATE $branch"
+              echo "::endgroup::"
+              continue
+            fi
+
+            if git merge --no-edit -m "Sync: merge main ($MAIN_SHA) into $branch" "$MAIN_SHA"; then
+              git push origin "$branch"
+              echo "✓ $branch оновлено"
+              UPDATED="$UPDATED $branch"
+            else
+              git merge --abort
+              echo "✗ $branch — конфлікт, пропускаю (потрібен ручний мердж)"
+              CONFLICTS="$CONFLICTS $branch"
+            fi
+            echo "::endgroup::"
+          done
+
+          {
+            echo "## Синхронізація homework-гілок"
+            echo ""
+            echo "- **main:** \`$MAIN_SHA\`"
+            echo "- **Оновлено:**${UPDATED:- —}"
+            echo "- **Вже актуальні:**${UPTODATE:- —}"
+            echo "- **Конфлікти (ручний мердж):**${CONFLICTS:- —}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ -n "$CONFLICTS" ]; then
+            echo "Є гілки з конфліктами:$CONFLICTS"
+            exit 1
+          fi

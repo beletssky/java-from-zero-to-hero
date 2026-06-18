@@ -4,16 +4,16 @@ import java.util.Objects;
 
 /**
  * UA: Моделює прямокутник.
- *     Поля: width (double, незмінне), height (double, незмінне).
- *     Валідація: обидва значення мають бути > 0, інакше IllegalArgumentException. Сеттерів немає.
- *     Методи: getWidth(), getHeight(), area() = width * height.
- *     Формат toString містить префікс "Rectangle" та значення полів.
- *
+ * Поля: width (double, незмінне), height (double, незмінне).
+ * Валідація: обидва значення мають бути > 0, інакше IllegalArgumentException. Сеттерів немає.
+ * Методи: getWidth(), getHeight(), area() = width * height.
+ * Формат toString містить префікс "Rectangle" та значення полів.
+ * <p>
  * RU: Моделирует прямоугольник.
- *     Поля: width (double, неизменяемое), height (double, неизменяемое).
- *     Валидация: оба значения должны быть > 0, иначе IllegalArgumentException. Сеттеров нет.
- *     Методы: getWidth(), getHeight(), area() = width * height.
- *     Формат toString содержит префикс "Rectangle" и значения полей.
+ * Поля: width (double, неизменяемое), height (double, неизменяемое).
+ * Валидация: оба значения должны быть > 0, иначе IllegalArgumentException. Сеттеров нет.
+ * Методы: getWidth(), getHeight(), area() = width * height.
+ * Формат toString содержит префикс "Rectangle" и значения полей.
  */
 public class Task04 {
 
@@ -21,40 +21,47 @@ public class Task04 {
     private final double height;
 
     public Task04(double width, double height) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (width <= 0) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        if (height <= 0) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        this.width = width;
+        this.height = height;
     }
 
     public double getWidth() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return width;
     }
 
     public double getHeight() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return height;
     }
 
     public double area() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return width * height;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task04 task04 = (Task04) o;
+        return Double.compare(width, task04.width) == 0 && Double.compare(height, task04.height) == 0;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(width, height);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Rectangle{" + width + "," + height + "}";
     }
 }

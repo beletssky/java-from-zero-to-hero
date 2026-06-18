@@ -8,7 +8,20 @@ public class Task15 {
      * Примеры: filterPositive({-1,2,-3,4,0}) == {2,4}; filterPositive({}) == {}.
      */
     public static int[] filterPositive(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй filterPositive");
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] > 0) {
+                count++;
+            }
+        }
+        int[] result = new int[count];
+        int j = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] > 0) {
+                result[j] = a[i];
+                j++;
+            }
+        }
+        return result;
+        }
     }
-}

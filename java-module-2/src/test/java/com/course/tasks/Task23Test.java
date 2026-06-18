@@ -26,9 +26,8 @@ class Task23Test {
 
     @Test
     void removeVowels_preservesSpacesAndPunctuation() {
-        assertEquals(" , !", Task23.removeVowels("a, e!"));
+        assertEquals(", !", Task23.removeVowels("a, e!"));
     }
-
     @Test
     void removeVowels_mixedCase() {
         assertEquals("Hll Wrld", Task23.removeVowels("HEllO WOrld"));

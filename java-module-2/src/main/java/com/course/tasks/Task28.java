@@ -9,7 +9,15 @@ public class Task28 {
      *          isDigitOnly("") == false; isDigitOnly(null) == false.
      */
     public static boolean isDigitOnly(String s) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй isDigitOnly");
+        if (s == null || s.isEmpty()) {
+            return false;
+        }
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
     }
 }

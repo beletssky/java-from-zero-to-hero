@@ -9,7 +9,19 @@ public class Task31 {
      * Примеры: sortAsc({3,1,4,1,5}) == {1,1,3,4,5}; sortAsc({}) == {}.
      */
     public static int[] sortAsc(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй sortAsc");
+        if (a == null) {
+            throw new IllegalArgumentException("NOOO");
+        }
+        int[] result = a.clone();
+        for (int i = 0; i < result.length - 1; i++) {
+            for (int j = 0; j < result.length - 1 - i; j++) {
+                if (result[j] > result[j + 1]) {
+                    int temp = result[j];
+                    result[j] = result[j + 1];
+                    result[j + 1] = temp;
+                }
+            }
+        }
+        return result;
     }
 }

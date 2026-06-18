@@ -8,7 +8,13 @@ public class Task25 {
      * Примеры: repeat("ab", 3) == "ababab"; repeat("x", 0) == "".
      */
     public static String repeat(String s, int n) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй repeat");
+        if (n < 0) {
+            throw new IllegalArgumentException("NOOO");
+        }
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < n; i++) {
+            result.append(s);
+        }
+        return result.toString();
     }
 }

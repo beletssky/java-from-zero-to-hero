@@ -7,13 +7,11 @@ public class Building implements Sized {
     private int floors;
 
     public Building(int floors) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.floors = floors;
     }
 
     @Override
     public int getSize() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return floors * 3;
     }
 }

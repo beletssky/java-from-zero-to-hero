@@ -9,25 +9,23 @@ public class IntStack implements SimpleStack {
 
     @Override
     public void push(int x) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        data[top] = x;
+        top++;
     }
 
     @Override
     public int pop() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        top--;
+        return data[top];
     }
 
     @Override
     public int peek() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return data[top - 1];
     }
 
     @Override
     public int size() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return top;
     }
 }

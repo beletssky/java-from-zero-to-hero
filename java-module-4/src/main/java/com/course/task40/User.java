@@ -8,17 +8,15 @@ public class User {
     private String name;
 
     public User(int id, String name) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.id = id;
+        this.name = name;
     }
 
     public int getId() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return id;
     }
 
     public String getName() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return name;
     }
 }

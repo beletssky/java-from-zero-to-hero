@@ -10,13 +10,11 @@ public class Car extends Vehicle {
 
   public Car(String brand, int year, int seats) {
     super(brand, year);
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.seats = seats;
   }
 
   @Override
   public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return super.toString() + ", seats=" + seats;
   }
 }

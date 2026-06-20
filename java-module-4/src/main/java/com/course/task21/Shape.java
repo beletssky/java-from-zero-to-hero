@@ -8,13 +8,11 @@ public abstract class Shape {
   protected String color;
 
   public Shape(String color) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.color = color;
   }
 
   public String getColor() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return color;
   }
 
   public abstract double area();

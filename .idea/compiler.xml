@@ -8,7 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="java-module-2" />
         <module name="java-module-1" />
+        <module name="java-module-4" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="java-module-3" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>

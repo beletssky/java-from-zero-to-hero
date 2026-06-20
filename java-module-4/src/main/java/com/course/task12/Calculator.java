@@ -7,7 +7,6 @@ package com.course.task12;
 public class Calculator {
 
   public double compute(double a, double b) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return a + b;
   }
 }

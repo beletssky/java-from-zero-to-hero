@@ -6,13 +6,11 @@ package com.course.task32;
 public class German implements Greeter {
     @Override
     public String name() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Hans";
     }
 
     @Override
     public String greet() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Hallo, " + name();
     }
 }

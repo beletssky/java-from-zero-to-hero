@@ -7,13 +7,10 @@ public class Bike extends Vehicle {
 
     public Bike(String brand) {
         super(brand);
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public double maxSpeed() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return 30.0;
     }
 }

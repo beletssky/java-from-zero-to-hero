@@ -10,28 +10,25 @@ public class Point {
     protected int y;
 
     public Point(int x, int y) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.x = x;
+        this.y = y;
     }
 
     public int getX() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return x;
     }
 
     public int getY() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return y;
     }
 
     public void move(int dx, int dy) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.x = this.x + dx;
+        this.y = this.y + dy;
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "(" + x + "," + y + ")";
     }
 }

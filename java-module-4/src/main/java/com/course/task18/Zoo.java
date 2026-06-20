@@ -7,7 +7,10 @@ package com.course.task18;
 public class Zoo {
 
   public String[] makeAllSounds(Animal[] animals) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    String[] sounds = new String[animals.length];
+      for (int i = 0; i < animals.length; i++) {
+        sounds[i] = animals[i].sound();
+      }
+      return sounds;
   }
 }

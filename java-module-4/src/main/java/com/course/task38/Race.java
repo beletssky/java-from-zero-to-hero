@@ -6,7 +6,16 @@ package com.course.task38;
 public class Race {
 
     public Vehicle fastest(Vehicle[] vehicles) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (vehicles == null || vehicles.length == 0) {
+            return null;
+        }
+
+        Vehicle leader = vehicles[0];
+        for (int i = 1; i < vehicles.length; i++) {
+            if (vehicles[i].maxSpeed() > leader.maxSpeed()) {
+                leader = vehicles[i];
+            }
+        }
+        return leader;
     }
 }

@@ -8,19 +8,16 @@ public abstract class Document {
   protected String title;
 
   public Document(String title) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.title = title;
   }
 
   public String getTitle() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return title;
   }
 
   public abstract String getExtension();
 
   public String getFullName() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return title + "." + getExtension();
   }
 }

@@ -8,13 +8,10 @@ public final class Dog extends Mammal {
 
     public Dog(String name) {
         super(name, 4);
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
     }
 
     @Override
     public String sound() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "woof";
     }
 }

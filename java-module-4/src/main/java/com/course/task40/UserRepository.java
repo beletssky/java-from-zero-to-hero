@@ -8,7 +8,7 @@ public class UserRepository extends BaseRepository {
 
     @Override
     public void save(Object item) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        User user = (User) item;
+        items[user.getId()] = user;
     }
 }

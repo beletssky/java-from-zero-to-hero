@@ -7,7 +7,6 @@ public class Cash extends PaymentProcessor {
 
   @Override
   public boolean process(long amount) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return true;
   }
 }

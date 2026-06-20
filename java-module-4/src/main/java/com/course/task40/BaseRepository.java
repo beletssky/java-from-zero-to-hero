@@ -9,8 +9,7 @@ public abstract class BaseRepository implements Repository<Object> {
 
     @Override
     public Object findById(int id) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return items[id];
     }
 
     @Override

@@ -10,12 +10,10 @@ public class Dog extends Animal {
 
   public Dog(String name, int age) {
     super(name);
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.age = age;
   }
 
   public int getAge() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return age;
   }
 }

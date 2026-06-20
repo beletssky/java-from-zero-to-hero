@@ -8,19 +8,16 @@ public abstract class Game {
   protected int players;
 
   public Game(int players) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.players = players;
   }
 
   public int getPlayers() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return players;
   }
 
   public abstract String start();
 
   public String info() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "Game for " + players + " players";
   }
 }

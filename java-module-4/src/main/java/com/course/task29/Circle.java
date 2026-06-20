@@ -6,7 +6,6 @@ package com.course.task29;
 public class Circle implements Drawable {
     @Override
     public String draw() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "drawing circle";
     }
 }

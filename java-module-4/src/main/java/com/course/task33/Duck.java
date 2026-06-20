@@ -5,7 +5,6 @@ package com.course.task33;
  */
 public class Duck implements Flyable, Swimmable {
     public String showAll() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return fly() + ", " + swim();
     }
 }

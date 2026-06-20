@@ -9,18 +9,15 @@ public class Circle extends Shape {
   private double radius;
 
   public Circle(double radius) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.radius = radius;
   }
 
   public double getRadius() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return radius;
   }
 
   @Override
   public double area() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return Math.PI * radius * radius;
   }
 }

@@ -7,7 +7,6 @@ package com.course.task11;
 public class Greeting {
 
   public String say(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "Hello, " + name;
   }
 }

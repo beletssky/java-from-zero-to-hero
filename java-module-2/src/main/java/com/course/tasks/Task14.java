@@ -7,7 +7,9 @@ public class Task14 {
      * Примеры: doubleEach({1,2,3}) == {2,4,6}; doubleEach({}) == {}.
      */
     public static int[] doubleEach(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй doubleEach");
+        for (int i = 0; i < a.length; i++){
+            a[i] = a[i]*2;
+        }
+        return a;
     }
 }

@@ -8,12 +8,13 @@ public class Task04 {
      * Пример: max3(1, 9, 5) == 9.
      */
     public static int max3(int a, int b, int c) {
-        // TODO: реализуй (через max2)
-        throw new UnsupportedOperationException("TODO: реализуй max3");
+        int max3 = (a > b) ? a : b;
+        max3 = (max3 > c) ? max3 : c;
+        return max3;
     }
 
     private static int max2(int a, int b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй max2");
+        Task04.max3(a, b, 0);
+        return max3(a, b, 0);
     }
 }

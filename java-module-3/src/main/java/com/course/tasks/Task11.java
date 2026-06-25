@@ -3,7 +3,7 @@ package com.course.tasks;
 import java.util.Objects;
 
 /**
- * UA: Модель банківського рахунку (BankAccount).
+ * /** UA: Модель банківського рахунку (BankAccount).
  * <p>Поля:
  * <ul>
  *   <li>{@code owner} — власник рахунку (незмінне, final).</li>
@@ -33,45 +33,50 @@ public class Task11 {
     private long balanceKopecks;
 
     public Task11(String owner, long initialBalance) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.owner = owner;
+        this.balanceKopecks = initialBalance;
     }
 
     public String getOwner() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return owner;
     }
 
     public long getBalance() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return balanceKopecks;
     }
 
     public void deposit(long amount) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+       if (amount <= 0)
+           throw new IllegalArgumentException("NOOOOO");
+        balanceKopecks += amount;
     }
 
     public void withdraw(long amount) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (amount <= 0 || balanceKopecks <= amount){
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        balanceKopecks = balanceKopecks - amount;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task11 task11 = (Task11) o;
+        return owner.equals(task11.owner) && balanceKopecks == task11.balanceKopecks;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(owner, balanceKopecks);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "BankAccount{" + owner + "," + balanceKopecks + "}";
     }
 }

@@ -4,53 +4,65 @@ import java.util.Objects;
 
 /**
  * UA: Моделює номер телефону.
- *     Поле: number (String, незмінне). Валідація: рівно 10 цифр (кожен символ перевіряється
- *     через Character.isDigit у циклі), інакше IllegalArgumentException. Сеттерів немає.
- *     Методи: getNumber(), format() — повертає рядок у форматі "(XXX) XXX-XX-XX".
- *     Формат toString містить префікс "PhoneNumber" та значення number.
- *     Приклад: number "0501234567" -> format() = "(050) 123-45-67".
- *
+ * Поле: number (String, незмінне). Валідація: рівно 10 цифр (кожен символ перевіряється
+ * через Character.isDigit у циклі), інакше IllegalArgumentException. Сеттерів немає.
+ * Методи: getNumber(), format() — повертає рядок у форматі "(XXX) XXX-XX-XX".
+ * Формат toString містить префікс "PhoneNumber" та значення number.
+ * Приклад: number "0501234567" -> format() = "(050) 123-45-67".
+ * <p>
  * RU: Моделирует номер телефона.
- *     Поле: number (String, неизменяемое). Валидация: ровно 10 цифр (каждый символ проверяется
- *     через Character.isDigit в цикле), иначе IllegalArgumentException. Сеттеров нет.
- *     Методы: getNumber(), format() — возвращает строку в формате "(XXX) XXX-XX-XX".
- *     Формат toString содержит префикс "PhoneNumber" и значение number.
- *     Пример: number "0501234567" -> format() = "(050) 123-45-67".
+ * Поле: number (String, неизменяемое). Валидация: ровно 10 цифр (каждый символ проверяется
+ * через Character.isDigit в цикле), иначе IllegalArgumentException. Сеттеров нет.
+ * Методы: getNumber(), format() — возвращает строку в формате "(XXX) XXX-XX-XX".
+ * Формат toString содержит префикс "PhoneNumber" и значение number.
+ * Пример: number "0501234567" -> format() = "(050) 123-45-67".
  */
 public class Task08 {
 
     private final String number;
 
     public Task08(String number) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (number == null || number.length() != 10) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        for (int i = 0; i < number.length(); i++) {
+            if (!Character.isDigit(number.charAt(i))) {
+                throw new IllegalArgumentException("NOOOOO");
+            }
+        }
+        this.number = number;
     }
 
     public String getNumber() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return number;
     }
 
     public String format() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "(" + number.substring(0, 3) + ") " +
+                number.substring(3, 6) + "-" +
+                number.substring(6, 8) + "-" +
+                number.substring(8, 10);
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task08 task08 = (Task08) o;
+        return number.equals(task08.number);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(number);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "PhoneNumber{" + number + "}";
     }
 }

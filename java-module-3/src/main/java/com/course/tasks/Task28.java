@@ -31,45 +31,45 @@ public class Task28 {
     private final double y;
 
     public Task28(double x, double y) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.x = x;
+        this.y = y;
     }
 
     public double getX() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return x;
     }
 
     public double getY() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+       return y;
     }
 
     public Task28 add(Task28 other) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return new Task28(this.x + other.x, this.y + other.y);
     }
 
     public double length() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Math.sqrt(x * x + y * y);
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o){
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        Task28 task28 = (Task28) o;
+        return Double.compare(task28.x, x) == 0 && Double.compare(task28.y, y) == 0;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(x, y);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Vector2D{" + "x=" + x + ", y=" + y + "}";
     }
 }

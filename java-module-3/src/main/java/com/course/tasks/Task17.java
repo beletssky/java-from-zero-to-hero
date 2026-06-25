@@ -36,60 +36,83 @@ public class Task17 {
     private int year;
 
     public Task17(int day, int month, int year) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validate(year, month, day);
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+
+    private void validate(int year, int month, int day) {
+        if (year < 1990 || year > 2100) {
+            throw new IllegalArgumentException("NOOOOO");
+        } else if (month < 1 || month > 12) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        int maxDays = daysInMonth(month, year);
+        if (day < 1 || day > maxDays) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
     }
 
     public int getDay() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return day;
     }
 
     public int getMonth() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return month;
     }
 
     public int getYear() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return year;
     }
 
     public void setDay(int day) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validate(year, month, day);
+        this.day = day;
     }
 
     public void setMonth(int month) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validate(year, month, day);
+        this.month = month;
     }
 
     public void setYear(int year) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validate(year, month, day);
+        this.year = year;
     }
 
     private int daysInMonth(int month, int year) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return switch (month) {
+            case 1, 3, 5, 7, 8, 10, 12 -> 31;
+            case 4, 6, 9, 11 -> 30;
+            case 2 -> {
+                boolean isLeap = (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
+                yield isLeap ? 29 : 28;
+            }
+            default -> throw new IllegalArgumentException("NOOOOO");
+        };
+
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task17 task17 = (Task17) o;
+        return day == task17.day && month == task17.month && year == task17.year;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(day, month, year);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return String.format("%02d.%02d.%04d", day, month, year);
     }
 }

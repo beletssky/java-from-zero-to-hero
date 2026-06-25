@@ -13,7 +13,7 @@ import java.util.Objects;
  *   <li>toString: префікс "Order" зі значеннями полів.</li>
  *   <li>Приклад: {@code new Task27(1L, "Ivan", 12300L, false)} -> "Order{id=1, customer='Ivan', totalKopecks=12300, paid=false}".</li>
  * </ul>
- *
+ * <p>
  * RU: Класс моделирует заказ (Order).
  * <ul>
  *   <li>Поля: {@code id} ({@code long}, final), {@code customer} ({@code String}, final),
@@ -33,50 +33,52 @@ public class Task27 {
     private boolean paid;
 
     public Task27(long id, String customer, long totalKopecks, boolean paid) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.id = id;
+        this.customer = customer;
+        this.totalKopecks = totalKopecks;
+        this.paid = paid;
     }
 
     public long getId() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return id;
     }
 
     public String getCustomer() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return customer;
     }
 
     public long getTotalKopecks() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return totalKopecks;
     }
 
     public boolean isPaid() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return paid;
     }
 
     public void markAsPaid() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.paid = true;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task27 task27 = (Task27) o;
+        return id == task27.id;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hashCode(id);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Order{" + "id=" + id +
+                ", customer='" + customer + '\'' + ", totalKopecks=" + totalKopecks + ", paid=" + paid + "}";
     }
 }

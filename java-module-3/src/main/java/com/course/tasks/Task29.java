@@ -14,7 +14,7 @@ import java.util.Objects;
  *   <li>toString: "numerator/denominator", напр. "3/4"; якщо знаменник після скорочення == 1, то просто число, напр. "2".</li>
  *   <li>Приклад: 2/4 дорівнює 1/2; toString для 6/3 -> "2".</li>
  * </ul>
- *
+ * <p>
  * RU: Класс моделирует рациональную дробь (Fraction).
  * <ul>
  *   <li>Поля: {@code numerator}, {@code denominator} — оба {@code int}, неизменяемые (final).</li>
@@ -33,40 +33,59 @@ public class Task29 {
     private final int denominator;
 
     public Task29(int numerator, int denominator) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (denominator == 0) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        if (denominator < 0) {
+            numerator = -numerator;
+            denominator = -denominator;
+        }
+        int g = gcd(numerator, denominator);
+        this.numerator = numerator / g;
+        this.denominator = denominator / g;
     }
 
     public int getNumerator() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return numerator;
     }
 
     public int getDenominator() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return denominator;
     }
 
     private int gcd(int a, int b) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        a = Math.abs(a);
+        b = Math.abs(b);
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task29 task29 = (Task29) o;
+        return numerator == task29.numerator && denominator == task29.denominator;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(numerator, denominator);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (denominator == 1) {
+            return String.valueOf(numerator);
+        }
+        return numerator + "/" + denominator;
     }
 }

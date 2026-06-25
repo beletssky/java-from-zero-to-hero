@@ -1,5 +1,7 @@
 package com.course.tasks;
 
+import java.util.Objects;
+
 /**
  * UA: Визначення пори року за номером місяця (калькулятор без стану).
  * <p>
@@ -44,8 +46,7 @@ public class Task35 {
      * RU: Конструктор без аргументов (класс без состояния).
      */
     public Task35() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+
     }
 
     /**
@@ -53,25 +54,37 @@ public class Task35 {
      * RU: Возвращает время года по месяцу (switch). Невалидный месяц → IllegalArgumentException.
      */
     public Season seasonByMonth(int month) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (month < 1 || month > 12) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        return switch (month) {
+            case 12, 1, 2 -> Season.WINTER;
+            case 3, 4, 5 -> Season.SPRING;
+            case 6, 7, 8 -> Season.SUMMER;
+            case 9, 10, 11 -> Season.AUTUMN;
+            default -> throw new IllegalArgumentException("NOOOOO");
+        };
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Task35{}";
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task35 task35 = (Task35) o;
+        return true;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash();
     }
 }

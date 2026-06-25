@@ -12,7 +12,7 @@ import java.util.Objects;
  *   <li>toString: префікс "Address" зі значеннями полів.</li>
  *   <li>Приклад: {@code new Task25("Kyiv", "Main", "10")} -> "Address{city='Kyiv', street='Main', building='10'}".</li>
  * </ul>
- *
+ * <p>
  * RU: Класс моделирует почтовый адрес (Address).
  * <ul>
  *   <li>Поля: {@code city}, {@code street}, {@code building} — все {@code String}, неизменяемые (final).</li>
@@ -30,40 +30,51 @@ public class Task25 {
     private final String building;
 
     public Task25(String city, String street, String building) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (city == null || city.trim().isEmpty()) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        if (street == null || street.trim().isEmpty()) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        if (building == null || building.trim().isEmpty()) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        this.city = city;
+        this.street = street;
+        this.building = building;
     }
 
     public String getCity() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+       return city;
     }
 
     public String getStreet() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return street;
     }
 
     public String getBuilding() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return building;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o){
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        Task25 task25 = (Task25) o;
+        return Objects.equals(city, task25.city) && Objects.equals(street, task25.street) && Objects.equals(building, task25.building);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(city, street, building);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Address{" + "city='" + city + '\'' + ", street='" + street + '\'' + ", building='" + building + '\'' + "}";
     }
 }

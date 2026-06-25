@@ -32,35 +32,58 @@ public class Task19 {
     private final String hash;
 
     public Task19(String raw) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validate(raw);
+        this.hash = raw;
+    }
+
+    private void validate(String s) {
+        if (s == null || s.length() < 8) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        boolean hasDigit = false;
+        boolean hasUpper = false;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (Character.isDigit(c)) {
+                hasDigit = true;
+            } else if (Character.isUpperCase(c)) {
+                hasUpper = true;
+            }
+            if (hasDigit && hasUpper) break;
+        }
+        if (!hasDigit || !hasUpper) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+
     }
 
     public String getHash() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return hash;
     }
 
     public boolean matches(String raw) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return hash.equals(raw);
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task19 task19 = (Task19) o;
+        return Objects.equals(hash, task19.hash);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(hash);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Password{hash=***}";
     }
 }

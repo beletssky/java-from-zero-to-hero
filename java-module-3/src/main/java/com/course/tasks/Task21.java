@@ -12,7 +12,7 @@ import java.util.Objects;
  *   <li>toString: префікс "Coordinates" разом зі значеннями полів.</li>
  *   <li>Приклад: {@code new Task21(50.45, 30.52)} -> "Coordinates{latitude=50.45, longitude=30.52}".</li>
  * </ul>
- *
+ * <p>
  * RU: Класс моделирует географические координаты (Coordinates).
  * <ul>
  *   <li>Поля: {@code latitude} (широта), {@code longitude} (долгота) — оба {@code double}, неизменяемые (final).</li>
@@ -31,35 +31,46 @@ public class Task21 {
     private final double longitude;
 
     public Task21(double latitude, double longitude) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (latitude < -90.0 || latitude > 90.0) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        if (longitude < -180.0 || longitude > 180.0) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public double getLatitude() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return latitude;
     }
 
     public double getLongitude() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return longitude;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task21 task21 = (Task21) o;
+        return Math.abs(this.latitude - task21.latitude) < EPSILON &&
+                Math.abs(this.longitude - task21.longitude) < EPSILON;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        long latBucket = Math.round(latitude / EPSILON);
+        long lonBucket = Math.round(longitude / EPSILON);
+        return Objects.hash(latBucket, lonBucket);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Coordinates{latitude=" + latitude + ", longitude=" + longitude + "}";
     }
 }

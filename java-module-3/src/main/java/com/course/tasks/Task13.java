@@ -30,45 +30,54 @@ public class Task13 {
     private double celsius;
 
     public Task13(double celsius) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validate(celsius);
+        this.celsius = celsius;
+    }
+
+    private void validate(double celsius) {
+        if (celsius < -273.15 || celsius > 1000) {
+            throw new IllegalArgumentException("NOOOOO");
+        }
     }
 
     public double getCelsius() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return celsius;
     }
 
     public void setCelsius(double celsius) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        validate(celsius);
+        this.celsius = celsius;
     }
 
     public double getFahrenheit() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+
+        return this.celsius * 9 / 5 + 32;
     }
 
     public double getKelvin() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+
+        return this.celsius + 273.15;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task13 task13 = (Task13) o;
+        return celsius == task13.celsius;
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(celsius);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "TemperatureSensor{" + celsius + "}";
     }
 }

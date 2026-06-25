@@ -29,35 +29,40 @@ public class Task22 {
     private final String second;
 
     public Task22(String first, String second) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (first == null || second == null){
+            throw new IllegalArgumentException("NOOOOO");
+        }
+        this.first = first;
+        this.second = second;
     }
 
     public String getFirst() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+       return first;
     }
 
     public String getSecond() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+       return second;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Task22 task22 = (Task22) o;
+        return Objects.equals(first, task22.first) && Objects.equals(second, task22.second);
     }
 
     @Override
     public int hashCode() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return Objects.hash(first, second);
     }
 
     @Override
     public String toString() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Pair{first=" + first + ", second=" + second + "}";
     }
 }

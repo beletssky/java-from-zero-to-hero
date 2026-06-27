@@ -7,24 +7,20 @@ public class Document implements Saveable, Loadable {
     private String content;
 
     public Document(String content) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.content = content;
     }
 
     public String getContent() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return content;
     }
 
     @Override
     public String save() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "saving '" + content + "'";
     }
 
     @Override
     public String load() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return content;
     }
 }

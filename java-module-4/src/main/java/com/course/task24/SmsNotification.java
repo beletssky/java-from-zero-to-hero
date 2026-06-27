@@ -7,13 +7,10 @@ public class SmsNotification extends Notification {
 
   public SmsNotification(String recipient) {
     super(recipient);
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
   }
 
   @Override
   public String send(String message) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "[SMS to " + recipient + "] " + message;
   }
 }

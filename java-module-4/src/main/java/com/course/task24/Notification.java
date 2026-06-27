@@ -8,13 +8,11 @@ public abstract class Notification {
   protected String recipient;
 
   public Notification(String recipient) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.recipient = recipient;
   }
 
   public String getRecipient() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return recipient;
   }
 
   public abstract String send(String message);

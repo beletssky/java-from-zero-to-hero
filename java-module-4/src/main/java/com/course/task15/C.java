@@ -8,7 +8,6 @@ public class C extends B {
 
   @Override
   public int level() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return super.level() + 100;
   }
 }

@@ -7,13 +7,10 @@ public class TextDoc extends Document {
 
   public TextDoc(String title) {
     super(title);
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
   }
 
   @Override
   public String getExtension() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "txt";
   }
 }

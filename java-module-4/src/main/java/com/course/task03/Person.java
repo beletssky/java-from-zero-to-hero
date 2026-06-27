@@ -10,22 +10,19 @@ public class Person {
     protected int age;
 
     public Person(String name, int age) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return name;
     }
 
     public int getAge() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return age;
     }
 
     public String greet() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Hello, I'm " + name;
     }
 }

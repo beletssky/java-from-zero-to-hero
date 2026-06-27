@@ -13,7 +13,6 @@ public class Dog extends Animal {
 
   @Override
   public String sound() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "woof";
   }
 }

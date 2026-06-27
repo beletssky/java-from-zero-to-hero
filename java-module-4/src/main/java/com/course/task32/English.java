@@ -6,7 +6,6 @@ package com.course.task32;
 public class English implements Greeter {
     @Override
     public String name() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "John";
     }
 }

@@ -8,13 +8,11 @@ public abstract class Animal {
     protected String name;
 
     public Animal(String name) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.name = name;
     }
 
     public String getName() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return name;
     }
 
     public abstract String sound();

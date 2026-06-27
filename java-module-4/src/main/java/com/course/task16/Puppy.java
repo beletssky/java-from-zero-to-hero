@@ -10,12 +10,10 @@ public class Puppy extends Dog {
 
   public Puppy(String name, int age, String breed) {
     super(name, age);
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.breed = breed;
   }
 
   public String getBreed() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return breed;
   }
 }

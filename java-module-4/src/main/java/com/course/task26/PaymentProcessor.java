@@ -9,7 +9,6 @@ public abstract class PaymentProcessor {
   public abstract boolean process(long amount);
 
   public String log(long amount) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "Processing" + amount;
   }
 }

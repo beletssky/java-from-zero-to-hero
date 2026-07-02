@@ -9,25 +9,29 @@ import java.util.Set;
  */
 public class Task17 {
 
-  private Set<String> blocked = new HashSet<>();
+    private Set<String> blocked = new HashSet<>();
 
-  public void block(String email) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void block(String email) {
+        // TODO: реализуй
+        if (email != null) {
+            blocked.add(email);
+        }
+    }
 
-  public boolean isBlocked(String email) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public boolean isBlocked(String email) {
+        // TODO: реализуй
+        return blocked.contains(email);
+    }
 
-  public void unblock(String email) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void unblock(String email) {
+        // TODO: реализуй
+        if (email != null) {
+            blocked.remove(email);
+        }
+    }
 
-  public Set<String> allBlocked() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public Set<String> allBlocked() {
+        // TODO: реализуй
+        return new HashSet<>(blocked);
+    }
 }

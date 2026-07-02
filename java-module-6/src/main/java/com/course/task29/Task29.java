@@ -11,6 +11,18 @@ public class Task29 {
 
   public void removeShort(List<String> input, int minLen) {
     // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    Iterator<String> it = input.iterator();
+
+    while (it.hasNext()) {
+      String item = it.next();
+      if (item == null) {
+        it.remove();
+        continue;
+      }
+      if (item.length() < minLen) {
+        it.remove();
+      }
+    }
+
   }
 }

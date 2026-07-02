@@ -2,6 +2,7 @@ package com.course.task15;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.TreeSet;
 
 /**
@@ -10,25 +11,33 @@ import java.util.TreeSet;
  */
 public class Task15 {
 
-  private TreeSet<String> tags = new TreeSet<>();
+    private TreeSet<String> tags = new TreeSet<>();
 
-  public void add(String t) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void add(String t) {
+        // TODO: реализуй
+        if (t != null) {
+            tags.add(t);
+        }
+    }
 
-  public List<String> all() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public List<String> all() {
+        // TODO: реализуй
+        return new ArrayList<>(tags);
+    }
 
-  public String first() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public String first() {
+        // TODO: реализуй
+        if (tags.isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return tags.first();
+    }
 
-  public String last() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public String last() {
+        // TODO: реализуй
+        if (tags.isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return tags.last();
+    }
 }

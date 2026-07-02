@@ -9,25 +9,40 @@ import java.util.Map;
  */
 public class Task27 {
 
-  private Map<String, Item> items = new HashMap<>();
+    private Map<String, Item> items = new HashMap<>();
 
-  public void addItem(Item i) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void addItem(Item i) {
+        // TODO: реализуй
+        if (i == null || i.getName() == null) {
+            throw new IllegalArgumentException();
+        }
+        items.put(i.getName(), i);
+    }
 
-  public void removeItem(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void removeItem(String name) {
+        // TODO: реализуй
+        if (!items.containsKey(name)) {
+            throw new IllegalArgumentException();
+        }
+        items.remove(name);
+    }
 
-  public void increaseQuantity(String name, int by) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void increaseQuantity(String name, int by) {
+        // TODO: реализуй
+        Item item = items.get(name);
+        if (item == null) {
+            throw new IllegalArgumentException();
+        }
 
-  public Item getItem(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+        item.setQuantity(item.getQuantity() + by);
+    }
+
+    public Item getItem(String name) {
+        // TODO: реализуй
+        Item item = items.get(name);
+        if (item == null) {
+            throw new IllegalArgumentException();
+        }
+        return item;
+    }
 }

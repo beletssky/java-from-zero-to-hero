@@ -9,30 +9,44 @@ import java.util.List;
  */
 public class Task05 {
 
-  private List<Task> tasks = new ArrayList<>();
+    private List<Task> tasks = new ArrayList<>();
 
-  public void add(String title) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void add(String title) {
+        // TODO: реализуй
+        tasks.add(new Task(title));
+    }
 
-  public void markDone(int index) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void markDone(int index) {
+        // TODO: реализуй
+        if (index >= 0 && index < tasks.size()) {
+            tasks.get(index).setDone(true);
+        }
+    }
 
-  public List<Task> getDone() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public List<Task> getDone() {
+        // TODO: реализуй
+        List<Task> doneTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.isDone()) {
+                doneTasks.add(task);
+            }
+        }
+        return doneTasks;
+    }
 
-  public List<Task> getPending() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public List<Task> getPending() {
+        // TODO: реализуй
+        List<Task> pendingTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (!task.isDone()) {
+                pendingTasks.add(task);
+            }
+        }
+        return pendingTasks;
+    }
 
-  public void clearDone() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void clearDone() {
+        // TODO: реализуй
+        tasks.removeIf(Task::isDone);
+    }
 }

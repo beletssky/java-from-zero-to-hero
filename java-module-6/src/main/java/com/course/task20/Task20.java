@@ -1,5 +1,6 @@
 package com.course.task20;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -10,7 +11,12 @@ import java.util.Map;
 public class Task20 {
 
   public Map<String, Integer> countWords(List<String> words) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    Map<String, Integer> result = new HashMap<>();
+
+    for (String word : words) {
+      int currentCount = result.getOrDefault(word, 0);
+      result.put(word, currentCount + 1);
+    }
+    return result;
   }
 }

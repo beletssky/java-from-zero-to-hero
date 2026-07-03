@@ -10,40 +10,46 @@ public class Item {
   private int quantity;
 
   public Item(String name, int quantity) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.name = name;
+    this.quantity = quantity;
   }
 
   public String getName() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return name;
   }
 
   public int getQuantity() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return quantity;
   }
 
   public void setQuantity(int quantity) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.quantity = quantity;
   }
 
   @Override
   public boolean equals(Object o) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    Item item = (Item) o;
+
+    if (quantity != item.quantity) return false;
+
+    return name != null ? name.equals(item.name) : item.name == null;
   }
 
   @Override
   public int hashCode() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    int result = name != null ? name.hashCode() : 0;
+    result = 31 * result + quantity;
+    return result;
   }
 
   @Override
   public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "Item{" +
+            "name='" + name + '\'' +
+            ", quantity=" + quantity +
+            '}';
   }
 }

@@ -10,40 +10,40 @@ public class Task {
   private boolean done;
 
   public Task(String title) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.title = title;
+    this.done = false;
   }
 
   public String getTitle() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return title;
   }
 
   public boolean isDone() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return done;
   }
 
   public void setDone(boolean done) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.done = done;
   }
 
   @Override
   public boolean equals(Object o) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Task task = (Task) o;
+    if (done != task.done) return false;
+    return title != null ? title.equals(task.title) : task.title == null;
   }
 
   @Override
   public int hashCode() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    int result = title != null ? title.hashCode() : 0;
+    result = 31 * result + (done ? 1 : 0);
+    return result;
   }
 
   @Override
   public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "Task{title='" + title + "', done=" + done + "}";
   }
 }

@@ -1,5 +1,6 @@
 package com.course.task06;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,12 +10,22 @@ import java.util.List;
 public class Task06 {
 
   public List<Integer> reverse(List<Integer> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    List<Integer> result = new ArrayList<>();
+    for (int i = input.size() - 1; i >= 0; i--) {
+      result.add(input.get(i));
+    }
+    return result;
   }
 
   public void reverseInPlace(List<Integer> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    int left = 0;
+    int right =  input.size() - 1;
+    while (left < right) {
+      int temp = input.get(left);
+      input.set(left, input.get(right));
+      input.set(right, temp);
+      left++;
+      right--;
+    }
   }
 }

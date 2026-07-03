@@ -12,27 +12,22 @@ public class Task01 {
   private List<String> words = new ArrayList<>();
 
   public void add(String w) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    words.add(w);
   }
 
   public List<String> getAll() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return new ArrayList<>(words);
   }
 
   public int size() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return words.size();
   }
 
   public boolean contains(String w) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return words.contains(w);
   }
 
   public void remove(String w) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    words.remove(w);
   }
 }

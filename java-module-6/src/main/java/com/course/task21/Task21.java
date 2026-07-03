@@ -12,22 +12,23 @@ public class Task21 {
   private Map<String, String> phones = new HashMap<>();
 
   public void add(String name, String phone) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    phones.put(name, phone);
   }
 
   public String find(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return phones.get(name);
   }
 
   public void removeByName(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    phones.remove(name);
   }
 
   public String findByPhone(String phone) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    for (Map.Entry<String, String> entry : phones.entrySet()) {
+      if (entry.getValue().equals(phone)) {
+        return entry.getKey();
+      }
+    }
+    return null;
   }
 }

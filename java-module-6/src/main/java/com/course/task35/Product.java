@@ -13,40 +13,46 @@ public class Product {
   private int rating;
 
   public Product(String name, long priceKopecks, int rating) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.name = name;
+    this.priceKopecks = priceKopecks;
+    this.rating =  rating;
   }
 
   public String getName() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return name;
   }
 
   public long getPriceKopecks() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return priceKopecks;
   }
 
   public int getRating() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return rating;
   }
 
   @Override
   public boolean equals(Object o) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+   if (this == o) {
+     return true;
+   }
+   if (o == null || getClass() != o.getClass()) {
+     return false;
+   }
+    Product product = (Product) o;
+   return priceKopecks == product.priceKopecks && rating == product.rating && Objects.equals(name, product.name);
   }
 
   @Override
   public int hashCode() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return Objects.hash(name, priceKopecks, rating);
   }
 
   @Override
   public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "Product{" +
+            "name='" + name + '\'' +
+            ", priceKopecks=" + priceKopecks +
+            ", rating=" + rating +
+            '}';
   }
 }

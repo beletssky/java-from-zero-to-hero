@@ -9,7 +9,9 @@ import java.util.List;
 public class Task09 {
 
   public List<Integer> topN(List<Integer> input, int n) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    List<Integer> sorted = new java.util.ArrayList<>(input);
+    java.util.Collections.sort(sorted, java.util.Collections.reverseOrder());
+    int limit = Math.min(n, sorted.size());
+    return new java.util.ArrayList<>(sorted.subList(0, limit));
   }
 }

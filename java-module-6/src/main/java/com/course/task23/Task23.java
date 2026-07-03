@@ -13,27 +13,22 @@ public class Task23 {
   private Map<String, String> settings = new HashMap<>();
 
   public void set(String key, String value) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    settings.put(key, value);
   }
 
   public String get(String key) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return settings.get(key);
   }
 
   public String getOrDefault(String key, String def) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return settings.getOrDefault(key, def);
   }
 
   public void remove(String key) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    settings.remove(key);
   }
 
   public Set<String> keys() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return Set.copyOf(settings.keySet());
   }
 }

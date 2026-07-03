@@ -10,7 +10,18 @@ import java.util.Set;
 public class Task16 {
 
   public Set<Character> uniqueLetters(String s) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    if (s == null) {
+      throw new IllegalArgumentException("String must not be null");
+    }
+
+    Set<Character> result = new HashSet<>();
+
+    for (char c : s.toCharArray()) {
+      if (c == ' ') {
+        continue;
+      }
+      result.add(Character.toLowerCase(c));
+    }
+    return result;
   }
 }

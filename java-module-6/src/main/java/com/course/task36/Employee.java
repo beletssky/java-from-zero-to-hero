@@ -8,45 +8,51 @@ import java.util.Objects;
  */
 public class Employee {
 
-  private String name;
-  private String department;
-  private long salary;
+    private String name;
+    private String department;
+    private long salary;
 
-  public Employee(String name, String department, long salary) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public Employee(String name, String department, long salary) {
+        // TODO: реализуй
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
+    }
 
-  public String getName() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public String getName() {
+        // TODO: реализуй
+        return name;
+    }
 
-  public String getDepartment() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public String getDepartment() {
+        // TODO: реализуй
+        return department;
+    }
 
-  public long getSalary() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public long getSalary() {
+        // TODO: реализуй
+        return salary;
+    }
 
-  @Override
-  public boolean equals(Object o) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public boolean equals(Object o) {
+        // TODO: реализуй
+        if (this == o) return true;
+        if (!(o instanceof Employee employee)) return false;
+        return this.name.equals(employee.name)
+                && this.department.equals(employee.department)
+                && this.salary == employee.salary;
+    }
 
-  @Override
-  public int hashCode() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public int hashCode() {
+        // TODO: реализуй
+        return Objects.hash(name, department, salary);
+    }
 
-  @Override
-  public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public String toString() {
+        // TODO: реализуй
+        return "Employee name: " + name + ", department: " + department + ", salary: " + salary;
+    }
 }

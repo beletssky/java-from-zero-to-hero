@@ -1,5 +1,6 @@
 package com.course.task34;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -10,6 +11,6 @@ public class Task34 {
 
   public void sortUsers(List<User> users) {
     // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    Collections.sort(users);
   }
 }

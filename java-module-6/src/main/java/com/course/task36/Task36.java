@@ -1,5 +1,7 @@
 package com.course.task36;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -8,8 +10,14 @@ import java.util.List;
  */
 public class Task36 {
 
-  public List<Employee> sort(List<Employee> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public List<Employee> sort(List<Employee> input) {
+        // TODO: реализуй
+        List<Employee> result = new ArrayList<>(input);
+        result.sort(
+                Comparator.comparing(Employee::getDepartment)
+                        .thenComparing(Comparator.comparingLong(Employee::getSalary).reversed())
+        );
+
+        return result;
+    }
 }

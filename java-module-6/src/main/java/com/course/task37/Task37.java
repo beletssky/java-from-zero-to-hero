@@ -1,5 +1,7 @@
 package com.course.task37;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -8,13 +10,29 @@ import java.util.List;
  */
 public class Task37 {
 
-  public List<Version> sortNatural(List<Version> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public List<Version> sortNatural(List<Version> input) {
+        // TODO: реализуй
+        if (input == null) {
+            return new ArrayList<>();
+        }
 
-  public List<Version> sortDesc(List<Version> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+        List<Version> result = new ArrayList<>(input);
+
+        Collections.sort(result);
+
+        return result;
+    }
+
+    public List<Version> sortDesc(List<Version> input) {
+        // TODO: реализуй
+        if (input == null) {
+            return new ArrayList<>();
+        }
+
+        List<Version> result = new ArrayList<>(input);
+
+        result.sort(Collections.reverseOrder());
+
+        return result;
+    }
 }

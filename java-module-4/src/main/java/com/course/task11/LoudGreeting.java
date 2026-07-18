@@ -8,7 +8,6 @@ public class LoudGreeting extends Greeting {
 
   @Override
   public String say(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return super.say(name).toUpperCase();
   }
 }

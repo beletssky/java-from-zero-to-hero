@@ -10,35 +10,36 @@ public class Item {
   private long priceKopecks;
 
   public Item(String name, long priceKopecks) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.name = name;
+    this.priceKopecks = priceKopecks;
   }
 
   public String getName() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return name;
   }
 
   public long getPriceKopecks() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return priceKopecks;
   }
 
   @Override
   public boolean equals(Object o) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Item item = (Item) o;
+    if (priceKopecks != item.priceKopecks) return false;
+    return name != null ? name.equals(item.name) : item.name == null;
   }
 
   @Override
   public int hashCode() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    int result = name != null ? name.hashCode() : 0;
+    result = 31 * result + (int) (priceKopecks ^ (priceKopecks >>> 32));
+    return result;
   }
 
   @Override
   public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "Item{name='" + name + "', priceKopecks=" + priceKopecks + "}";
   }
 }

@@ -13,22 +13,18 @@ public class Task15 {
   private TreeSet<String> tags = new TreeSet<>();
 
   public void add(String t) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    tags.add(t);
   }
 
   public List<String> all() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return new ArrayList<>(tags);
   }
 
   public String first() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return tags.first();
   }
 
   public String last() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return tags.last();
   }
 }

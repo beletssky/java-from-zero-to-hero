@@ -9,7 +9,12 @@ import java.util.List;
 public class Task04 {
 
   public List<String> filterByLength(List<String> input, int minLen) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    List<String> result = new java.util.ArrayList<>();
+    for (String s : input) {
+      if (s.length() >= minLen) {
+        result.add(s);
+      }
+    }
+    return result;
   }
 }

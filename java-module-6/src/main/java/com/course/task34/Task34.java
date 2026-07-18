@@ -9,7 +9,6 @@ import java.util.List;
 public class Task34 {
 
   public void sortUsers(List<User> users) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    java.util.Collections.sort(users);
   }
 }

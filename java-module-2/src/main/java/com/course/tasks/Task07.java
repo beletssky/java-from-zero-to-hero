@@ -1,14 +1,21 @@
 package com.course.tasks;
 
 public class Task07 {
-
     /**
      * Возвращает максимальный элемент массива.
      * Для пустого массива или {@code null} — IllegalArgumentException.
      * Примеры: maxArray({3,1,4,1,5,9,2,6}) == 9; maxArray({-5,-1,-10}) == -1.
      */
     public static int maxArray(int[] a) {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй maxArray");
+        if (a == null || a.length == 0) {
+            throw new IllegalArgumentException("Ты кнопка бл*ть");
+        }
+        int max = a[0];
+        for (int i : a) {
+            if (i > max) {
+                max = i;
+            }
+        }
+        return max;
     }
 }

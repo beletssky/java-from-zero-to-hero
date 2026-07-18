@@ -11,7 +11,6 @@ import java.util.Set;
 public class Task11 {
 
   public Set<String> unique(List<String> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return new HashSet<>(input);
   }
 }

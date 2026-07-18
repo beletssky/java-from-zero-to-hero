@@ -10,35 +10,42 @@ public class Permission {
   private String action;
 
   public Permission(String resource, String action) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.resource = resource;
+    this.action = action;
   }
 
   public String getResource() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return resource;
   }
 
   public String getAction() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return action;
   }
 
   @Override
   public boolean equals(Object o) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Permission that = (Permission) o;
+    if (resource != null ? !resource.equals(that.resource) : that.resource != null) {
+      return false;
+    }
+    return action != null ? action.equals(that.action) : that.action ==  null;
   }
 
   @Override
   public int hashCode() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    int result = resource != null ? resource.hashCode() : 0;
+    result = 31 * result + (action != null ? action.hashCode() : 0);
+    return result;
   }
 
   @Override
   public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "Permission{resource='" + resource + "', action='" + action + "'}";
   }
 }

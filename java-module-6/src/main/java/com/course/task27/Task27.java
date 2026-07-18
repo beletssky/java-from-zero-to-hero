@@ -12,22 +12,25 @@ public class Task27 {
   private Map<String, Item> items = new HashMap<>();
 
   public void addItem(Item i) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    items.put(i.getName(), i);
   }
 
   public void removeItem(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    if (!items.containsKey(name)) {
+      throw new IllegalArgumentException("Товар не найден: " + name);
+    }
+    items.remove(name);
   }
 
   public void increaseQuantity(String name, int by) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    Item item =  getItem(name);
+    item.setQuantity(item.getQuantity() + by);
   }
 
   public Item getItem(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    if (!items.containsKey(name)) {
+      throw new IllegalArgumentException("Товар не найден: " + name);
+    }
+    return items.get(name);
   }
 }

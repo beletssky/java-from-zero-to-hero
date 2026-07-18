@@ -10,18 +10,15 @@ public class Student extends Person {
 
     public Student(String name, int age, String university) {
         super(name, age);
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        this.university = university;
     }
 
     public String getUniversity() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return university;
     }
 
     @Override
     public String greet() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Hello, I'm " + name + ", student at " + university;
     }
 }

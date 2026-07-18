@@ -7,7 +7,6 @@ public interface Greeter {
     String name();
 
     default String greet() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "Hello, " + name();
     }
 }

@@ -12,27 +12,22 @@ public class Task12 {
   private Set<String> tags = new HashSet<>();
 
   public void add(String tag) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    tags.add(tag);
   }
 
   public boolean has(String tag) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return tags.contains(tag);
   }
 
   public Set<String> all() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return new HashSet<>(tags);
   }
 
   public void remove(String tag) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    tags.remove(tag);
   }
 
   public int size() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return tags.size();
   }
 }

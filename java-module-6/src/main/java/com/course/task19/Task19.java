@@ -12,27 +12,22 @@ public class Task19 {
   private Map<String, Integer> ages = new HashMap<>();
 
   public void set(String name, int age) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    ages.put(name, age);
   }
 
   public Integer get(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return ages.get(name);
   }
 
   public boolean has(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return ages.containsKey(name);
   }
 
   public void remove(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    ages.remove(name);
   }
 
   public int size() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return ages.size();
   }
 }

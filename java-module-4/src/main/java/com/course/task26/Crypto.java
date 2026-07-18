@@ -7,7 +7,6 @@ public class Crypto extends PaymentProcessor {
 
   @Override
   public boolean process(long amount) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return amount >= 1000L;
   }
 }

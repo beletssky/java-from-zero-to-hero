@@ -12,22 +12,18 @@ public class Task14 {
   private Set<Permission> perms = new HashSet<>();
 
   public void grant(Permission p) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    perms.add(p);
   }
 
   public void revoke(Permission p) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    perms.remove(p);
   }
 
   public boolean has(Permission p) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return perms.contains(p);
   }
 
   public int size() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return perms.size();
   }
 }

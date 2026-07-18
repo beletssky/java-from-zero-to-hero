@@ -1,5 +1,6 @@
 package com.course.task08;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,7 +10,16 @@ import java.util.List;
 public class Task08 {
 
   public List<Integer> merge(List<Integer> a, List<Integer> b) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    List<Integer> result = new ArrayList<>();
+    int maxLength = Math.max(a.size(), b.size());
+    for (int i = 0; i < maxLength; i++) {
+      if (i < a.size()) {
+        result.add(a.get(i));
+      }
+      if (i < b.size()) {
+        result.add(b.get(i));
+      }
+    }
+    return result;
   }
 }

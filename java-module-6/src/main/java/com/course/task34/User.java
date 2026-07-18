@@ -10,29 +10,25 @@ public class User implements Comparable<User> {
   private int age;
 
   public User(String name, int age) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.name = name;
+    this.age = age;
   }
 
   public String getName() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return name;
   }
 
   public int getAge() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return age;
   }
 
   @Override
   public int compareTo(User other) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return this.age - other.age;
   }
 
   @Override
   public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return "User{name='" + name + "', age=" + age + "}";
   }
 }

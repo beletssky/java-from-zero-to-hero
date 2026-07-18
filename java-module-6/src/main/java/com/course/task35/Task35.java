@@ -9,17 +9,26 @@ import java.util.List;
 public class Task35 {
 
   public List<Product> byPrice(List<Product> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    List<Product> copy = new java.util.ArrayList<>(input);
+
+    copy.sort((p1, p2) -> Long.compare(p1.getPriceKopecks(), p2.getPriceKopecks()));
+
+    return copy;
   }
 
   public List<Product> byRating(List<Product> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    List<Product> copy = new java.util.ArrayList<>(input);
+
+    copy.sort((p1, p2) -> Integer.compare(p2.getRating(), p1.getRating()));
+
+    return copy;
   }
 
   public List<Product> byName(List<Product> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    List<Product> copy = new java.util.ArrayList<>(input);
+
+    copy.sort((p1, p2) -> p1.getName().compareTo(p2.getName()));
+
+    return copy;
   }
 }

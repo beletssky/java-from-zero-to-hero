@@ -8,8 +8,13 @@ import java.util.List;
  */
 public class Task07 {
 
-  public List<String> removeDuplicates(List<String> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public List<String> removeDuplicates(List<String> input) {
+        List<String> result = new java.util.ArrayList<>();
+        for (String item : input) {
+            if (!result.contains(item)) {
+                result.add(item);
+            }
+        }
+        return result;
+    }
 }

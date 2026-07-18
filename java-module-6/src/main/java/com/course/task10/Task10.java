@@ -1,6 +1,7 @@
 package com.course.task10;
 
 import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Постраничная разбивка списка строк.
@@ -9,7 +10,11 @@ import java.util.List;
 public class Task10 {
 
   public List<String> page(List<String> input, int pageNum, int pageSize) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    int startIndex = (pageNum - 1) * pageSize;
+    if (startIndex >= input.size()) {
+      return new ArrayList<>();
+    }
+    int endIndex = Math.min(startIndex + pageSize, input.size());
+    return new ArrayList<>(input.subList(startIndex, endIndex));
   }
 }

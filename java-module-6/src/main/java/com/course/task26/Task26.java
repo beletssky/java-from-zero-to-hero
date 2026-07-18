@@ -12,17 +12,14 @@ public class Task26 {
   private LinkedHashMap<String, String> cache = new LinkedHashMap<>();
 
   public void put(String key, String value) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    cache.put(key, value);
   }
 
   public String get(String key) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return cache.get(key);
   }
 
   public List<String> keysInOrder() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return List.copyOf(cache.keySet());
   }
 }

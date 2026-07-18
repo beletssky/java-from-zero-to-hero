@@ -9,18 +9,15 @@ public class Square extends Shape {
   private double side;
 
   public Square(double side) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    this.side = side;
   }
 
   public double getSide() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return side;
   }
 
   @Override
   public double area() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return side * side;
   }
 }

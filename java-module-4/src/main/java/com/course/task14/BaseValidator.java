@@ -7,7 +7,6 @@ package com.course.task14;
 public class BaseValidator {
 
   public boolean validate(String s) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return s != null && !s.isEmpty();
   }
 }

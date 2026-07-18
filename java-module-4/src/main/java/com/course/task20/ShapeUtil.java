@@ -7,7 +7,8 @@ package com.course.task20;
 public class ShapeUtil {
 
   public double getRadiusOrSide(Shape s) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    if (s instanceof Circle c) return c.getRadius();
+    if (s instanceof Square sq) return sq.getSide();
+    return -1.0;
   }
 }

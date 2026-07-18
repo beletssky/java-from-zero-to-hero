@@ -12,27 +12,29 @@ public class Task03 {
   private List<Item> items = new ArrayList<>();
 
   public void add(Item i) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    items.add(i);
   }
 
   public void removeByName(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    items.removeIf(item ->
+            (name == null && item.getName() == null) ||
+                    (name != null && name.equals(item.getName()))
+    );
   }
 
   public long total() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    long sum = 0;
+    for (Item item : items) {
+      sum += item.getPriceKopecks();
+    }
+    return sum;
   }
 
   public int size() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return items.size();
   }
 
   public List<Item> items() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return new ArrayList<>(items);
   }
 }

@@ -5,7 +5,6 @@ package com.course.task33;
  */
 public interface Flyable {
     default String fly() {
-        // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return "flying";
     }
 }

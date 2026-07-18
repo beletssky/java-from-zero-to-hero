@@ -12,17 +12,14 @@ public class Task18 {
   private Set<String> voted = new HashSet<>();
 
   public boolean vote(String userId) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return voted.add(userId);
   }
 
   public boolean hasVoted(String userId) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return voted.contains(userId);
   }
 
   public int count() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
+    return voted.size();
   }
 }

@@ -1,7 +1,11 @@
 name: Sync homework branches with main
 
-# При кожному пуші в main підтягує оновлений main у всі гілки homework/*.
-# Використовується merge (а не reset), щоб НЕ втратити вже влиті роботи студентів.
+# При кожному пуші в main підтягує оновлений main у визначений список
+# базових homework-гілок. Використовується merge (не reset), щоб НЕ
+# втратити вже влиті роботи студентів.
+# Оновлюються ТІЛЬКИ: homework/arthur, homework/kate, homework/liza,
+# homework/nikita. Похідні гілки (homework/*-dz*, homework/kate-module-*)
+# студент оновлює сам через свою базову гілку.
 on:
   push:
     branches: [main]
@@ -42,9 +46,14 @@ jobs:
           UPTODATE=""
           CONFLICTS=""
 
-          for ref in $(git for-each-ref --format='%(refname:short)' 'refs/remotes/origin/homework/*'); do
-            branch="${ref#origin/}"
+          for branch in homework/arthur homework/kate homework/liza homework/nikita; do
             echo "::group::$branch"
+
+            if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+              echo "гілка $branch не існує на remote — пропускаю"
+              echo "::endgroup::"
+              continue
+            fi
 
             git checkout -B "$branch" "origin/$branch"
 

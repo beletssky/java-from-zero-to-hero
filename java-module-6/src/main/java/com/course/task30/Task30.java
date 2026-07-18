@@ -8,8 +8,20 @@ import java.util.Map;
  */
 public class Task30 {
 
-  public int sumValues(Map<String, Integer> map) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public int sumValues(Map<String, Integer> map) {
+        // TODO: реализуй
+        if (map == null || map.isEmpty()) {
+            return 0;
+        }
+        int sum = 0;
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            Integer value = entry.getValue();
+
+            if (value != null) {
+                sum += value;
+            }
+        }
+
+        return sum;
+    }
 }

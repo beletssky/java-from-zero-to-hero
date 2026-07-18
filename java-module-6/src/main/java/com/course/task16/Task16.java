@@ -9,8 +9,16 @@ import java.util.Set;
  */
 public class Task16 {
 
-  public Set<Character> uniqueLetters(String s) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public Set<Character> uniqueLetters(String s) {
+        // TODO: реализуй
+        if (s == null) {
+            throw new IllegalArgumentException();
+        }
+        Set<Character> result = new HashSet<>();
+        for (Character ch : s.toCharArray()) {
+            if (ch.equals(' ')) continue;
+            result.add(Character.toLowerCase(ch));
+        }
+        return result;
+    }
 }

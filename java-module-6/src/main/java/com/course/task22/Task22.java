@@ -1,5 +1,6 @@
 package com.course.task22;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -8,8 +9,16 @@ import java.util.Map;
  */
 public class Task22 {
 
-  public Map<Character, Integer> countChars(String s) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public Map<Character, Integer> countChars(String s) {
+        // TODO: реализуй
+        if (s == null) {
+            throw new IllegalArgumentException();
+        }
+        Map<Character, Integer> frequencyMap = new HashMap<>();
+        for (Character c : s.toCharArray()) {
+            if (c.equals(' ')) continue;
+            frequencyMap.put(c, frequencyMap.getOrDefault(c, 0) + 1);
+        }
+        return frequencyMap;
+    }
 }

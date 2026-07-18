@@ -8,51 +8,70 @@ import java.util.Objects;
  */
 public class Version implements Comparable<Version> {
 
-  private int major;
-  private int minor;
-  private int patch;
+    private int major;
+    private int minor;
+    private int patch;
 
-  public Version(int major, int minor, int patch) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public Version(int major, int minor, int patch) {
+        // TODO: реализуй
+        this.major = major;
+        this.minor = minor;
+        this.patch = patch;
+    }
 
-  public int getMajor() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public int getMajor() {
+        // TODO: реализуй
+        return major;
+    }
 
-  public int getMinor() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public int getMinor() {
+        // TODO: реализуй
+        return minor;
+    }
 
-  public int getPatch() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public int getPatch() {
+        // TODO: реализуй
+        return patch;
+    }
 
-  @Override
-  public int compareTo(Version other) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public int compareTo(Version other) {
+        // TODO: реализуй
+        if (other == null) {
+            return 1;
+        }
 
-  @Override
-  public boolean equals(Object o) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+        int majorCompare = Integer.compare(this.major, other.major);
+        if (majorCompare != 0) {
+            return majorCompare;
+        }
 
-  @Override
-  public int hashCode() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+        int minorCompare = Integer.compare(this.minor, other.minor);
+        if (minorCompare != 0) {
+            return minorCompare;
+        }
+        return Integer.compare(this.patch, other.patch);
+    }
 
-  @Override
-  public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public boolean equals(Object o) {
+        // TODO: реализуй
+        if (this == o) return true;
+        if (!(o instanceof Version version)) return false;
+        return major == version.major
+                && minor == version.minor
+                && patch == version.patch;
+    }
+
+    @Override
+    public int hashCode() {
+        // TODO: реализуй
+        return Objects.hash(major, minor, patch);
+    }
+
+    @Override
+    public String toString() {
+        // TODO: реализуй
+        return major + "." + minor + "." + patch;
+    }
 }

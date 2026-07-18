@@ -9,30 +9,41 @@ import java.util.List;
  */
 public class Task03 {
 
-  private List<Item> items = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
 
-  public void add(Item i) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void add(Item i) {
+        // TODO: реализуй
+        items.add(i);
+    }
 
-  public void removeByName(String name) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public void removeByName(String name) {
+        // TODO: реализуй
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).getName().equals(name)) {
+                items.remove(i);
+                break;
+            }
+        }
+    }
 
-  public long total() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public long total() {
+        // TODO: реализуй
+        long sum = 0;
 
-  public int size() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+        for (Item item : items) {
+            sum += item.getPriceKopecks();
+        }
 
-  public List<Item> items() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+        return sum;
+    }
+
+    public int size() {
+        // TODO: реализуй
+        return items.size();
+    }
+
+    public List<Item> items() {
+        // TODO: реализуй
+        return new ArrayList<>(items);
+    }
 }

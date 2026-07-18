@@ -1,10 +1,6 @@
 package com.course.task39;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Простая система голосования.
@@ -17,16 +13,37 @@ public class Task39 {
 
     public void vote(String userId, String candidate) {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (userId == null || userId.isBlank() || candidate == null || candidate.isBlank()) {
+            return;
+        }
+
+        if (!votedUsers.contains(userId)) {
+            votes.put(candidate, votes.getOrDefault(candidate, 0) + 1);
+            votedUsers.add(userId);
+        } else throw new IllegalStateException();
     }
 
     public String winner() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        if (votes.isEmpty()) {
+            return null;
+        }
+
+        String topCandidate = null;
+        int maxVotes = -1;
+
+        for (Map.Entry<String, Integer> entry : votes.entrySet()) {
+            if (entry.getValue() > maxVotes) {
+                maxVotes = entry.getValue();
+                topCandidate = entry.getKey();
+            }
+        }
+
+        return topCandidate;
     }
 
     public TreeMap<String, Integer> results() {
         // TODO: реализуй
-        throw new UnsupportedOperationException("TODO: реализуй");
+        return new TreeMap<>(votes);
     }
 }

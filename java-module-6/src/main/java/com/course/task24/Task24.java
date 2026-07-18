@@ -1,5 +1,7 @@
 package com.course.task24;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,8 +11,13 @@ import java.util.Map;
  */
 public class Task24 {
 
-  public Map<Integer, List<String>> groupByLength(List<String> input) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public Map<Integer, List<String>> groupByLength(List<String> input) {
+        // TODO: реализуй
+        Map<Integer, List<String>> result = new HashMap<>();
+        for (String element : input) {
+            int length = element.length();
+            result.computeIfAbsent(length, k -> new ArrayList<>()).add(element);
+        }
+        return result;
+    }
 }

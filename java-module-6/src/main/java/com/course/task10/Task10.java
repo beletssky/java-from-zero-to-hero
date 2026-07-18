@@ -1,5 +1,6 @@
 package com.course.task10;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,8 +9,19 @@ import java.util.List;
  */
 public class Task10 {
 
-  public List<String> page(List<String> input, int pageNum, int pageSize) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public List<String> page(List<String> input, int pageNum, int pageSize) {
+        // TODO: реализуй
+        if (input == null || pageNum < 1 || pageSize <= 0) {
+            return new ArrayList<>();
+        }
+
+        int fromIndex = (pageNum - 1) * pageSize;
+
+        if (fromIndex >= input.size()) {
+            return new ArrayList<>();
+        }
+
+        int toIndex = Math.min(fromIndex + pageSize, input.size());
+        return new ArrayList<>(input.subList(fromIndex, toIndex));
+    }
 }

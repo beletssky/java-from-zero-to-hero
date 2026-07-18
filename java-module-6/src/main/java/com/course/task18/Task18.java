@@ -9,20 +9,23 @@ import java.util.Set;
  */
 public class Task18 {
 
-  private Set<String> voted = new HashSet<>();
+    private Set<String> voted = new HashSet<>();
 
-  public boolean vote(String userId) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public boolean vote(String userId) {
+        // TODO: реализуй
+        if (userId == null) {
+            return false;
+        }
+        return voted.add(userId);
+    }
 
-  public boolean hasVoted(String userId) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public boolean hasVoted(String userId) {
+        // TODO: реализуй
+        return voted.contains(userId);
+    }
 
-  public int count() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public int count() {
+        // TODO: реализуй
+        return voted.size();
+    }
 }

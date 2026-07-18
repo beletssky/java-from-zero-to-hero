@@ -8,45 +8,51 @@ import java.util.Objects;
  */
 public class Product {
 
-  private String name;
-  private long priceKopecks;
-  private int rating;
+    private String name;
+    private long priceKopecks;
+    private int rating;
 
-  public Product(String name, long priceKopecks, int rating) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public Product(String name, long priceKopecks, int rating) {
+        // TODO: реализуй
+        this.name = name;
+        this.priceKopecks = priceKopecks;
+        this.rating = rating;
+    }
 
-  public String getName() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public String getName() {
+        // TODO: реализуй
+        return name;
+    }
 
-  public long getPriceKopecks() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public long getPriceKopecks() {
+        // TODO: реализуй
+        return priceKopecks;
+    }
 
-  public int getRating() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    public int getRating() {
+        // TODO: реализуй
+        return rating;
+    }
 
-  @Override
-  public boolean equals(Object o) {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public boolean equals(Object o) {
+        // TODO: реализуй
+        if (this == o) return true;
+        if (!(o instanceof Product product)) return false;
+        return this.name.equals(product.name)
+                && this.priceKopecks == product.priceKopecks
+                && this.rating == product.rating;
+    }
 
-  @Override
-  public int hashCode() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public int hashCode() {
+        // TODO: реализуй
+        return Objects.hash(name, priceKopecks, rating);
+    }
 
-  @Override
-  public String toString() {
-    // TODO: реализуй
-    throw new UnsupportedOperationException("TODO: реализуй");
-  }
+    @Override
+    public String toString() {
+        // TODO: реализуй
+        return "Product name: " + name + ", prrice: " + priceKopecks + ", rating: " + rating;
+    }
 }
